@@ -209,7 +209,7 @@ nav ul li {
     padding: 2.5px 0;
     border-bottom: 1px solid #fff;
     display: block;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     color: #fff;
 }
@@ -270,7 +270,7 @@ nav ul li {
 }
 
 .selector select{
-    width: 150px;
+    width: 200px;
     height: 35px;
     border-radius: 4px;
     border: 1px solid #1b2538;

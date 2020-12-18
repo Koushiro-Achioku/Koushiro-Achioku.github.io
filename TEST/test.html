@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<style>
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        background-color: #333;
+        transition: all 0.4s ease-in-out;
+        transform: translate(-300px);
+        z-index: 1000;
+        text-align: center;
+    }
+    nav.open {
+        transform: translate(0); 
+    }
+
+
+    nav ul {
+        margin: 0;
+        padding: 0 1em;
+        list-style-type: none;
+    }
+    nav ul li {
+        padding: 2.5px 0;
+        border-bottom: 1px solid #fff;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .btn_menu{
+        margin-top: 8px;
+        margin-bottom: 8px;
+        margin-left: 8px;
+        border-radius: 100%;
+        background-color: #86c7FF;
+        color: white;
+        font-size: 23px;
+        width: min-content;
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+    .btn_menu:hover{
+        background-color: #9dcefa;
+        box-shadow: 0px 1px 2px 0 gray;
+    }
+</style>
+
+<div class="btn_menu"><p style="margin: 0;">≡</p></div>
+
+<nav>
+    <div class="nav_title">
+        <div class="btn_menu"><p style="margin: 0;">✕</p></div>
+        <p style="color: white; margin: 10px;">出場Team一覧</p>
+    </div>
+
+    <ul style="height: 2000px;">
+        <li>Team1</li>
+        <li>Team2</li>
+        <li>Team3</li>
+        <li>Team4</li>
+        <li>Team5</li>
+        <li>Team6</li>
+        <li>Team7</li>
+        <li>Team8</li>
+        <li>Team9</li>
+        <li>Team10</li>
+        <li>Team11</li>
+        <li>Team12</li>
+        <li>Team13</li>
+        <li>Team14</li>
+        <li>Team15</li>
+        <li>Team16</li>
+        <li>Team17</li>
+        <li>Team18</li>
+        <li>Team19</li>
+        <li>Team20</li>
+    </ul> 
+</nav>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(function(){
+$('.btn_menu').click(function(){
+$('nav').toggleClass('open');}
+);
+})
+</script>

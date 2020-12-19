@@ -52,25 +52,39 @@ document.getElementById("start-button").onclick = function(){
             EndTime_array[0]-=1;
         }
         
-        var sec = RunningTime_array[1]*60 + RunningTime_array[2];
+        var min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
         
-        document.getElementById("Time-textbox").value = sec+"."+RunningTime_array[3];
+        document.getElementById("Time-textbox").value = min_and_sec + "." + RunningTime_array[3];
         
-        if(RunningTime_array[3]<10){
-            RunningTime_array[3]="00"+RunningTime_array[3];
+        var min = RunningTime_array[1];
+        var sec = RunningTime_array[2];
+        var microsec = RunningTime_array[3];
+        
+        if(microsec<10){
+            microsec = "00" + microsec;
         }
-        else if(RunningTime_array[3]<100){
-            RunningTime_array[3]="0"+RunningTime_array[3];
+        else if(microsec<100){
+            microsec = "0" + microsec;
         }
 
-        if(RunningTime_array[2]<10){
-            RunningTime_array[2]="0"+RunningTime_array[2];
+        if(sec<10){
+            sec = "0" + sec;
         }
 
-        document.getElementById("RunningTime-text").innerHTML = RunningTime_array[1]+":"+RunningTime_array[2]+"."+RunningTime_array[3];
+        document.getElementById("RunningTime-text").innerHTML = min + ":" + sec + "." + microsec;
 
         clearInterval(timer1);
     }
+};
+
+document.getElementById("radio_select_R_1").onclick = function(){
+    document.getElementById("Time-textbox").value = "150.0"
+};
+
+document.getElementById("radio_select_R_2").onclick = function(){
+    var min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
+        
+        document.getElementById("Time-textbox").value = min_and_sec + "." + RunningTime_array[3];
 };
 
 function logging(){

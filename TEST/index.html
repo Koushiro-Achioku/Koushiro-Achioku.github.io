@@ -79,7 +79,6 @@
         <form method="POST" action="">
 
             <!--ヘッダー-->
-
             <div class="headder">
                 <table>
                     <td class="nav-td">
@@ -102,7 +101,6 @@
             </div>
 
             <!--メイン-->
-
             <div class="area">
                 <form method="post" action=""></form>
 
@@ -149,12 +147,12 @@
                     
                     <!--RadioButton-->
                     <div style="margin-bottom:20px;">
-                        <label for="radio_select_1_0" class="radio_select">
-                            <input name="Challege" id="radio_select_1_0" type="radio" class="radio_select_inner" required/>
+                        <label for="radio_select_C_0" class="radio_select">
+                            <input name="Challege" id="radio_select_C_0" type="radio" class="radio_select_inner" required/>
                             1st
                         </label><br>
-                        <label for="radio_select_1_1" class="radio_select">
-                            <input name="Challege" id="radio_select_1_1" type="radio" class="radio_select_inner" />
+                        <label for="radio_select_C_1" class="radio_select">
+                            <input name="Challege" id="radio_select_C_1" type="radio" class="radio_select_inner" />
                             2nd
                         </label>
                     </div>
@@ -451,41 +449,36 @@
                     </div>
                 </div>
                 
-                
-                
-                
-                <!--RadioButton-->
-                <div style="margin-bottom:20px;">
-                    <label for="radio_select_1_0" class="radio_select">
-                        <input name="Handicap" id="radio_select_H_0" type="radio" class="radio_select_inner" required/>
-                        Selection1
-                    </label><br>
-                    <label for="radio_select_1_1" class="radio_select">
-                        <input name="Handicap" id="radio_select_H_1" type="radio" class="radio_select_inner" />
-                        Selection2
-                    </label><br>
-                    <label for="radio_select_1_2" class="radio_select">
-                        <input name="Handicap" id="radio_select_H_2" type="radio" class="radio_select_inner" />
-                        Selection3
-                    </label><br>
-                    <label for="radio_select_1_3" class="radio_select">
-                        <input name="Handicap" id="radio_select_H_3" type="radio" class="radio_select_inner" />
-                        Selection4
-                    </label><br>
-                </div>
-                
-                
-                <!--TextBox-->
-                <div class="cp_iptxt">
-                    <label class="ef">
-                        <table class="Table-Textbox">
-                            <td><p style="width: 100px;">TextBox:</p></td>
-                            <td><input type="text" name="Name" placeholder="Text" style="width: 200px;" required></td>
-                        </table>
+                <!--タイム-->
+                <div class="section">
+                    <table class="section-title">
+                        <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="45px" height="45px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M4,7h16v2H4V7z M4,13h16v-2H4V13z M4,17h7v-2H4V17z M4,21h7v-2H4V21z M15.41,18.17L14,16.75l-1.41,1.41L15.41,21L20,16.42 L18.58,15L15.41,18.17z M4,3v2h16V3H4z"/></g></svg></td>
+                        <td><p style="font-size: 30px;">Check Data</p></td>
+                    </table>
+                    
+                    <p style="font-size: 25px; display: inline-block;">Team Name :</p>
+                    <p style="font-size: 25px; display: inline;" id="TeamName-text">---</p><br>
+                    
+                    <p style="font-size: 25px; display: inline-block;">Challenge :</p>
+                    <p style="font-size: 25px; display: inline;" id="Challenge-text">---</p><br>
+                    
+                    <p style="font-size: 25px; display: inline-block;">Point :</p>
+                    <p style="font-size: 25px; display: inline;" id="Point-text">0</p>
+                    <p style="font-size: 25px; display: inline;">Pts</p><br>
+                    
+                    <p style="font-size: 25px; display: inline-block;">Retire :</p>
+                    <p style="font-size: 25px; display: inline;" id="Retire-text">---</p><br>
+                    
+                    <p style="font-size: 25px; display: inline-block;">Time :</p>
+                    <p style="font-size: 25px; display: inline;" id="Time-text">---</p><br>
+                    
+                    <label for="checkbox" class="checkbox">
+                        <p style="font-size: 20px; display: inline-block;">チーム代表者確認</p>
+                        <input id="checkbox" type="checkbox" class="checkbox_inner" required/>
+                        
                     </label>
                 </div>
                 
-
                 <input type="submit" value="Send" class="submit-button">
             </div>
         </form>

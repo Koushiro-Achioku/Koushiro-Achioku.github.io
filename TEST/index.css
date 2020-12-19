@@ -230,7 +230,7 @@ nav ul li {
 
 .cp_iptxt {
     width: 120px;
-    margin: 25px 8px;
+    margin: 15px 8px;
 }
 .cp_iptxt input {
     font: 15px/24px sans-serif;
@@ -302,13 +302,13 @@ nav ul li {
 
 .radio_select{
     margin: 5px;
-    font-size: 15px;
-    font-family: F1Bold ,'M PLUS 1p', sans-serif;
+    font-size: 20px;
+    font-family: 'Titillium Web', 'M PLUS 1p', sans-serif;
 }
 
 .radio_select .radio_select_inner{
     position: relative;
-    top: 10px;
+    top: 7px;
     width: 26px;
     height: 26px;
     margin-right: 10px;
@@ -334,4 +334,50 @@ nav ul li {
     text-align: center;
     font-size: 25px;
     content: "";
+}
+
+.Check-text{
+    width: 50%;
+}
+
+.Check-text td{
+    text-align: left;
+    
+}
+
+/* checkbox */
+
+.checkbox{
+    margin: 5px;
+    font-family: 'Titilium Web','M PLUS 1p', sans-serif;
+}
+
+.checkbox .checkbox_inner{
+    top: 10px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background: rgb(214, 214, 214);
+    -webkit-appearance: none;
+    outline: none;
+    border: black solid 2px;
+}
+
+.checkbox .checkbox_inner:checked{
+    border: 0px;
+}
+
+.checkbox .checkbox_inner:checked::after{
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
+    position: absolute;
+    background: #007fff;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    content: "✓";
+    border: black solid 2px;
 }

@@ -52,6 +52,10 @@ document.getElementById("start-button").onclick = function(){
             EndTime_array[0]-=1;
         }
         
+        var sec = RunningTime_array[1]*60 + RunningTime_array[2];
+        
+        document.getElementById("Time-textbox").value = sec+"."+RunningTime_array[3];
+        
         if(RunningTime_array[3]<10){
             RunningTime_array[3]="00"+RunningTime_array[3];
         }
@@ -63,7 +67,6 @@ document.getElementById("start-button").onclick = function(){
             RunningTime_array[2]="0"+RunningTime_array[2];
         }
 
-        console.log(RunningTime_array[1]+":"+RunningTime_array[2]+"."+RunningTime_array[3]);
         document.getElementById("RunningTime-text").innerHTML = RunningTime_array[1]+":"+RunningTime_array[2]+"."+RunningTime_array[3];
 
         clearInterval(timer1);

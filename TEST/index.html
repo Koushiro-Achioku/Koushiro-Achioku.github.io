@@ -4,7 +4,7 @@
         <base target="_top">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="Content-Script-Type" content="text/javascript">
-        <title>長距離走-フォーム</title>
+        <title>高校Ex-フォーム</title>
 
         <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,700&display=swap" rel="stylesheet">
@@ -17,9 +17,14 @@
             var StartTime_array = new Array(0,0,0,0);
             var EndTime_array = new Array(0,0,0,0);
             var RunningTime_array = new Array(0,0,0,0);
-        </script>
-        
-        <script>
+            
+            var Score_array = new Array(12);
+
+            function Score_reset(){
+                for(let i=0; i<12 ; i++ ){ Score_array[i]=0; }
+            }
+            Score_reset();
+            
             function CurrentTime(){
                 var now = new Date();
                 var CureentTime_array = new Array(3);
@@ -123,7 +128,7 @@
                         <table class="Selector-Textbox">
                             <td><p>Team Name:</p></td>
                             <td>
-                                <select name="Teamname" required>
+                                <select name="Teamname" id="Teamname_selector" required>
                                     <option value="null" hidden>選択してください</option>
                                     <option value="1">1 シナモォン!ロール</option>
                                     <option value="2">2 Team GACHI(真剣)</option>
@@ -456,21 +461,9 @@
                         <td><p style="font-size: 30px;">Check Data</p></td>
                     </table>
                     
-                    <p style="font-size: 25px; display: inline-block;">Team Name :</p>
-                    <p style="font-size: 25px; display: inline;" id="TeamName-text">---</p><br>
-                    
-                    <p style="font-size: 25px; display: inline-block;">Challenge :</p>
-                    <p style="font-size: 25px; display: inline;" id="Challenge-text">---</p><br>
-                    
                     <p style="font-size: 25px; display: inline-block;">Point :</p>
                     <p style="font-size: 25px; display: inline;" id="Point-text">0</p>
                     <p style="font-size: 25px; display: inline;">Pts</p><br>
-                    
-                    <p style="font-size: 25px; display: inline-block;">Retire :</p>
-                    <p style="font-size: 25px; display: inline;" id="Retire-text">---</p><br>
-                    
-                    <p style="font-size: 25px; display: inline-block;">Time :</p>
-                    <p style="font-size: 25px; display: inline;" id="Time-text">---</p><br>
                     
                     <label for="checkbox" class="checkbox">
                         <p style="font-size: 20px; display: inline-block;">チーム代表者確認</p>
@@ -484,6 +477,7 @@
         </form>
 
         <script type="text/javascript" src="timing.js"></script>
+        <script type="text/javascript" src="scoring.js"></script>
         
     </body>
 </html>

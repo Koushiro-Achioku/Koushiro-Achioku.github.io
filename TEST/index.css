@@ -26,12 +26,12 @@ p{
     .TitleEng{
         font-family: 'Titillium Web', 'M PLUS 1p', sans-serif;
         font-weight: 600;
-        font-size: 13px; 
+        font-size: 14px; 
         margin: 0;
     }
 
-    .image {
-        width: 100px;
+    .image{
+        height: 25px;
         padding-top: 5px;
     }
 }
@@ -56,11 +56,11 @@ p{
     .TitleEng{
         font-family: 'Titillium Web', 'M PLUS 1p', sans-serif;
         font-weight: 600;
-        font-size: 18px; 
+        font-size: 20px; 
         margin: 0;
     }
 
-    .image {
+    .image{
         height: 25px;
         margin-top: 5px;
     }
@@ -229,10 +229,25 @@ nav ul li {
 /* textbox */
 
 .cp_iptxt {
-    width: 120px;
+    width: 350px;
     margin: 15px 8px;
 }
 .cp_iptxt input {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    color: #000000;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+}
+.cp_ipnum {
+    width: 150px;
+    margin: 15px 8px;
+}
+.cp_ipnum input {
     font: 15px/24px sans-serif;
     box-sizing: border-box;
     width: 100%;
@@ -342,14 +357,12 @@ nav ul li {
 
 .Check-text td{
     text-align: left;
-    
 }
 
 /* checkbox */
 
 .checkbox{
-    margin: 5px;
-    font-family: 'Titilium Web','M PLUS 1p', sans-serif;
+    font-family: 'Titillium Web','M PLUS 1p', sans-serif;
 }
 
 .checkbox .checkbox_inner{

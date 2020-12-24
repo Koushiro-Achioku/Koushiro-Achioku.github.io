@@ -1,5 +1,57 @@
-let timer1;
-var NowTime_array = new Array(4);
+var timer1;
+
+function logging(){
+    let NowTime_array = new Array(4);
+    let now = new Date();
+    NowTime_array[0] = now.getHours();
+    NowTime_array[1] = now.getMinutes();
+    NowTime_array[2] = now.getSeconds();
+    NowTime_array[3] = now.getMilliseconds();
+    
+    //マイクロ秒計算
+    if(NowTime_array[3]>=StartTime_array[3]){
+        RunningTime_array[3]=NowTime_array[3]-StartTime_array[3];
+    }
+    else{
+        RunningTime_array[3]=1000+NowTime_array[3]-StartTime_array[3];
+        NowTime_array[2]-=1;
+    }
+    //秒計算
+    if(NowTime_array[2]>=StartTime_array[2]){
+        RunningTime_array[2]=NowTime_array[2]-StartTime_array[2];
+    }
+    else{
+        RunningTime_array[2]=60+NowTime_array[2]-StartTime_array[2];
+        NowTime_array[1]-=1;
+    }
+    //分計算(60分以内が前提)
+    if(NowTime_array[1]>=StartTime_array[1]){
+        RunningTime_array[1]=NowTime_array[1]-StartTime_array[1];
+    }
+    else{
+        RunningTime_array[1]=60+NowTime_array[1]-StartTime_array[1];
+        NowTime_array[0]-=1;
+    }
+    
+    let min = RunningTime_array[1];
+    let sec = RunningTime_array[2];
+    let microsec = RunningTime_array[3];
+
+    if(microsec<10){
+        microsec = "00" + microsec;
+    }
+    else if(microsec<100){
+        microsec = "0" + microsec;
+    }
+
+    if(sec<10){
+        sec = "0" + sec;
+    }
+
+    document.getElementById("RunningTime-text").innerHTML = min + ":" + sec + "." + microsec;
+    
+    console.log(NowTime_array[1]+":"+NowTime_array[2]+"."+NowTime_array[3]);    //ロギング
+}
 
 document.getElementById("start-button").onclick = function(){
     if(document.getElementById("StartTime").innerHTML=="Start:Ready"){
@@ -52,13 +104,13 @@ document.getElementById("start-button").onclick = function(){
             EndTime_array[0]-=1;
         }
         
-        var min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
+        let min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
         
         document.getElementById("Time-textbox").value = min_and_sec + "." + RunningTime_array[3];
         
-        var min = RunningTime_array[1];
-        var sec = RunningTime_array[2];
-        var microsec = RunningTime_array[3];
+        let min = RunningTime_array[1];
+        let sec = RunningTime_array[2];
+        let microsec = RunningTime_array[3];
         
         if(microsec<10){
             microsec = "00" + microsec;
@@ -83,53 +135,5 @@ document.getElementById("radio_select_R_1").onclick = function(){
 
 document.getElementById("radio_select_R_2").onclick = function(){
     var min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
-        
-        document.getElementById("Time-textbox").value = min_and_sec + "." + RunningTime_array[3];
+    document.getElementById("Time-textbox").value = min_and_sec + "." + RunningTime_array[3];
 };
-
-function logging(){
-    var now = new Date();
-    NowTime_array[0] = now.getHours();
-    NowTime_array[1] = now.getMinutes();
-    NowTime_array[2] = now.getSeconds();
-    NowTime_array[3] = now.getMilliseconds()
-    
-    //マイクロ秒計算
-    if(NowTime_array[3]>=StartTime_array[3]){
-        RunningTime_array[3]=NowTime_array[3]-StartTime_array[3];
-    }
-    else{
-        RunningTime_array[3]=1000+NowTime_array[3]-StartTime_array[3];
-        NowTime_array[2]-=1;
-    }
-    //秒計算
-    if(NowTime_array[2]>=StartTime_array[2]){
-        RunningTime_array[2]=NowTime_array[2]-StartTime_array[2];
-    }
-    else{
-        RunningTime_array[2]=60+NowTime_array[2]-StartTime_array[2];
-        NowTime_array[1]-=1;
-    }
-    //分計算(60分以内が前提)
-    if(NowTime_array[1]>=StartTime_array[1]){
-        RunningTime_array[1]=NowTime_array[1]-StartTime_array[1];
-    }
-    else{
-        RunningTime_array[1]=60+NowTime_array[1]-StartTime_array[1];
-        NowTime_array[0]-=1;
-    }
-    
-    if(RunningTime_array[3]<10){
-        RunningTime_array[3]="00"+RunningTime_array[3];
-    }
-    else if(RunningTime_array[3]<100){
-        RunningTime_array[3]="0"+RunningTime_array[3];
-    }
-    
-    if(RunningTime_array[2]<10){
-        RunningTime_array[2]="0"+RunningTime_array[2];
-    }
-    
-    console.log(NowTime_array[1]+":"+NowTime_array[2]+"."+NowTime_array[3]);    //ロギング
-    document.getElementById("RunningTime-text").innerHTML = RunningTime_array[1]+":"+RunningTime_array[2]+"."+RunningTime_array[3];    //テキスト表示
-}

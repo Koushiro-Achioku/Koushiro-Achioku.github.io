@@ -105,9 +105,6 @@ document.getElementById("start-button").onclick = function(){
         }
         
         let min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
-        
-        document.getElementById("Time-textbox").value = min_and_sec + "." + RunningTime_array[3];
-        
         let min = RunningTime_array[1];
         let sec = RunningTime_array[2];
         let microsec = RunningTime_array[3];
@@ -123,6 +120,7 @@ document.getElementById("start-button").onclick = function(){
             sec = "0" + sec;
         }
 
+        document.getElementById("Time-textbox").value = min_and_sec + "." + microsec;
         document.getElementById("RunningTime-text").innerHTML = min + ":" + sec + "." + microsec;
 
         clearInterval(timer1);

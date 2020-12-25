@@ -1,3 +1,5 @@
+var passcode = '123456';
+
 function doGet() {
     /*
     var htmlOutput = HtmlService.createTemplateFromFile("index").evaluate();
@@ -9,6 +11,7 @@ function doGet() {
 }
 
 function doPost(e) {
+  if(e.parameter.Passcode == passcode){
     // シートを取得
     var sheet = getSheet('Base Data');
 
@@ -26,6 +29,14 @@ function doPost(e) {
     htmlOutput.setTitle('Senior Ex-Form').setFaviconUrl('https://dl.dropboxusercontent.com/s/2fkyrscnn1yeg1v/fabicon.png');
     htmlOutput.addMetaTag('viewport','width=device-width, initial-scale=1, user-scalable=no');
     return htmlOutput;
+  }
+  else{
+    var htmlOutput = HtmlService.createTemplateFromFile("error").evaluate();
+    //https://dl.dropboxusercontent.com/s/2fkyrscnn1yeg1v/fabicon.png
+    htmlOutput.setTitle('Senior Ex-Form').setFaviconUrl('https://dl.dropboxusercontent.com/s/2fkyrscnn1yeg1v/fabicon.png');
+    htmlOutput.addMetaTag('viewport','width=device-width, initial-scale=1, user-scalable=no');
+    return htmlOutput;
+  }
 }
 
 function getSheet(name){

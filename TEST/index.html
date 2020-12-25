@@ -4,7 +4,7 @@
         <base target="_top">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="Content-Script-Type" content="text/javascript">
-        <title>高校Ex-フォーム</title>
+        <title>Senior Ex-Form</title>
 
         <!--WEBフォントの引用-->
         <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700&display=swap" rel="stylesheet">
@@ -27,14 +27,6 @@
         
             <ul>
                 <li>Aコート</li>
-                <li>1 Team GACHI(真剣)</li>
-                <li>2 シナモォン!ロール</li>
-                <li>3 Ragipower Next</li>
-                <li>4 サクシード ろぼ I+F</li>
-                <li>5 overcome</li>
-                <li>6 松山ちゃん</li>
-                <li>7 NEO-phyte</li>
-                <li>Bコート</li>
                 <li>1 Team GACHI(真剣)</li>
                 <li>2 シナモォン!ロール</li>
                 <li>3 Ragipower Next</li>
@@ -73,7 +65,6 @@
                     <td class="right-td">
                         <p class="TitleEng">Time</p>
                         <p class="TitleEng" id="RunningTime-text">0:00.000</p>
-                        <input type="hidden" name="Time" id="Time-input" value="">
                     </td>
                 </table>
             </div>
@@ -101,7 +92,7 @@
                         <table class="Selector-Textbox">
                             <td><p>Team Name:</p></td>
                             <td>
-                                <select name="Teamname" id="Teamname_selector" required>
+                                <select name="TeamID" id="Teamname_selector" required>
                                     <option value="null" hidden>選択してください</option>
                                     <option value="1">1 シナモォン!ロール</option>
                                     <option value="2">2 Team GACHI(真剣)</option>
@@ -126,11 +117,11 @@
                     <!--RadioButton-->
                     <div style="margin-bottom:20px;">
                         <label for="radio_select_C_0" class="radio_select">
-                            <input name="Challege" id="radio_select_C_0" type="radio" class="radio_select_inner" required/>
+                            <input name="Challege" id="radio_select_C_0" type="radio" class="radio_select_inner" value="1" required/>
                             1st
                         </label><br>
                         <label for="radio_select_C_1" class="radio_select">
-                            <input name="Challege" id="radio_select_C_1" type="radio" class="radio_select_inner" />
+                            <input name="Challege" id="radio_select_C_1" type="radio" class="radio_select_inner" value="2" />
                             2nd
                         </label>
                     </div>
@@ -436,6 +427,8 @@
                     <p style="font-size: 25px; display: inline-block;">Point :</p>
                     <p style="font-size: 25px; display: inline;" id="Point-text">0</p>
                     <p style="font-size: 25px; display: inline;">Pts</p><br>
+
+                    <input hidden type="number" name="Point" value="0" id="Point-textbox" required>
                     
                     <label for="checkbox" class="checkbox">
                         <p style="font-size: 25px; display: inline-block;">Confirmation</p>

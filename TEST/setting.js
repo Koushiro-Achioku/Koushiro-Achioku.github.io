@@ -63,6 +63,7 @@ function Scoring(mission,selected){
     Score_array[mission] = each_point * selected;
     Score_sum();
     document.getElementById("Point-text").innerHTML = Score_array[0];
+    document.getElementById("Point-textbox").value = Score_array[0];
 }
 
 //現在時刻表示関数

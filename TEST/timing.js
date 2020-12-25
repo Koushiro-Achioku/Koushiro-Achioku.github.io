@@ -56,7 +56,7 @@ function logging(){
 document.getElementById("start-button").onclick = function(){
     if(document.getElementById("StartTime").innerHTML=="Start:Ready"){
         console.log("start!");
-        var now = new Date();
+        let now = new Date();
         StartTime_array[0] = now.getHours();
         StartTime_array[1] = now.getMinutes();
         StartTime_array[2] = now.getSeconds();
@@ -70,7 +70,7 @@ document.getElementById("start-button").onclick = function(){
     }
     else if(document.getElementById("EndTime").innerHTML == "End:Now Running"){
         console.log("end!");
-        var now = new Date();
+        let now = new Date();
         EndTime_array[0] = now.getHours();
         EndTime_array[1] = now.getMinutes();
         EndTime_array[2] = now.getSeconds();
@@ -134,6 +134,6 @@ document.getElementById("radio_select_R_1").onclick = function(){
 };
 
 document.getElementById("radio_select_R_2").onclick = function(){
-    var min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
+    let min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
     document.getElementById("Time-textbox").value = min_and_sec + "." + RunningTime_array[3];
 };

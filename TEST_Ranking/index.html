@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base target="_top">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <title>Ranking</title>
+
+        <!--WEBフォントの引用-->
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,700&display=swap" rel="stylesheet">
+
+        <link href="index.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="setting.js"></script>
+    </head>
+    <body onLoad="CurrentTime()">
+        <!--ヘッダー-->
+        <div class="headder">
+            <table>
+                <td class="nav-td">
+                    <!--
+                    <div class="btn_menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30px" height="30px" style="padding-top: 3px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg></div>
+                    -->
+                </td>
+                <td class="center-td">
+                    <img src="wro-rogo-white.png" class="image">
+                    <p class="TitleEng">Scoring System - Senior Ex</p>
+                    <!--<p class="Title">高校エキスパート</p>-->
+                </td>
+                <td class="right-td">
+                    <p class="TitleEng">Current</p>
+                    <p class="TitleEng" id="CurrentTime-text">12:34:56</p>
+                </td>
+            </table>
+        </div>
+
+        <!--メイン-->
+        <div class="area">
+            <table class="section-title">
+                <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 0 24 24" width="45px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></td>
+                <td><p style="font-size: 30px;">Live Standings</p></td>
+            </table>
+            <iframe src="https://script.google.com/macros/s/AKfycbzmTYgogly8EdV-wDBH5nae3llwGATD4_P4nHBo4g74QVDcP4mG/exec"></iframe>
+        </div>
+        
+    </body>
+</html>

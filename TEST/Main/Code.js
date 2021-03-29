@@ -26,7 +26,7 @@ function doPost(e) {
 
     // 最終行にデータ挿入
     // 「e.parameter.フォーム名」 でフォームから送信されたパラメータを受け取ることができます
-    sheet.appendRow([new Date(),e.parameter.TeamID,e.parameter.Challege,e.parameter.Point,e.parameter.Time,e.parameter.Retire,
+    sheet.appendRow([new Date(),e.parameter.TeamID,e.parameter.Round,e.parameter.Point,e.parameter.Time,e.parameter.Retire,
         e.parameter.Mission1_1,e.parameter.Mission1_2,e.parameter.Mission2_1,e.parameter.Mission2_2,e.parameter.Mission2_3,
         e.parameter.Mission3_1,e.parameter.Mission3_2,e.parameter.Mission3_3,e.parameter.Mission4,e.parameter.Mission5_1,e.parameter.Mission5_2]);
 

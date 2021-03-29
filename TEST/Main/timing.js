@@ -62,7 +62,7 @@ document.getElementById("start-button").onclick = function(){
         StartTime_array[2] = now.getSeconds();
         StartTime_array[3] = now.getMilliseconds()
 
-        document.getElementById("StartTime").innerHTML = "Start:" + StartTime_array[0] + "時" + StartTime_array[1] + "分" + StartTime_array[2] + "秒" + StartTime_array[3];
+        document.getElementById("StartTime").innerHTML = "Start:" + StartTime_array[0] + ":" + StartTime_array[1] + ":" + StartTime_array[2] + "." + StartTime_array[3];
         document.getElementById("EndTime").innerHTML = "End:Now Running";
         document.getElementById("start-button-text").innerHTML="Stop";
 
@@ -76,7 +76,7 @@ document.getElementById("start-button").onclick = function(){
         EndTime_array[2] = now.getSeconds();
         EndTime_array[3] = now.getMilliseconds()
 
-        document.getElementById("EndTime").innerHTML = "End:" + EndTime_array[0] + "時" + EndTime_array[1] + "分" + EndTime_array[2] + "秒" + EndTime_array[3];
+        document.getElementById("EndTime").innerHTML = "End:" + EndTime_array[0] + ":" + EndTime_array[1] + ":" + EndTime_array[2] + "." + EndTime_array[3];
         document.getElementById("start-button-text").innerHTML="-----";
 
 
@@ -128,12 +128,12 @@ document.getElementById("start-button").onclick = function(){
     }
 };
 
-document.getElementById("radio_select_R_1").onclick = function(){
+document.getElementById("radio_select_Retire_1").onclick = function(){
     document.getElementById("Time-textbox").value = "150.0";
     document.getElementById("Time-text").innerHTML = "150.0";
 };
 
-document.getElementById("radio_select_R_2").onclick = function(){
+document.getElementById("radio_select_Retire_2").onclick = function(){
     let min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
     document.getElementById("Time-textbox").value = min_and_sec + "." + RunningTime_array[3];
     document.getElementById("Time-text").innerHTML = min_and_sec + "." + RunningTime_array[3];

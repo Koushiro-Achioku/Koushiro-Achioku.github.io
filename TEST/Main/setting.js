@@ -88,6 +88,10 @@ function Scoring(mission,selected){
     document.getElementById("Point-textbox").value = Score_array[0];
 }
 
+function Round_set(text){
+    document.getElementById("Round-text").innerHTML = text;
+}
+
 //現在時刻表示関数
 function CurrentTime(){
     let now = new Date();
@@ -107,12 +111,16 @@ function CurrentTime(){
     setTimeout("CurrentTime()", 1000);
 }
 
-//Timeへの直打ち処理
+//Teamname,Round,Timeの処理
 window.addEventListener('DOMContentLoaded', function(){
-    // input要素を取得
-    var input_name = document.getElementById("Time-textbox");
-    // イベントリスナーでイベント「change」を登録
-    input_name.addEventListener("change",function(){
-        document.getElementById("Time-text").innerHTML = input_name.value;
+    var input_time = document.getElementById("Time-textbox");
+    input_time.addEventListener("change",function(){
+        document.getElementById("Time-text").innerHTML = input_time.value;
+    });
+
+    var select_teamname = document.getElementById("Teamname_selector");
+    select_teamname.addEventListener("change",function(){
+        var num = select_teamname.selectedIndex;
+        document.getElementById("Teamname-text").innerHTML = select_teamname.options[num].innerText;
     });
 });

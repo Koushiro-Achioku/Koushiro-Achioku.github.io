@@ -22,7 +22,7 @@
         <nav>
             <div>
                 <div class="btn_menu"><p style="margin: 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30px" height="30px" style="padding-top: 4px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></p></div>
-                <p style="color: white; margin: 10px;">出走順一覧</p>
+                <p style="color: white; margin: 10px;">Start Order List</p>
             </div>
 
             <iframe src="https://script.google.com/macros/s/AKfycbyY_WIBIEL7IJ52DPCEr58Vdj3Ouv2Q3lu3D-0xyYZNxil27l8/exec"></iframe>
@@ -102,17 +102,17 @@
                 <div class="section">
                     <table class="section-title">
                         <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="45px" height="45px"><path d="M0 0h24v24H0z" fill="none"/><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg></td>
-                        <td><p style="font-size: 30px;">Challege</p></td>
+                        <td><p style="font-size: 30px;">Round</p></td>
                     </table>
                     
                     <!--RadioButton-->
                     <div style="margin-bottom:20px;">
-                        <label for="radio_select_C_0" class="radio_select">
-                            <input name="Challege" id="radio_select_C_0" type="radio" class="radio_select_inner" value="1" required/>
+                        <label for="radio_select_Round_0" class="radio_select">
+                            <input name="Round" id="radio_select_Round_0" type="radio" class="radio_select_inner" value="1" onclick="Round_set('1st')" required/>
                             1st
                         </label><br>
-                        <label for="radio_select_C_1" class="radio_select">
-                            <input name="Challege" id="radio_select_C_1" type="radio" class="radio_select_inner" value="2" />
+                        <label for="radio_select_Round_1" class="radio_select">
+                            <input name="Round" id="radio_select_Round_1" type="radio" class="radio_select_inner" value="2" onclick="Round_set('2nd')" />
                             2nd
                         </label>
                     </div>
@@ -379,12 +379,12 @@
                     </table>
                     
                     <div>
-                        <label for="radio_select_R_1" class="radio_select">
-                            <input name="Retire" id="radio_select_R_1" type="radio" class="radio_select_inner" value="Yes" required/>
+                        <label for="radio_select_Retire_1" class="radio_select">
+                            <input name="Retire" id="radio_select_Retire_1" type="radio" class="radio_select_inner" value="Yes" required/>
                             YES
                         </label><br>
-                        <label for="radio_select_R_2" class="radio_select">
-                            <input name="Retire" id="radio_select_R_2" type="radio" class="radio_select_inner" value="No" />
+                        <label for="radio_select_Retire_2" class="radio_select">
+                            <input name="Retire" id="radio_select_Retire_2" type="radio" class="radio_select_inner" value="No" />
                             NO
                         </label>
                     </div><br>
@@ -414,6 +414,19 @@
                         <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="45px" height="45px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M4,7h16v2H4V7z M4,13h16v-2H4V13z M4,17h7v-2H4V17z M4,21h7v-2H4V21z M15.41,18.17L14,16.75l-1.41,1.41L15.41,21L20,16.42 L18.58,15L15.41,18.17z M4,3v2h16V3H4z"/></g></svg></td>
                         <td><p style="font-size: 30px;">Check Data</p></td>
                     </table>
+
+                    <table class="check" style="width:60%">
+                        <tr>
+                            <td style="width:20%">Team Name</td>
+                            <td id="Teamname-text"></td>
+                        </tr>
+                        <tr>
+                            <td style="width:20%">Round</td>
+                            <td id="Round-text"></td>
+                        </tr>
+                    </table>
+
+                    <br>
 
                     <table class="check">
                         <tr style="background-color: white;">

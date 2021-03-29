@@ -19,42 +19,64 @@ function Score_sum(){
     }
 }
 
-//点数計算関数
+//点数計算・確認画面生成関数
 function Scoring(mission,selected){
     let each_point;
     switch(mission){
         case 1:
             each_point=9;
+            document.getElementById("check_M1-1").innerText = selected;
+            document.getElementById("check_M1-1_Total").innerText = selected*each_point;
             break;
         case 2:
             each_point=6;
+            document.getElementById("check_M1-2").innerText = selected;
+            document.getElementById("check_M1-2_Total").innerText = selected*each_point;
             break;
         case 3:
             each_point=12;
+            document.getElementById("check_M2-1").innerText = selected;
+            document.getElementById("check_M2-1_Total").innerText = selected*each_point;
             break;
         case 4:
             each_point=8;
+            document.getElementById("check_M2-2").innerText = selected;
+            document.getElementById("check_M2-2_Total").innerText = selected*each_point;
             break;
         case 5:
             each_point=10;
+            document.getElementById("check_M2-3").innerText = selected;
+            document.getElementById("check_M2-3_Total").innerText = selected*each_point;
             break;
         case 6:
             each_point=4;
+            document.getElementById("check_M3-1").innerText = selected;
+            document.getElementById("check_M3-1_Total").innerText = selected*each_point;
             break;
         case 7:
             each_point=8;
+            document.getElementById("check_M3-2").innerText = selected;
+            document.getElementById("check_M3-2_Total").innerText = selected*each_point;
             break;
         case 8:
             each_point=7;
+            document.getElementById("check_M3-3").innerText = selected;
+            document.getElementById("check_M3-3_Total").innerText = selected*each_point;
             break;
         case 9:
             each_point=6;
+            document.getElementById("check_M4").innerText = selected;
+            document.getElementById("check_M4_Total").innerText = selected*each_point;
             break;
         case 10:
             each_point=5;
+            document.getElementById("check_M5-1").innerText = selected;
+            document.getElementById("check_M5-1_Total").innerText = selected*each_point;
             break;
         case 11:
             each_point=-7;
+            document.getElementById("check_M5-2").innerText = selected;
+            document.getElementById("check_M5-2_Total").innerText = selected*each_point;
             break;
         default:
             console.log("ERROR!!");
@@ -84,3 +106,13 @@ function CurrentTime(){
     document.getElementById("CurrentTime-text").innerHTML = CureentTime_array[0]+":"+CureentTime_array[1]+":"+CureentTime_array[2];
     setTimeout("CurrentTime()", 1000);
 }
+
+//Timeへの直打ち処理
+window.addEventListener('DOMContentLoaded', function(){
+    // input要素を取得
+    var input_name = document.getElementById("Time-textbox");
+    // イベントリスナーでイベント「change」を登録
+    input_name.addEventListener("change",function(){
+        document.getElementById("Time-text").innerHTML = input_name.value;
+    });
+});

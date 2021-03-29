@@ -121,6 +121,7 @@ document.getElementById("start-button").onclick = function(){
         }
 
         document.getElementById("Time-textbox").value = min_and_sec + "." + microsec;
+        document.getElementById("Time-text").innerHTML = min_and_sec + "." + microsec;
         document.getElementById("RunningTime-text").innerHTML = min + ":" + sec + "." + microsec;
 
         clearInterval(timer1);
@@ -128,10 +129,12 @@ document.getElementById("start-button").onclick = function(){
 };
 
 document.getElementById("radio_select_R_1").onclick = function(){
-    document.getElementById("Time-textbox").value = "150.0"
+    document.getElementById("Time-textbox").value = "150.0";
+    document.getElementById("Time-text").innerHTML = "150.0";
 };
 
 document.getElementById("radio_select_R_2").onclick = function(){
     let min_and_sec = RunningTime_array[1]*60 + RunningTime_array[2];
     document.getElementById("Time-textbox").value = min_and_sec + "." + RunningTime_array[3];
+    document.getElementById("Time-text").innerHTML = min_and_sec + "." + RunningTime_array[3];
 };

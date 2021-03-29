@@ -94,6 +94,18 @@ td{
     text-align:  center;
 }
 
+.check{
+    border: solid 0.5px #5f5f5f;
+}
+
+.check th{
+    border: solid 0.5px #5f5f5f;
+}
+
+.check td{
+    border: solid 0.5px #5f5f5f;
+}
+
 .nav-td{
     width: 25%;
 }

@@ -415,6 +415,7 @@
                         <td><p style="font-size: 30px;">Check Data</p></td>
                     </table>
 
+                    <!--確認画面-->
                     <table class="check" style="width:60%">
                         <tr>
                             <td style="width:20%">Team Name</td>
@@ -547,8 +548,19 @@
                         </tr>
                     </table>
 
+                    <!--データ送信用非表示input-->
                     <input hidden type="number" name="Point" value="0" id="Point-textbox" required>
+
+                    <p style="font-size: 30px;">Signature</p>
+                    <!--署名欄-->
+                    <canvas id="canvas" width="800" height="300" style="border: solid 1px #000;box-sizing: border-box;"></canvas>
+                    <br>
+                    <input type="button" value="clear" id="clear" wtx-context="0F667A5A-ADAA-4A61-832D-BCCB93A881AF">
+                    <a id="download" href="#" download="canvas.jpg">ダウンロード</a>
+                    <div id="result"><img src=""></div>
+                    <script src="./canvas.js"></script>
                     
+                    <!--確認用チェックボックス-->
                     <label for="checkbox" class="checkbox">
                         <p style="font-size: 25px; display: inline-block;">Confirmation</p>
                         <input id="checkbox" type="checkbox" class="checkbox_inner" required/>

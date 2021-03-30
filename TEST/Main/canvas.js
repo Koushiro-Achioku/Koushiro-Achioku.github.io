@@ -22,13 +22,11 @@ clickFlg = 0; // マウス押下終了
 // マウス移動処理
 if(!clickFlg) return false;
 draw(e.offsetX, e.offsetY);
-});
-
-$("#canvas").touchstart(function(){
+}).on('touchstart',function(){
 clickFlg = 1; // マウス押下開始
-}).touchend(function(){
+}).on('touchend',function(){
 clickFlg = 0; // マウス押下終了
-}).touchmove(function(e){
+}).on('touchmove',function(e){
 // マウス移動処理
 if(!clickFlg) return false;
 draw(e.offsetX, e.offsetY);

@@ -49,8 +49,9 @@ setBgColor();
 // canvasを画像で保存
 $("#download").click(function(){
 canvas = document.getElementById('canvas');
-var base64 = canvas.toDataURL("image/jpeg");
+var base64 = canvas.toDataURL("image/png");
 document.getElementById("download").href = base64;
+console.log(base64);
 });
 
 function setBgColor(){

@@ -26,12 +26,12 @@ draw(e.offsetX, e.offsetY);
 
 $("#canvas").touchstart(function(){
 clickFlg = 1; // マウス押下開始
-}).mouseup(function(){
+}).touchend(function(){
 clickFlg = 0; // マウス押下終了
-}).mousemove(function(e){
+}).touchmove(function(e){
 // マウス移動処理
 if(!clickFlg) return false;
-draw(e.offsetX, e.offsetY); 
+draw(e.offsetX, e.offsetY);
 });
 
 // 描画処理

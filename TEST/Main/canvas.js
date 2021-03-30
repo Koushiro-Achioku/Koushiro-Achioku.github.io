@@ -24,6 +24,16 @@ if(!clickFlg) return false;
 draw(e.offsetX, e.offsetY);
 });
 
+$("#canvas").touchstart(function(){
+clickFlg = 1; // マウス押下開始
+}).mouseup(function(){
+clickFlg = 0; // マウス押下終了
+}).mousemove(function(e){
+// マウス移動処理
+if(!clickFlg) return false;
+draw(e.offsetX, e.offsetY); 
+});
+
 // 描画処理
 function draw(x, y) {
 ctx.lineWidth = cnvBold;

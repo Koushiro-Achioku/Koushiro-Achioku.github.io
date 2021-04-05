@@ -412,3 +412,7 @@ iframe{
     content: "✓";
     border: black solid 2px;
 }
+
+.printBc{
+    font-family: 'Titillium Web', 'M PLUS 1p', sans-serif;
+}

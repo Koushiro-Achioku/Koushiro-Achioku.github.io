@@ -415,150 +415,163 @@
                         <td><p style="font-size: 30px;">Check Data</p></td>
                     </table>
 
-                    <!--確認画面-->
-                    <table class="check" style="width:60%">
-                        <tr>
-                            <td style="width:20%">Team Name</td>
-                            <td id="Teamname-text"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:20%">Round</td>
-                            <td id="Round-text"></td>
-                        </tr>
-                    </table>
+                    <div class="print-area">
+                        <img src="../../img/wro-rogo.png" alt="WRO-rogo" style="width: 30%;">
+
+                        <!--確認画面-->
+                        <table class="check" style="width:60%">
+                            <tr>
+                                <td style="width:20%">Team Name</td>
+                                <td id="Teamname-text"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:20%">Round</td>
+                                <td id="Round-text"></td>
+                            </tr>
+                        </table>
+                        <br>
+
+                        <table class="check">
+                            <tr style="background-color: white;">
+                                <th style="width: 60%;">Tasks</th>
+                                <th style="width: 10%;">Each</th>
+                                <th style="width: 10%;">Max</th>
+                                <th style="width: 10%;">#</th>
+                                <th style="width: 10%;">Total</th>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>Deliver the notices of evacuation</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>Completely within the property (max. 1 per house)</td>
+                                <td style="background-color: lightgray;">9</td>
+                                <td style="background-color: lightgray;">18</td>
+                                <td id="check_M1-1">0</td>
+                                <td id="check_M1-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>Partly within the property (max. 1 per house)</td>
+                                <td style="background-color: lightgray;">6</td>
+                                <td style="background-color: lightgray;">12</td>
+                                <td id="check_M1-2">0</td>
+                                <td id="check_M1-2_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>Protect the houses</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>Sandbag touches the black line (2 max. per house)</td>
+                                <td style="background-color: lightgray;">12</td>
+                                <td style="background-color: lightgray;">48</td>
+                                <td id="check_M2-1">0</td>
+                                <td id="check_M2-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>●Bonus if both sandbags are the same color as the house</td>
+                                <td style="background-color: lightgray;">8</td>
+                                <td style="background-color: lightgray;">16</td>
+                                <td id="check_M2-2">0</td>
+                                <td id="check_M2-2_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>●Bonus for house fully protected (no gap)</td>
+                                <td style="background-color: lightgray;">10</td>
+                                <td style="background-color: lightgray;">20</td>
+                                <td id="check_M2-3">0</td>
+                                <td id="check_M2-3_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>Build reinforcement walls</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>Concrete blocks completely inside the white target area or stacked on blocks completely inside the white target area (3 max per target area)</td>
+                                <td style="background-color: lightgray;">4</td>
+                                <td style="background-color: lightgray;">24</td>
+                                <td id="check_M3-1">0</td>
+                                <td id="check_M3-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>●Bonus for concrete block standing and correctly stacked in an intertwined way on two blocks</td>
+                                <td style="background-color: lightgray;">8</td>
+                                <td style="background-color: lightgray;">16</td>
+                                <td id="check_M3-2">0</td>
+                                <td id="check_M3-2_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>●Bonus for each block of the right color per target area</td>
+                                <td style="background-color: lightgray;">7</td>
+                                <td style="background-color: lightgray;">42</td>
+                                <td id="check_M3-3">0</td>
+                                <td id="check_M3-3_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>Return to starting position</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>Returns to its starting position and stops by itself (partly or completely hiding the grey circle from top view)</td>
+                                <td style="background-color: lightgray;">6</td>
+                                <td style="background-color: lightgray;">6</td>
+                                <td id="check_M4">0</td>
+                                <td id="check_M4_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>Get bonus points and avoid penalties</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>House still in its original position</td>
+                                <td style="background-color: lightgray;">5</td>
+                                <td style="background-color: lightgray;">10</td>
+                                <td id="check_M5-1">0</td>
+                                <td id="check_M5-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>Tree moved (no longer touching the light grey square) or damaged (at least one piece broken). (*)</td>
+                                <td style="background-color: lightgray;">-7</td>
+                                <td style="background-color: lightgray;">-21</td>
+                                <td id="check_M5-2">0</td>
+                                <td id="check_M5-2_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>Maximum Score</td>
+                                <td></td><td>200</td><td></td><td></td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>Total Score in this run</td>
+                                <td></td><td></td><td></td><td id="Point-text">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>Time in full seconds</td>
+                                <td></td><td></td><td></td><td id="Time-text">0</td>
+                            </tr>
+                        </table>
+                        <br>
+
+                        <table class="check" style="width:60%">
+                            <tr>
+                                <td style="width:20%">Player Signature</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="width:20%">Judge Signature</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    
 
                     <br>
-
-                    <table class="check">
-                        <tr style="background-color: white;">
-                            <th style="width: 60%;">Tasks</th>
-                            <th style="width: 10%;">Each</th>
-                            <th style="width: 10%;">Max</th>
-                            <th style="width: 10%;">#</th>
-                            <th style="width: 10%;">Total</th>
-                        </tr>
-                        <tr style="background-color: lightgray;">
-                            <td>Deliver the notices of evacuation</td>
-                            <td></td><td></td><td></td><td></td>
-                        </tr>
-                        <tr>
-                            <td>Completely within the property (max. 1 per house)</td>
-                            <td style="background-color: lightgray;">9</td>
-                            <td style="background-color: lightgray;">18</td>
-                            <td id="check_M1-1">0</td>
-                            <td id="check_M1-1_Total">0</td>
-                        </tr>
-                        <tr>
-                            <td>Partly within the property (max. 1 per house)</td>
-                            <td style="background-color: lightgray;">6</td>
-                            <td style="background-color: lightgray;">12</td>
-                            <td id="check_M1-2">0</td>
-                            <td id="check_M1-2_Total">0</td>
-                        </tr>
-                        <tr style="background-color: lightgray;">
-                            <td>Protect the houses</td>
-                            <td></td><td></td><td></td><td></td>
-                        </tr>
-                        <tr>
-                            <td>Sandbag touches the black line (2 max. per house)</td>
-                            <td style="background-color: lightgray;">12</td>
-                            <td style="background-color: lightgray;">48</td>
-                            <td id="check_M2-1">0</td>
-                            <td id="check_M2-1_Total">0</td>
-                        </tr>
-                        <tr>
-                            <td>●Bonus if both sandbags are the same color as the house</td>
-                            <td style="background-color: lightgray;">8</td>
-                            <td style="background-color: lightgray;">16</td>
-                            <td id="check_M2-2">0</td>
-                            <td id="check_M2-2_Total">0</td>
-                        </tr>
-                        <tr>
-                            <td>●Bonus for house fully protected (no gap)</td>
-                            <td style="background-color: lightgray;">10</td>
-                            <td style="background-color: lightgray;">20</td>
-                            <td id="check_M2-3">0</td>
-                            <td id="check_M2-3_Total">0</td>
-                        </tr>
-                        <tr style="background-color: lightgray;">
-                            <td>Build reinforcement walls</td>
-                            <td></td><td></td><td></td><td></td>
-                        </tr>
-                        <tr>
-                            <td>Concrete blocks completely inside the white target area or stacked on blocks completely inside the white target area (3 max per target area)</td>
-                            <td style="background-color: lightgray;">4</td>
-                            <td style="background-color: lightgray;">24</td>
-                            <td id="check_M3-1">0</td>
-                            <td id="check_M3-1_Total">0</td>
-                        </tr>
-                        <tr>
-                            <td>●Bonus for concrete block standing and correctly stacked in an intertwined way on two blocks</td>
-                            <td style="background-color: lightgray;">8</td>
-                            <td style="background-color: lightgray;">16</td>
-                            <td id="check_M3-2">0</td>
-                            <td id="check_M3-2_Total">0</td>
-                        </tr>
-                        <tr>
-                            <td>●Bonus for each block of the right color per target area</td>
-                            <td style="background-color: lightgray;">7</td>
-                            <td style="background-color: lightgray;">42</td>
-                            <td id="check_M3-3">0</td>
-                            <td id="check_M3-3_Total">0</td>
-                        </tr>
-                        <tr style="background-color: lightgray;">
-                            <td>Return to starting position</td>
-                            <td></td><td></td><td></td><td></td>
-                        </tr>
-                        <tr>
-                            <td>Returns to its starting position and stops by itself (partly or completely hiding the grey circle from top view)</td>
-                            <td style="background-color: lightgray;">6</td>
-                            <td style="background-color: lightgray;">6</td>
-                            <td id="check_M4">0</td>
-                            <td id="check_M4_Total">0</td>
-                        </tr>
-                        <tr style="background-color: lightgray;">
-                            <td>Get bonus points and avoid penalties</td>
-                            <td></td><td></td><td></td><td></td>
-                        </tr>
-                        <tr>
-                            <td>House still in its original position</td>
-                            <td style="background-color: lightgray;">5</td>
-                            <td style="background-color: lightgray;">10</td>
-                            <td id="check_M5-1">0</td>
-                            <td id="check_M5-1_Total">0</td>
-                        </tr>
-                        <tr>
-                            <td>Tree moved (no longer touching the light grey square) or damaged (at least one piece broken). (*)</td>
-                            <td style="background-color: lightgray;">-7</td>
-                            <td style="background-color: lightgray;">-21</td>
-                            <td id="check_M5-2">0</td>
-                            <td id="check_M5-2_Total">0</td>
-                        </tr>
-                        <tr style="background-color: lightgray;">
-                            <td>Maximum Score</td>
-                            <td></td><td>200</td><td></td><td></td>
-                        </tr>
-                        <tr style="background-color: lightgray;">
-                            <td>Total Score in this run</td>
-                            <td></td><td></td><td></td><td id="Point-text">0</td>
-                        </tr>
-                        <tr style="background-color: lightgray;">
-                            <td>Time in full seconds</td>
-                            <td></td><td></td><td></td><td id="Time-text">0</td>
-                        </tr>
-                    </table>
+                    <button id="print-btn">Print</button>
+                    
+                    <br>
 
                     <!--データ送信用非表示input-->
                     <input hidden type="number" name="Point" value="0" id="Point-textbox" required>
-
-                    <p style="font-size: 30px;">Signature</p>
-
-                    <!--署名欄-->
-                    <canvas id="canvas" width="800" height="300" style="border: solid 1px #000;box-sizing: border-box;"></canvas>
-                    <br>
-                    <input type="button" value="clear" id="clear" wtx-context="0F667A5A-ADAA-4A61-832D-BCCB93A881AF">
-                    <a id="download" href="#" download="canvas.png">ダウンロード</a>
-                    <script src="./canvas.js"></script><br>
                     
                     <!--確認用チェックボックス-->
                     <label for="checkbox" class="checkbox">
@@ -582,6 +595,7 @@
         </form>
 
         <script type="text/javascript" src="timing.js"></script>
+        <script type="text/javascript" src="print.js"></script>
         
     </body>
 </html>

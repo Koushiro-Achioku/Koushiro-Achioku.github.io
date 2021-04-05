@@ -416,16 +416,16 @@
                     </table>
 
                     <div class="print-area">
-                        <img src="../../img/wro-kyoto-rogo2.png" alt="WRO-rogo" style="width: 30%;">
+                        <img id="rogo_img" class="print-rogo" src="../../img/wro-kyoto-rogo2.png">
 
                         <!--確認画面-->
                         <table class="check" style="width:60%">
                             <tr>
-                                <td style="width:20%">Team Name</td>
+                                <td style="width:30%">Team Name</td>
                                 <td id="Teamname-text"></td>
                             </tr>
                             <tr>
-                                <td style="width:20%">Round</td>
+                                <td style="width:30%">Round</td>
                                 <td id="Round-text"></td>
                             </tr>
                         </table>
@@ -551,23 +551,20 @@
                         </table>
                         <br>
 
-                        <table class="check" style="width:60%">
-                            <tr>
-                                <td style="width:20%">Player Signature</td>
+                        <table id="signature" class="signature-table" style="width: 60%;">
+                            <tr style="height: 60px;">
+                                <td style="width: 40%;">Player Signature</td>
                                 <td></td>
                             </tr>
-                            <tr>
-                                <td style="width:20%">Judge Signature</td>
+                            <tr style="height: 60px;">
+                                <td style="width: 40%;">Judge Signature</td>
                                 <td></td>
                             </tr>
                         </table>
                     </div>
 
-                    
-
                     <br>
                     <button id="print-btn">Print</button>
-                    
                     <br>
 
                     <!--データ送信用非表示input-->

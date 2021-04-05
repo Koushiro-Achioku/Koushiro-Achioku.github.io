@@ -416,3 +416,18 @@ iframe{
 .printBc{
     font-family: 'Titillium Web', 'M PLUS 1p', sans-serif;
 }
+
+.print-rogo{
+    width: 20%;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.signature-table{
+    border-collapse: collapse;
+    display: none;
+}
+
+.signature-table td{
+    border: solid 0.5px #5f5f5f;
+}

@@ -11,7 +11,7 @@ function doGet() {
   　//エラー表示
   　var htmlOutput = HtmlService.createTemplateFromFile("error").evaluate();
     //https://dl.dropboxusercontent.com/s/2fkyrscnn1yeg1v/fabicon.png
-    htmlOutput.setTitle('Senior Ex-Form').setFaviconUrl('https://dl.dropboxusercontent.com/s/2fkyrscnn1yeg1v/fabicon.png');
+    htmlOutput.setTitle('エラー').setFaviconUrl('https://dl.dropboxusercontent.com/s/2fkyrscnn1yeg1v/fabicon.png');
     htmlOutput.addMetaTag('viewport','width=device-width, initial-scale=1, user-scalable=no');
     return htmlOutput;
 }

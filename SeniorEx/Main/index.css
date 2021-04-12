@@ -4,6 +4,7 @@ body{
 
 p{
     margin: 8px;
+    font-size: 20px;
 }
 
 @media screen and (max-width : 566px){

@@ -173,8 +173,9 @@
                             </table>
                         </div>
                     </div><br>
-                
-                
+                </div>
+
+                <div class="section">
                     <p>Energy unit completely in a house</p>
                     <p>● matching the energy identifier color for that house or</p>
                     <p>● matching the color of the surplus energy source</p>
@@ -204,7 +205,9 @@
                             </table>
                         </div>
                     </div><br>
+                </div>
 
+                <div class="section">
                     <p>Correct configuration of energy supply for a house (4 energy units completely in the house, at least one color per energy identifier and possibly of the surplus energy and no units of the wrong color in the house)</p>
                     <img width="40%" height="auto" src="../img/M1-3.png" ><br>
                     <div>
@@ -225,212 +228,114 @@
                             3
                         </label><br>
                     </div><br>
+                </div>
+                
+                <div class="section">
+                    <p style="font-size: 25px;">[M2]Store remaining energy units (points for max. 4 units)</p>
 
-                    <!--====================================================ここまで==============================================================================-->
-                    
-                    <p style="font-size: 25px;">[M2]Protect the houses</p>
-
-                    <p>Sandbag touches the black line (2 max. per house) [12pts/each]</p>
-                    <img width="60%" height="auto" src="../img/M2-1.png" >
+                    <p>Energy unit is completely inside the storage battery and the
+                        fence is not moved (touching outside the light grey area) and not
+                        damaged (at least one piece broken)</p>
+                    <img width="40%" height="auto" src="../img/M2-1.png" >
                     <div>
                         <label for="radio_select_M2-1_0" class="radio_select">
-                            <input name="Mission2_1" id="radio_select_M2-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(3,this.value)" required/>
+                            <input name="Mission2_1" id="radio_select_M2-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(4,this.value)" required/>
                             0
                         </label><br>
                         <label for="radio_select_M2-1_1" class="radio_select">
-                            <input name="Mission2_1" id="radio_select_M2-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(3,this.value)" />
+                            <input name="Mission2_1" id="radio_select_M2-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(4,this.value)" />
                             1
                         </label><br>
                         <label for="radio_select_M2-1_2" class="radio_select">
-                            <input name="Mission2_1" id="radio_select_M2-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(3,this.value)" />
+                            <input name="Mission2_1" id="radio_select_M2-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(4,this.value)" />
                             2
                         </label><br>
                         <label for="radio_select_M2-1_3" class="radio_select">
-                            <input name="Mission2_1" id="radio_select_M2-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(3,this.value)" />
+                            <input name="Mission2_1" id="radio_select_M2-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(4,this.value)" />
                             3
                         </label><br>
                         <label for="radio_select_M2-1_4" class="radio_select">
-                            <input name="Mission2_1" id="radio_select_M2-1_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(3,this.value)" />
+                            <input name="Mission2_1" id="radio_select_M2-1_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(4,this.value)" />
                             4
                         </label><br>
                     </div><br>
-
-                    <p>Bonus if both sandbags are the same color as the house [8pts/each]</p>
-                    <!--https://dl.dropboxusercontent.com/s/fmv5jum6m4ylyh8/M2-23.png-->
-                    <img width="40%" height="auto" src="../img/M2-23.png" >
-                    <div>
-                        <label for="radio_select_M2-2_0" class="radio_select">
-                            <input name="Mission2_2" id="radio_select_M2-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(4,this.value)" required/>
-                            0
-                        </label><br>
-                        <label for="radio_select_M2-2_1" class="radio_select">
-                            <input name="Mission2_2" id="radio_select_M2-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(4,this.value)" />
-                            1
-                        </label><br>
-                        <label for="radio_select_M2-2_2" class="radio_select">
-                            <input name="Mission2_2" id="radio_select_M2-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(4,this.value)" />
-                            2
-                        </label><br>
-                    </div><br>
-                    
-                    <p>Bonus for house fully protected (no gap) [10pts/each]</p>
-                    <div>
-                        <label for="radio_select_M2-3_0" class="radio_select">
-                            <input name="Mission2_3" id="radio_select_M2-3_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(5,this.value)" required/>
-                            0
-                        </label><br>
-                        <label for="radio_select_M2-3_1" class="radio_select">
-                            <input name="Mission2_3" id="radio_select_M2-3_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(5,this.value)" />
-                            1
-                        </label><br>
-                        <label for="radio_select_M2-3_2" class="radio_select">
-                            <input name="Mission2_3" id="radio_select_M2-3_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(5,this.value)" />
-                            2
-                        </label><br>
-                    </div><br>
-
-                    <p style="font-size: 25px;">[M3]Build reinforcement walls</p>
-                    <p>Concrete blocks completely inside the white target area or stacked on blocks completely inside the white target area (3 max per target area) [4pts/each]</p>
-                    <!--https://dl.dropboxusercontent.com/s/2jf9ssqg9kchme7/M3-1.png-->
-                    <img width="40%" height="auto" src="../img/M3-1.png" >
+                </div>
+                
+                <div class="section">
+                    <p style="font-size: 25px;">[M3]Turn the solar cells</p>
+                    <p>Solar cell completely inside the lighter yellow area the solar cell is standing with studs on top.</p>
+                    <img width="40%" height="auto" src="../img/M3.png" >
                     <div>
                         <label for="radio_select_M3-1_0" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(6,this.value)" required/>
+                            <input name="Mission3_1" id="radio_select_M3-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(5,this.value)" required/>
                             0
                         </label><br>
                         <label for="radio_select_M3-1_1" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(6,this.value)" />
+                            <input name="Mission3_1" id="radio_select_M3-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(5,this.value)" />
                             1
                         </label><br>
                         <label for="radio_select_M3-1_2" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(6,this.value)" />
-                            2
-                        </label><br>
-                        <label for="radio_select_M3-1_3" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(6,this.value)" />
-                            3
-                        </label><br>
-                        <label for="radio_select_M3-1_4" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(6,this.value)" />
-                            4
-                        </label><br>
-                        <label for="radio_select_M3-1_5" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_5" type="radio" class="radio_select_inner" value="5" onclick="Scoring(6,this.value)" />
-                            5
-                        </label><br>
-                        <label for="radio_select_M3-1_6" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_6" type="radio" class="radio_select_inner" value="6" onclick="Scoring(6,this.value)" />
-                            6
-                        </label><br>
-                    </div><br>
-
-                    <p>Bonus for concrete block standing and correctly stacked in an intertwined way on two blocks [8pts/each]</p>
-                    <!--https://dl.dropboxusercontent.com/s/k2r0rl7ruzvtvs1/M3-2.png-->
-                    <img width="30%" height="auto" src="../img/M3-2.png" >
-                    <div>
-                        <label for="radio_select_M3-2_0" class="radio_select">
-                            <input name="Mission3_2" id="radio_select_M3-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(7,this.value)" required/>
-                            0
-                        </label><br>
-                        <label for="radio_select_M3-2_1" class="radio_select">
-                            <input name="Mission3_2" id="radio_select_M3-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(7,this.value)" />
-                            1
-                        </label><br>
-                        <label for="radio_select_M3-2_2" class="radio_select">
-                            <input name="Mission3_2" id="radio_select_M3-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(7,this.value)" />
+                            <input name="Mission3_1" id="radio_select_M3-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(5,this.value)" />
                             2
                         </label><br>
                     </div><br>
-
-                    <p>Bonus for each block of the right color per target area [7pts/each]</p>
-                    <!--https://dl.dropboxusercontent.com/s/g5ra1dtwj5fpocy/M3-3.png-->
-                    <img width="50%" height="auto" src="../img/M3-3.png" >
-                    <div>
-                        <label for="radio_select_M3-3_0" class="radio_select">
-                            <input name="Mission3_3" id="radio_select_M3-3_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(8,this.value)" required/>
-                            0
-                        </label><br>
-                        <label for="radio_select_M3-3_1" class="radio_select">
-                            <input name="Mission3_3" id="radio_select_M3-3_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(8,this.value)" />
-                            1
-                        </label><br>
-                        <label for="radio_select_M3-3_2" class="radio_select">
-                            <input name="Mission3_3" id="radio_select_M3-3_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(8,this.value)" />
-                            2
-                        </label><br>
-                        <label for="radio_select_M3-3_3" class="radio_select">
-                            <input name="Mission3_3" id="radio_select_M3-3_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(8,this.value)" />
-                            3
-                        </label><br>
-                        <label for="radio_select_M3-3_4" class="radio_select">
-                            <input name="Mission3_3" id="radio_select_M3-3_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(8,this.value)" />
-                            4
-                        </label><br>
-                        <label for="radio_select_M3-3_5" class="radio_select">
-                            <input name="Mission3_3" id="radio_select_M3-3_5" type="radio" class="radio_select_inner" value="5" onclick="Scoring(8,this.value)" />
-                            5
-                        </label><br>
-                        <label for="radio_select_M3-3_6" class="radio_select">
-                            <input name="Mission3_3" id="radio_select_M3-3_6" type="radio" class="radio_select_inner" value="6" onclick="Scoring(8,this.value)" />
-                            6
-                        </label><br>
-                    </div><br>
-
-                    <p style="font-size: 25px;">[M4]Return to starting position</p>
-                    <p>Robot started at position:</p>
-                    <p>Returns to its starting position and stops by itself (partly or completely hiding the grey circle from top view) [6pts]</p>
-                    <!--https://dl.dropboxusercontent.com/s/ezxpysa6k773phm/M4.png-->
+                </div>
+                <!--====================================================ここまで==============================================================================-->
+                <div class="section">
+                    <p style="font-size: 25px;">[M4]Park the robot</p>
+                    <p>Robot completely stops in the Start & Finish Area (only if other points, not bonus, are assigned)</p>
                     <img width="50%" height="auto" src="../img/M4.png" >
                     <div>
                         <label for="radio_select_M4_1" class="radio_select">
-                            <input name="Mission4" id="radio_select_M4_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(9,this.value)" required/>
+                            <input name="Mission4" id="radio_select_M4_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(6,this.value)" required/>
                             YES
                         </label><br>
                         <label for="radio_select_M4_2" class="radio_select">
-                            <input name="Mission4" id="radio_select_M4_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(9,this.value)" />
+                            <input name="Mission4" id="radio_select_M4_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(6,this.value)" />
                             NO
                         </label>
                     </div><br>
+                </div>
 
-                    <p style="font-size: 25px;">[M5]Get bonus points and avoid penalties</p>
-
-                    <p>House still in its original position [5pts/each]</p>
-                    <!--https://dl.dropboxusercontent.com/s/8woz8maj3m7t0c3/M5-1.png-->
-                    <img width="40%" height="auto" src="../img/M5-1.png" >
+                <div class="section">
+                    <p style="font-size: 25px;">[M5]Get bonus points</p>
+                    <p>Hydro power plant fence is not moved or damaged.</p>
+                    <img width="50%" height="auto" src="../img/M5-1.png" >
                     <div>
-                        <label for="radio_select_M5-1_0" class="radio_select">
-                            <input name="Mission5_1" id="radio_select_M5-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(10,this.value)" required/>
-                            0
-                        </label><br>
                         <label for="radio_select_M5-1_1" class="radio_select">
-                            <input name="Mission5_1" id="radio_select_M5-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(10,this.value)" />
-                            1
+                            <input name="Mission5_1" id="radio_select_M5-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(7,this.value)" required/>
+                            YES
                         </label><br>
                         <label for="radio_select_M5-1_2" class="radio_select">
-                            <input name="Mission5_1" id="radio_select_M5-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(10,this.value)" />
-                            2
-                        </label><br>
+                            <input name="Mission5_1" id="radio_select_M5-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(7,this.value)" />
+                            NO
+                        </label>
                     </div><br>
+                </div>
 
-                    <p>Tree moved (no longer touching the light grey square) or damaged (at least one piece broken). (*) [-7pts/each]</p>
-                    <!--https://dl.dropboxusercontent.com/s/an8qw95jwcdlgxr/M5-2.png-->
+                <div class="section">
+                    <p>Wind turbine not moved or damaged.</p>
                     <img width="50%" height="auto" src="../img/M5-2.png" >
                     <div>
                         <label for="radio_select_M5-2_0" class="radio_select">
-                            <input name="Mission5_2" id="radio_select_M5-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(11,this.value)" required/>
+                            <input name="Mission5_2" id="radio_select_M5-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(8,this.value)" required/>
                             0
                         </label><br>
                         <label for="radio_select_M5-2_1" class="radio_select">
-                            <input name="Mission5_2" id="radio_select_M5-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(11,this.value)" />
+                            <input name="Mission5_2" id="radio_select_M5-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(8,this.value)" />
                             1
                         </label><br>
                         <label for="radio_select_M5-2_2" class="radio_select">
-                            <input name="Mission5_2" id="radio_select_M5-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(11,this.value)" />
+                            <input name="Mission5_2" id="radio_select_M5-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(8,this.value)" />
                             2
                         </label><br>
                         <label for="radio_select_M5-2_3" class="radio_select">
-                            <input name="Mission5_2" id="radio_select_M5-2_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(11,this.value)" />
+                            <input name="Mission5_2" id="radio_select_M5-2_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(8,this.value)" />
                             3
+                        </label><br>
+                        <label for="radio_select_M5-2_4" class="radio_select">
+                            <input name="Mission5_2" id="radio_select_M5-2_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(8,this.value)" />
+                            4
                         </label><br>
                     </div><br>
                 </div>
@@ -533,59 +438,34 @@
                                 <td id="check_M1-3">0</td>
                                 <td id="check_M1-3_Total">0</td>
                             </tr>
-                            <!--====================================================ここまで==============================================================================-->
                             <tr style="background-color: lightgray;">
-                                <td>Protect the houses</td>
+                                <td>Store remaining energy units (points for max. 4 units)</td>
                                 <td></td><td></td><td></td><td></td>
                             </tr>
                             <tr>
-                                <td>Sandbag touches the black line (2 max. per house)</td>
-                                <td style="background-color: lightgray;">12</td>
-                                <td style="background-color: lightgray;">48</td>
-                                <td id="check_M2-1">0</td>
-                                <td id="check_M2-1_Total">0</td>
+                                <td>Energy unit is completely inside the storage battery and the
+                                    fence is not moved (touching outside the light grey area) and not
+                                    damaged (at least one piece broken)</td>
+                                <td style="background-color: lightgray;">5</td>
+                                <td style="background-color: lightgray;">20</td>
+                                <td id="check_M2">0</td>
+                                <td id="check_M2_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>Turn the solar cells</td>
+                                <td></td><td></td><td></td><td></td>
                             </tr>
                             <tr>
-                                <td>●Bonus if both sandbags are the same color as the house</td>
-                                <td style="background-color: lightgray;">8</td>
-                                <td style="background-color: lightgray;">16</td>
-                                <td id="check_M2-2">0</td>
-                                <td id="check_M2-2_Total">0</td>
-                            </tr>
-                            <tr>
-                                <td>●Bonus for house fully protected (no gap)</td>
+                                <td>Solar cell completely inside the lighter yellow area the solar cell
+                                    is standing with studs on top.</td>
                                 <td style="background-color: lightgray;">10</td>
                                 <td style="background-color: lightgray;">20</td>
-                                <td id="check_M2-3">0</td>
-                                <td id="check_M2-3_Total">0</td>
+                                <td id="check_M3">0</td>
+                                <td id="check_M3_Total">0</td>
                             </tr>
+                            <!--====================================================ここまで==============================================================================-->
                             <tr style="background-color: lightgray;">
-                                <td>Build reinforcement walls</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
-                            <tr>
-                                <td>Concrete blocks completely inside the white target area or stacked on blocks completely inside the white target area (3 max per target area)</td>
-                                <td style="background-color: lightgray;">4</td>
-                                <td style="background-color: lightgray;">24</td>
-                                <td id="check_M3-1">0</td>
-                                <td id="check_M3-1_Total">0</td>
-                            </tr>
-                            <tr>
-                                <td>●Bonus for concrete block standing and correctly stacked in an intertwined way on two blocks</td>
-                                <td style="background-color: lightgray;">8</td>
-                                <td style="background-color: lightgray;">16</td>
-                                <td id="check_M3-2">0</td>
-                                <td id="check_M3-2_Total">0</td>
-                            </tr>
-                            <tr>
-                                <td>●Bonus for each block of the right color per target area</td>
-                                <td style="background-color: lightgray;">7</td>
-                                <td style="background-color: lightgray;">42</td>
-                                <td id="check_M3-3">0</td>
-                                <td id="check_M3-3_Total">0</td>
-                            </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>Return to starting position</td>
+                                <td>Park the robot</td>
                                 <td></td><td></td><td></td><td></td>
                             </tr>
                             <tr>
@@ -596,26 +476,26 @@
                                 <td id="check_M4_Total">0</td>
                             </tr>
                             <tr style="background-color: lightgray;">
-                                <td>Get bonus points and avoid penalties</td>
+                                <td>Get bonus points</td>
                                 <td></td><td></td><td></td><td></td>
                             </tr>
                             <tr>
-                                <td>House still in its original position</td>
-                                <td style="background-color: lightgray;">5</td>
-                                <td style="background-color: lightgray;">10</td>
+                                <td>Hydro power plant fence is not moved or damaged.</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">12</td>
                                 <td id="check_M5-1">0</td>
                                 <td id="check_M5-1_Total">0</td>
                             </tr>
                             <tr>
-                                <td>Tree moved (no longer touching the light grey square) or damaged (at least one piece broken). (*)</td>
-                                <td style="background-color: lightgray;">-7</td>
-                                <td style="background-color: lightgray;">-21</td>
+                                <td>Wind turbine not moved or damaged.</td>
+                                <td style="background-color: lightgray;">3</td>
+                                <td style="background-color: lightgray;">12</td>
                                 <td id="check_M5-2">0</td>
                                 <td id="check_M5-2_Total">0</td>
                             </tr>
                             <tr style="background-color: lightgray;">
                                 <td>Maximum Score</td>
-                                <td></td><td>200</td><td></td><td></td>
+                                <td></td><td>210</td><td></td><td></td>
                             </tr>
                             <tr style="background-color: lightgray;">
                                 <td>Total Score in this run</td>

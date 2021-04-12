@@ -19,8 +19,8 @@ function doPost(e) {
     // 最終行にデータ挿入
     // 「e.parameter.フォーム名」 でフォームから送信されたパラメータを受け取ることができます
     sheet.appendRow([new Date(),e.parameter.TeamID,e.parameter.Round,e.parameter.Point,e.parameter.Time,e.parameter.Retire,
-        e.parameter.Mission1_1,e.parameter.Mission1_2,e.parameter.Mission1_3,e.parameter.Mission2_2,e.parameter.Mission2_3,
-        e.parameter.Mission3_1,e.parameter.Mission3_2,e.parameter.Mission3_3,e.parameter.Mission4,e.parameter.Mission5_1,e.parameter.Mission5_2]);
+        e.parameter.Mission1_1,e.parameter.Mission1_2,e.parameter.Mission1_3,e.parameter.Mission2,e.parameter.Mission3,
+        e.parameter.Mission4,e.parameter.Mission5_1,e.parameter.Mission5_2]);
 
     calculate();
     sort();
@@ -40,7 +40,8 @@ function doPost(e) {
 
 function getSheet(name){
     // SSIDからスプレッドシートの取得
-    var ssId = '';
+    //https://docs.google.com/spreadsheets/d/1ura54uUdaOLdgg9DY-cHIapp-wN-nLY69U0s7z-7Qjk/edit?usp=sharing
+    var ssId = '1ura54uUdaOLdgg9DY-cHIapp-wN-nLY69U0s7z-7Qjk';
     var ss = SpreadsheetApp.openById(ssId);
     // 指定されたシート名からシートを取得して返却
     var sheet = ss.getSheetByName(name);
@@ -64,7 +65,7 @@ function calculate(){
   
   for(var i=2; i<LastRow+1; i++){
     //BaseDataからcheckしていない行を探索
-    if(sheet.getRange(i,18).getValue()!="Yes"){
+    if(sheet.getRange(i,15).getValue()!="Yes"){
       
       var id_position=0;
       for(var ii=2; ii<LastRow2+2; ii++){

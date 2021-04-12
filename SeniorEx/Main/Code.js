@@ -155,7 +155,7 @@ function calculate(){
       sheet3.getRange(rank,6).setValue(sheet2.getRange(id_position,5).getValue());
       
       
-      sheet.getRange(i,18).setValue("Yes");//checkした行に印をつける
+      sheet.getRange(i,15).setValue("Yes");//checkした行に印をつける
     }
   }
 }

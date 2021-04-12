@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base target="_top">
+
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,700&display=swap" rel="stylesheet">
+
+    <style>
+        <?!= HtmlService.createHtmlOutputFromFile('CSS').getContent(); ?>
+    </style>
+    
+    <!--GASでは以下は削除-->
+    <link href="gas.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <table>
+        <tr>
+            <th>POS</th>
+            <th>Team Name</th>
+            <th>Point</th>
+            <th>Time</th>
+            <th>Retire</th>
+        </tr>
+        <?
+            // スプレッドシートからデータを取得
+            var data = getData('Ranking');
+            
+            // テーブルを作成
+            for(var i=1;i<data.length;i++){
+                output._ = '<tr>';
+                output._ = '<td>' + data[i][0] + '</td>';
+                output._ = '<td class="MpBold">' + data[i][2] + '</td>';
+                output._ = '<td>' + data[i][3] + '</td>';
+                output._ = '<td>' + data[i][4] + '</td>';
+                output._ = '<td>' + data[i][5] + '</td>';
+                output._ = '</tr>';
+            }
+        ?>
+        </table>
+  </body>
+</html>

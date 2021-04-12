@@ -50,7 +50,7 @@ function doPost(e) {
 
 function getSheet(name){
     // SSIDからスプレッドシートの取得
-    var ssId = '1oH0emVlJX4MwYbd1gzXWfPmNs1h8lql12jCLCxfoj8s';
+    var ssId = 'hoge';
     var ss = SpreadsheetApp.openById(ssId);
     // 指定されたシート名からシートを取得して返却
     var sheet = ss.getSheetByName(name);

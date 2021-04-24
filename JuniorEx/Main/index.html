@@ -25,7 +25,7 @@
                 <p style="color: white; margin: 10px;">Start Order List</p>
             </div>
 
-            <iframe src="https://script.google.com/macros/s/AKfycbzXzhx9dNpu9LPSYAiNknLRFCgrqTncY5SYkmD97AvYXdmcBVViqRvB6Dg8JaQMYjU5/exec"></iframe>
+            <iframe src="hoge"></iframe>
         </nav>
         
         <script>
@@ -36,7 +36,7 @@
         })
         </script>
 
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbxWsUwy8gAsLbUTM_F3cSRRDdWIq_UjkzMp9txvAg6gKYducK6oELNnLF-n9QWo71Ag/exec">
+        <form method="POST" action="hoge">
 
             <!--ヘッダー-->
             <div class="headder">
@@ -61,7 +61,6 @@
 
             <!--メイン-->
             <div class="area">
-                <form method="post" action="https://script.google.com/macros/s/AKfycbxWsUwy8gAsLbUTM_F3cSRRDdWIq_UjkzMp9txvAg6gKYducK6oELNnLF-n9QWo71Ag/exec"></form>
 
                 <!--ストップウォッチ-->
                 <table>
@@ -149,13 +148,13 @@
                     <img width="25%" height="auto" src="../img/M1-1.png" ><br>
                     <div>
                         <div>
-                            <label for="radio_select_M1-1_0" class="radio_select">
-                                <input name="Mission1_1" id="radio_select_M1-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(1,this.value)" required/>
-                                NO
-                            </label><br>
                             <label for="radio_select_M1-1_1" class="radio_select">
                                 <input name="Mission1_1" id="radio_select_M1-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(1,this.value)" />
                                 YES
+                            </label><br>
+                            <label for="radio_select_M1-1_0" class="radio_select">
+                                <input name="Mission1_1" id="radio_select_M1-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(1,this.value)" required/>
+                                NO
                             </label><br>
                         </div><br>
                     </div><br>
@@ -180,12 +179,8 @@
                     </div><br>
                 </div>
 
-                <!--========================================================ここまで========================================================-->
-
-                <p style="font-size: 50px;">[CAUTION]UNDER CONSTRUCTION</p><br>
-
                 <div class="section">
-                    <p>Correct configuration of energy supply for a house (4 energy units completely in the house, at least one color per energy identifier and possibly of the surplus energy and no units of the wrong color in the house)</p>
+                    <p>Electrical and hybrid car completely inside the parking bay in the exit lane (only one car per parking bay counts).</p>
                     <img width="40%" height="auto" src="../img/M1-3.png" ><br>
                     <div>
                         <label for="radio_select_M1-3_0" class="radio_select">
@@ -200,75 +195,147 @@
                             <input name="Mission1_3" id="radio_select_M1-3_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(3,this.value)" />
                             2
                         </label><br>
-                        <label for="radio_select_M1-3_3" class="radio_select">
-                            <input name="Mission1_3" id="radio_select_M1-3_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(3,this.value)" />
+                    </div><br>
+                </div>
+                
+                <div class="section">
+                    <p style="font-size: 25px;">[M2]Sorting waiting cars (cars without black tiles on top)</p>
+
+                    <p>Car completely in a parking bay of a different color without a barrier in front.</p>
+                    <img width="40%" height="auto" src="../img/M2-1.png" >
+                    <div>
+                        <label for="radio_select_M2-1_0" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(4,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M2-1_1" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(4,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M2-1_2" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(4,this.value)" />
+                            2
+                        </label><br>
+                        <label for="radio_select_M2-1_3" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(4,this.value)" />
                             3
+                        </label><br>
+                        <label for="radio_select_M2-1_4" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2-1_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(4,this.value)" />
+                            4
+                        </label><br>
+                        <label for="radio_select_M2-1_5" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2-1_5" type="radio" class="radio_select_inner" value="5" onclick="Scoring(4,this.value)" />
+                            5
+                        </label><br>
+                        <label for="radio_select_M2-1_6" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2-1_6" type="radio" class="radio_select_inner" value="6" onclick="Scoring(4,this.value)" />
+                            6
+                        </label><br>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p>Car completely in a parking bay of the corresponding color and without a barrier in front.</p>
+                    <img width="40%" height="auto" src="../img/M2-2.png" >
+                    <div>
+                        <label for="radio_select_M2-2_0" class="radio_select">
+                            <input name="Mission2_2" id="radio_select_M2-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(5,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M2-2_1" class="radio_select">
+                            <input name="Mission2_2" id="radio_select_M2-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(5,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M2-2_2" class="radio_select">
+                            <input name="Mission2_2" id="radio_select_M2-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(5,this.value)" />
+                            2
+                        </label><br>
+                        <label for="radio_select_M2-2_3" class="radio_select">
+                            <input name="Mission2_2" id="radio_select_M2-2_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(5,this.value)" />
+                            3
+                        </label><br>
+                        <label for="radio_select_M2-2_4" class="radio_select">
+                            <input name="Mission2_2" id="radio_select_M2-2_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(5,this.value)" />
+                            4
+                        </label><br>
+                        <label for="radio_select_M2-2_5" class="radio_select">
+                            <input name="Mission2_2" id="radio_select_M2-2_5" type="radio" class="radio_select_inner" value="5" onclick="Scoring(5,this.value)" />
+                            5
+                        </label><br>
+                        <label for="radio_select_M2-2_6" class="radio_select">
+                            <input name="Mission2_2" id="radio_select_M2-2_6" type="radio" class="radio_select_inner" value="6" onclick="Scoring(5,this.value)" />
+                            6
                         </label><br>
                     </div><br>
                 </div>
                 
                 <div class="section">
-                    <p style="font-size: 25px;">[M2]Store remaining energy units (points for max. 4 units)</p>
-
-                    <p>Energy unit is completely inside the storage battery and the
-                        fence is not moved (touching outside the light grey area) and not
-                        damaged (at least one piece broken)</p>
-                    <img width="40%" height="auto" src="../img/M2-1.png" >
+                    <p style="font-size: 25px;">[M3]Charge the cars (only one block per parking bay counts)</p>
+                    <p>Battery block touching a green or blue parking bay with a correct car.</p>
+                    <img width="40%" height="auto" src="../img/M3-1.png" >
                     <div>
-                        <label for="radio_select_M2-1_0" class="radio_select">
-                            <input name="Mission2" id="radio_select_M2-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(4,this.value)" required/>
+                        <label for="radio_select_M3-1_0" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(6,this.value)" required/>
                             0
                         </label><br>
-                        <label for="radio_select_M2-1_1" class="radio_select">
-                            <input name="Mission2" id="radio_select_M2-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(4,this.value)" />
+                        <label for="radio_select_M3-1_1" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(6,this.value)" />
                             1
                         </label><br>
-                        <label for="radio_select_M2-1_2" class="radio_select">
-                            <input name="Mission2" id="radio_select_M2-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(4,this.value)" />
+                        <label for="radio_select_M3-1_2" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(6,this.value)" />
                             2
                         </label><br>
-                        <label for="radio_select_M2-1_3" class="radio_select">
-                            <input name="Mission2" id="radio_select_M2-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(4,this.value)" />
+                        <label for="radio_select_M3-1_3" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(6,this.value)" />
                             3
                         </label><br>
-                        <label for="radio_select_M2-1_4" class="radio_select">
-                            <input name="Mission2" id="radio_select_M2-1_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(4,this.value)" />
+                        <label for="radio_select_M3-1_4" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3-1_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(6,this.value)" />
                             4
                         </label><br>
                     </div><br>
                 </div>
-                
+
                 <div class="section">
-                    <p style="font-size: 25px;">[M3]Turn the solar cells</p>
-                    <p>Solar cell completely inside the lighter yellow area the solar cell is standing with studs on top.</p>
-                    <img width="40%" height="auto" src="../img/M3.png" >
+                    <p>OR: Battery block completely inside a green or blue parking bay with a correct car.</p>
+                    <img width="40%" height="auto" src="../img/M3-2.png" >
                     <div>
-                        <label for="radio_select_M3-1_0" class="radio_select">
-                            <input name="Mission3" id="radio_select_M3-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(5,this.value)" required/>
+                        <label for="radio_select_M3-2_0" class="radio_select">
+                            <input name="Mission3_2" id="radio_select_M3-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(7,this.value)" required/>
                             0
                         </label><br>
-                        <label for="radio_select_M3-1_1" class="radio_select">
-                            <input name="Mission3" id="radio_select_M3-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(5,this.value)" />
+                        <label for="radio_select_M3-2_1" class="radio_select">
+                            <input name="Mission3_2" id="radio_select_M3-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(7,this.value)" />
                             1
                         </label><br>
-                        <label for="radio_select_M3-1_2" class="radio_select">
-                            <input name="Mission3" id="radio_select_M3-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(5,this.value)" />
+                        <label for="radio_select_M3-2_2" class="radio_select">
+                            <input name="Mission3_2" id="radio_select_M3-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(7,this.value)" />
                             2
                         </label><br>
+                        <label for="radio_select_M3-2_3" class="radio_select">
+                            <input name="Mission3_2" id="radio_select_M3-2_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(7,this.value)" />
+                            3
+                        </label><br>
+                        <label for="radio_select_M3-2_4" class="radio_select">
+                            <input name="Mission3_2" id="radio_select_M3-2_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(7,this.value)" />
+                            4
+                        </label><br>
                     </div><br>
-                </div>
-                <!--====================================================ここまで==============================================================================-->
+                </div>                
+                
                 <div class="section">
                     <p style="font-size: 25px;">[M4]Park the robot</p>
                     <p>Robot completely stops in the Start & Finish Area (only if other points, not bonus, are assigned)</p>
                     <img width="50%" height="auto" src="../img/M4.png" >
                     <div>
                         <label for="radio_select_M4_1" class="radio_select">
-                            <input name="Mission4" id="radio_select_M4_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(6,this.value)" required/>
+                            <input name="Mission4" id="radio_select_M4_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(8,this.value)" required/>
                             YES
                         </label><br>
                         <label for="radio_select_M4_2" class="radio_select">
-                            <input name="Mission4" id="radio_select_M4_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(6,this.value)" />
+                            <input name="Mission4" id="radio_select_M4_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(8,this.value)" />
                             NO
                         </label>
                     </div><br>
@@ -276,43 +343,43 @@
 
                 <div class="section">
                     <p style="font-size: 25px;">[M5]Get bonus points</p>
-                    <p>Hydro power plant fence is not moved or damaged.</p>
+                    <p>Pillar is not moved or damaged.</p>
                     <img width="50%" height="auto" src="../img/M5-1.png" >
                     <div>
+                        <label for="radio_select_M5-1_0" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(9,this.value)" required/>
+                            0
+                        </label><br>
                         <label for="radio_select_M5-1_1" class="radio_select">
-                            <input name="Mission5_1" id="radio_select_M5-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(7,this.value)" required/>
-                            YES
+                            <input name="Mission5_1" id="radio_select_M5-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(9,this.value)" />
+                            1
                         </label><br>
                         <label for="radio_select_M5-1_2" class="radio_select">
-                            <input name="Mission5_1" id="radio_select_M5-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(7,this.value)" />
-                            NO
-                        </label>
+                            <input name="Mission5_1" id="radio_select_M5-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(9,this.value)" />
+                            2
+                        </label><br>
+                        <label for="radio_select_M5-1_3" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(9,this.value)" />
+                            3
+                        </label><br>
                     </div><br>
                 </div>
 
                 <div class="section">
-                    <p>Wind turbine not moved or damaged.</p>
+                    <p>Barrier is not moved or damaged.</p>
                     <img width="50%" height="auto" src="../img/M5-2.png" >
                     <div>
                         <label for="radio_select_M5-2_0" class="radio_select">
-                            <input name="Mission5_2" id="radio_select_M5-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(8,this.value)" required/>
+                            <input name="Mission5_2" id="radio_select_M5-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(10,this.value)" required/>
                             0
                         </label><br>
                         <label for="radio_select_M5-2_1" class="radio_select">
-                            <input name="Mission5_2" id="radio_select_M5-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(8,this.value)" />
+                            <input name="Mission5_2" id="radio_select_M5-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(10,this.value)" />
                             1
                         </label><br>
                         <label for="radio_select_M5-2_2" class="radio_select">
-                            <input name="Mission5_2" id="radio_select_M5-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(8,this.value)" />
+                            <input name="Mission5_2" id="radio_select_M5-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(10,this.value)" />
                             2
-                        </label><br>
-                        <label for="radio_select_M5-2_3" class="radio_select">
-                            <input name="Mission5_2" id="radio_select_M5-2_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(8,this.value)" />
-                            3
-                        </label><br>
-                        <label for="radio_select_M5-2_4" class="radio_select">
-                            <input name="Mission5_2" id="radio_select_M5-2_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(8,this.value)" />
-                            4
                         </label><br>
                     </div><br>
                 </div>
@@ -386,69 +453,75 @@
                                 <th style="width: 10%;">Total</th>
                             </tr>
                             <tr style="background-color: lightgray;">
-                                <td>Establish energy supply (max. 4 units in a house, if more units are inside one house, no points for house and units will be awarded)</td>
+                                <td>Sorting parked cars (cars with black tiles on top)</td>
                                 <td></td><td></td><td></td><td></td>
                             </tr>
                             <tr>
-                                <td>Energy unit completely in a house but not matching the energy identifier color for that house or the surplus energy source.</td>
-                                <td style="background-color: lightgray;">2</td>
-                                <td style="background-color: lightgray;">24</td>
+                                <td>Petrol car completely in a red petrol parking bay without a barrier in front.</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">10</td>
                                 <td id="check_M1-1">0</td>
                                 <td id="check_M1-1_Total">0</td>
                             </tr>
                             <tr>
-                                <td>Energy unit completely in a house<br>
-                                    ● matching the energy identifier color for that house or<br>
-                                    ● matching the color of the surplus energy source</td>
-                                <td style="background-color: lightgray;">8</td>
-                                <td style="background-color: lightgray;">96</td>
+                                <td>Electrical and hybrid car touching the parking bay in the exit lane (only one car per parking bay counts).</td>
+                                <td style="background-color: lightgray;">6</td>
+                                <td style="background-color: lightgray;">12</td>
                                 <td id="check_M1-2">0</td>
                                 <td id="check_M1-2_Total">0</td>
                             </tr>
                             <tr>
-                                <td>Correct configuration of energy supply for a house (4 energy
-                                    units completely in the house, at least one color per energy
-                                    identifier and possibly of the surplus energy and no units of the
-                                    wrong color in the house)</td>
-                                <td style="background-color: lightgray;">12</td>
-                                <td style="background-color: lightgray;">36</td>
+                                <td>Electrical and hybrid car completely inside the parking bay in the exit lane (only one car per parking bay counts).</td>
+                                <td style="background-color: lightgray;">8</td>
+                                <td style="background-color: lightgray;">16</td>
                                 <td id="check_M1-3">0</td>
                                 <td id="check_M1-3_Total">0</td>
                             </tr>
                             <tr style="background-color: lightgray;">
-                                <td>Store remaining energy units (points for max. 4 units)</td>
+                                <td>Sorting waiting cars (cars without black tiles on top)</td>
                                 <td></td><td></td><td></td><td></td>
                             </tr>
                             <tr>
-                                <td>Energy unit is completely inside the storage battery and the
-                                    fence is not moved (touching outside the light grey area) and not
-                                    damaged (at least one piece broken)</td>
-                                <td style="background-color: lightgray;">5</td>
-                                <td style="background-color: lightgray;">20</td>
-                                <td id="check_M2">0</td>
-                                <td id="check_M2_Total">0</td>
+                                <td>Car completely in a parking bay of a different color without a barrier in front.</td>
+                                <td style="background-color: lightgray;">4</td>
+                                <td style="background-color: lightgray;">24</td>
+                                <td id="check_M2-1">0</td>
+                                <td id="check_M2-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>Car completely in a parking bay of the corresponding color and without a barrier in front.</td>
+                                <td style="background-color: lightgray;">8</td>
+                                <td style="background-color: lightgray;">48</td>
+                                <td id="check_M2-2">0</td>
+                                <td id="check_M2-2_Total">0</td>
                             </tr>
                             <tr style="background-color: lightgray;">
-                                <td>Turn the solar cells</td>
+                                <td>Charge the cars (only one block per parking bay counts)</td>
                                 <td></td><td></td><td></td><td></td>
                             </tr>
-                            <tr>
-                                <td>Solar cell completely inside the lighter yellow area the solar cell
-                                    is standing with studs on top.</td>
-                                <td style="background-color: lightgray;">10</td>
-                                <td style="background-color: lightgray;">20</td>
-                                <td id="check_M3">0</td>
-                                <td id="check_M3_Total">0</td>
-                            </tr>
                             <!--====================================================ここまで==============================================================================-->
+                            <tr>
+                                <td>Battery block touching a green or blue parking bay with a correct car.</td>
+                                <td style="background-color: lightgray;">4</td>
+                                <td style="background-color: lightgray;">16</td>
+                                <td id="check_M3-1">0</td>
+                                <td id="check_M3-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>OR: Battery block completely inside a green or blue parking bay with a correct car.</td>
+                                <td style="background-color: lightgray;">6</td>
+                                <td style="background-color: lightgray;">24</td>
+                                <td id="check_M3-2">0</td>
+                                <td id="check_M3-2_Total">0</td>
+                            </tr>
                             <tr style="background-color: lightgray;">
                                 <td>Park the robot</td>
                                 <td></td><td></td><td></td><td></td>
                             </tr>
                             <tr>
-                                <td>Returns to its starting position and stops by itself (partly or completely hiding the grey circle from top view)</td>
-                                <td style="background-color: lightgray;">6</td>
-                                <td style="background-color: lightgray;">6</td>
+                                <td>Robot completely stops in the Start & Finish Area (only if other points, not bonus, are assigned)</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">7</td>
                                 <td id="check_M4">0</td>
                                 <td id="check_M4_Total">0</td>
                             </tr>
@@ -457,16 +530,16 @@
                                 <td></td><td></td><td></td><td></td>
                             </tr>
                             <tr>
-                                <td>Hydro power plant fence is not moved or damaged.</td>
-                                <td style="background-color: lightgray;"></td>
-                                <td style="background-color: lightgray;">12</td>
+                                <td>Pillar is not moved or damaged.</td>
+                                <td style="background-color: lightgray;">5</td>
+                                <td style="background-color: lightgray;">15</td>
                                 <td id="check_M5-1">0</td>
                                 <td id="check_M5-1_Total">0</td>
                             </tr>
                             <tr>
-                                <td>Wind turbine not moved or damaged.</td>
-                                <td style="background-color: lightgray;">3</td>
-                                <td style="background-color: lightgray;">12</td>
+                                <td>Barrier is not moved or damaged.</td>
+                                <td style="background-color: lightgray;">5</td>
+                                <td style="background-color: lightgray;">10</td>
                                 <td id="check_M5-2">0</td>
                                 <td id="check_M5-2_Total">0</td>
                             </tr>

@@ -7,8 +7,8 @@ function doGet() {
 
 function getSheet(name){
     // SSIDからスプレッドシートの取得
-    //https://docs.google.com/spreadsheets/d/hoge
-    var ssId = 'hoge';
+    //https://docs.google.com/spreadsheets/d/1SII8x2YkNLf50GjY-a3XFlUTI9C28H2WAeC_iOey5CU/edit?usp=sharing
+    var ssId = '1SII8x2YkNLf50GjY-a3XFlUTI9C28H2WAeC_iOey5CU';
     var ss = SpreadsheetApp.openById(ssId);
     // 指定されたシート名からシートを取得して返却
     var sheet = ss.getSheetByName(name);

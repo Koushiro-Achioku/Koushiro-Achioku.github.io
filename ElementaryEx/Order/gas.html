@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base target="_top">
+
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,700&display=swap" rel="stylesheet">
+
+    <style>
+        <?!= HtmlService.createHtmlOutputFromFile('CSS').getContent(); ?>
+    </style>
+    
+    <!--GASでは以下は削除-->
+    <link href="gas.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <ul>
+      <?
+        // スプレッドシートからデータを取得
+        var data = getData('Order');
+        
+        // テーブルを作成
+        for(var i=1;i<data.length;i++){
+          output._ = '<li>';
+          output._ = data[i][0] + ' ' + data[i][1] + ' ' + data[i][2] + ' ' + data[i][3];
+          output._ = '</li>';
+        }
+      ?>
+    </ul>
+  </body>
+</html>

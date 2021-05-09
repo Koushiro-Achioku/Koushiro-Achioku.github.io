@@ -259,7 +259,7 @@ iframe{
     transition: 0.3s;
     letter-spacing: 1px;
     color: #000000;
-    border: 1px solid #1b2538;
+    border: 1px solid #000;
     border-radius: 4px;
 }
 .cp_ipnum {
@@ -274,13 +274,13 @@ iframe{
     transition: 0.3s;
     letter-spacing: 1px;
     color: #000000;
-    border: 1px solid #1b2538;
+    border: 1px solid #000;
     border-radius: 4px;
 }
 .ef input:focus {
     border: 2px solid #cb7f69;
     outline: none;
-    box-shadow: 0 0 5px 1px rgba(73, 136, 253, 0.5);
+    box-shadow: 0 0 5px 1px #ca8c7a;
 }
 .Table-Textbox{
     border-bottom: none;
@@ -307,14 +307,14 @@ iframe{
     width: 200px;
     height: 35px;
     border-radius: 4px;
-    border: 1px solid #1b2538;
+    border: 1px solid #000;
     font: 15px/24px sans-serif;
 }
 
 .selector select:focus{
     border: 2px solid #cb7f69;
     outline: none;
-    box-shadow: 0 0 5px 1px rgba(73, 136, 253, 0.5);
+    box-shadow: 0 0 5px 1px #ca8c7a;
 }
 
 .Selector-Textbox{

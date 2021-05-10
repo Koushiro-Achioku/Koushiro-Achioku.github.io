@@ -1,0 +1,36 @@
+table{
+    background-color: white;
+    border: solid 2px black;
+    border-collapse: collapse;
+    font-family: 'Titillium Web', 'M PLUS 1p', sans-serif;
+    font-weight: 800;
+    margin: 0 auto;
+    width: 100%;
+}
+
+th {
+    padding: 2px;
+    text-align:  center;
+}
+td {
+    padding: 2px;
+    text-align:  center;
+}
+
+.Rank{
+    width: 10%;
+    background-color: white;
+    color: black;
+}
+
+.Teamname{
+    width: 70%;
+    background-color: black;
+    color: white;
+}
+
+.Point{
+    width: 20%;
+    background-color: gray;
+    color: white;
+}

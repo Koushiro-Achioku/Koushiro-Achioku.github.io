@@ -1,8 +1,22 @@
-function doGet() {
-    var htmlOutput = HtmlService.createTemplateFromFile("index").evaluate();
-    htmlOutput.addMetaTag('viewport','width=device-width, initial-scale=1, user-scalable=no');
-    htmlOutput.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
-    return htmlOutput;
+function doGet(e) {
+    if(e.parameter.page=1){
+        var htmlOutput = HtmlService.createTemplateFromFile("index").evaluate();
+        htmlOutput.addMetaTag('viewport','width=device-width, initial-scale=1, user-scalable=no');
+        htmlOutput.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+        return htmlOutput;
+    }
+    else if(e.parameter.page=2){
+        var htmlOutput = HtmlService.createTemplateFromFile("index2").evaluate();
+        htmlOutput.addMetaTag('viewport','width=device-width, initial-scale=1, user-scalable=no');
+        htmlOutput.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+        return htmlOutput;
+    }
+    else{
+        var htmlOutput = HtmlService.createTemplateFromFile("index").evaluate();
+        htmlOutput.addMetaTag('viewport','width=device-width, initial-scale=1, user-scalable=no');
+        htmlOutput.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+        return htmlOutput;
+    }
 }
 
 function getSheet(name){

@@ -45,7 +45,7 @@
                         <div class="btn_menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30px" height="30px" style="padding-top: 3px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg></div>
                     </td>
                     <td class="center-td">
-                        <a href="../../top/index.html"><img src="../../img/wro-rogo-white.png" class="image"></a>
+                        <a target="_blank" href="../../top/index.html"><img src="../../img/wro-rogo-white.png" class="image"></a>
                         <p class="TitleEng">Scoring System - Senior Ex</p>
                     </td>
                     <td class="right-td">
@@ -61,7 +61,6 @@
 
             <!--メイン-->
             <div class="area">
-                <form method="post" action="https://script.google.com/macros/s/AKfycbxWsUwy8gAsLbUTM_F3cSRRDdWIq_UjkzMp9txvAg6gKYducK6oELNnLF-n9QWo71Ag/exec"></form>
 
                 <!--ストップウォッチ-->
                 <table>
@@ -83,33 +82,7 @@
                             <td><p>Team Name:</p></td>
                             <td>
                                 <select name="TeamID" id="Teamname_selector" required>
-                                    <option value="null" hidden>Please Select</option>
-                                    <option value="1">1 Team Alfa</option>
-                                    <option value="2">2 Team Bravo</option>
-                                    <option value="3">3 Team Charlie</option>
-                                    <option value="4">4 Team Delta</option>
-                                    <option value="5">5 Team Echo</option>
-                                    <option value="6">6 Team Foxtrot</option>
-                                    <option value="7">7 Team Golf</option>
-                                    <option value="8">8 Team Hote</option>
-                                    <option value="9">9 Team India</option>
-                                    <option value="10">10 Team Juliet</option>
-                                    <option value="11">11 Team Kilo</option>
-                                    <option value="12">12 Team Lima</option>
-                                    <option value="13">13 Team Mike</option>
-                                    <option value="14">14 Team November</option>
-                                    <option value="15">15 Team Oscar</option>
-                                    <option value="16">16 Team Papa</option>
-                                    <option value="17">17 Team Quebec</option>
-                                    <option value="18">18 Team Romeo</option>
-                                    <option value="19">19 Team Sierra</option>
-                                    <option value="20">20 Team Tango</option>
-                                    <option value="21">21 Team Uniform</option>
-                                    <option value="22">22 Team Victor</option>
-                                    <option value="23">23 Team Whiskey</option>
-                                    <option value="24">24 Team X-ray</option>
-                                    <option value="25">25 Team Yankee</option>
-                                    <option value="26">26 Team Zule</option>
+                                    <option value="1">116 WORLD RING 2nd</option>
                                 </select>
                             </td>
                         </table>
@@ -142,12 +115,8 @@
                         <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="45px" height="45px"><rect fill="none" height="24" width="24"/><path d="M22,5.18L10.59,16.6l-4.24-4.24l1.41-1.41l2.83,2.83l10-10L22,5.18z M19.79,10.22C19.92,10.79,20,11.39,20,12 c0,4.42-3.58,8-8,8s-8-3.58-8-8c0-4.42,3.58-8,8-8c1.58,0,3.04,0.46,4.28,1.25l1.44-1.44C16.1,2.67,14.13,2,12,2C6.48,2,2,6.48,2,12 c0,5.52,4.48,10,10,10s10-4.48,10-10c0-1.19-0.22-2.33-0.6-3.39L19.79,10.22z"/></svg></td>
                         <td><p style="font-size: 30px;">Tasks</p></td>
                     </table>
-                    
-                    <p style="font-size: 25px;">[M1]Establish energy supply (max. 4 units in a house, if more units are inside one house, no points for house and units will be awarded)</p><br>
-                    <img width="40%" height="auto" src="../img/M1.png" ><br>
 
-                    <p>Energy unit completely in a house but not matching the energy identifier color for that house or the surplus energy source.</p>
-                    <img width="25%" height="auto" src="../img/M1-1.png" ><br>
+                    <p>家の中にエネルギーユニットが完全に入っていて、その家のエネルギー識別子または余剰エネルギー源と一致している。</p>
                     <div>
                         <div class="selector">
                             <table class="Selector-Textbox">
@@ -176,10 +145,7 @@
                 </div>
 
                 <div class="section">
-                    <p>Energy unit completely in a house</p>
-                    <p>● matching the energy identifier color for that house or</p>
-                    <p>● matching the color of the surplus energy source</p>
-                    <img width="25%" height="auto" src="../img/M1-2.png" ><br>
+                    <p>家の中にエネルギーユニットが完全に入っているが、その家のエネルギー識別子または余剰エネルギー源と一致していない。</p>
                     <div>
                         <div class="selector">
                             <table class="Selector-Textbox">
@@ -208,8 +174,7 @@
                 </div>
 
                 <div class="section">
-                    <p>Correct configuration of energy supply for a house (4 energy units completely in the house, at least one color per energy identifier and possibly of the surplus energy and no units of the wrong color in the house)</p>
-                    <img width="40%" height="auto" src="../img/M1-3.png" ><br>
+                    <p>家の中のエネルギー供給が正しい構成になっている。</p>
                     <div>
                         <label for="radio_select_M1-3_0" class="radio_select">
                             <input name="Mission1_3" id="radio_select_M1-3_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(3,this.value)" required/>
@@ -231,12 +196,7 @@
                 </div>
                 
                 <div class="section">
-                    <p style="font-size: 25px;">[M2]Store remaining energy units (points for max. 4 units)</p>
-
-                    <p>Energy unit is completely inside the storage battery and the
-                        fence is not moved (touching outside the light grey area) and not
-                        damaged (at least one piece broken)</p>
-                    <img width="40%" height="auto" src="../img/M2-1.png" >
+                    <p>残りのエネルギーユニットが蓄電池の中にあり、フェンスが移動または破損していない。</p>
                     <div>
                         <label for="radio_select_M2-1_0" class="radio_select">
                             <input name="Mission2" id="radio_select_M2-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(4,this.value)" required/>
@@ -262,9 +222,7 @@
                 </div>
                 
                 <div class="section">
-                    <p style="font-size: 25px;">[M3]Turn the solar cells</p>
-                    <p>Solar cell completely inside the lighter yellow area the solar cell is standing with studs on top.</p>
-                    <img width="40%" height="auto" src="../img/M3.png" >
+                    <p>太陽電池は明るい黄色の領域の内側に完全に入っていて、上部にポッチがある。</p>
                     <div>
                         <label for="radio_select_M3-1_0" class="radio_select">
                             <input name="Mission3" id="radio_select_M3-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(5,this.value)" required/>
@@ -282,9 +240,7 @@
                 </div>
                 
                 <div class="section">
-                    <p style="font-size: 25px;">[M4]Park the robot</p>
-                    <p>Robot completely stops in the Start & Finish Area (only if other points, not bonus, are assigned)</p>
-                    <img width="50%" height="auto" src="../img/M4.png" >
+                    <p>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。</p>
                     <div>
                         <label for="radio_select_M4_1" class="radio_select">
                             <input name="Mission4" id="radio_select_M4_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(6,this.value)" required/>
@@ -298,9 +254,7 @@
                 </div>
 
                 <div class="section">
-                    <p style="font-size: 25px;">[M5]Get bonus points</p>
-                    <p>Hydro power plant fence is not moved or damaged.</p>
-                    <img width="50%" height="auto" src="../img/M5-1.png" >
+                    <p>ボーナス：水力発電所のフェンスが移動または破損していない。</p>
                     <div>
                         <label for="radio_select_M5-1_1" class="radio_select">
                             <input name="Mission5_1" id="radio_select_M5-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(7,this.value)" required/>
@@ -314,8 +268,7 @@
                 </div>
 
                 <div class="section">
-                    <p>Wind turbine not moved or damaged.</p>
-                    <img width="50%" height="auto" src="../img/M5-2.png" >
+                    <p>ボーナス：風車が移動または破損していない。</p>
                     <div>
                         <label for="radio_select_M5-2_0" class="radio_select">
                             <input name="Mission5_2" id="radio_select_M5-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(8,this.value)" required/>
@@ -391,7 +344,7 @@
                         <table class="check" style="width:60%">
                             <tr>
                                 <td style="width:30%">Team Name</td>
-                                <td id="Teamname-text"></td>
+                                <td id="Teamname-text">116 WORLD RING 2nd</td>
                             </tr>
                             <tr>
                                 <td style="width:30%">Round</td>
@@ -408,85 +361,57 @@
                                 <th style="width: 10%;">#</th>
                                 <th style="width: 10%;">Total</th>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>Establish energy supply (max. 4 units in a house, if more units are inside one house, no points for house and units will be awarded)</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>Energy unit completely in a house but not matching the energy identifier color for that house or the surplus energy source.</td>
-                                <td style="background-color: lightgray;">2</td>
-                                <td style="background-color: lightgray;">24</td>
+                                <td>家の中にエネルギーユニットが完全に入っていて、その家のエネルギー識別子または余剰エネルギー源と一致している。</td>
+                                <td style="background-color: lightgray;">8</td>
+                                <td style="background-color: lightgray;">96</td>
                                 <td id="check_M1-1">0</td>
                                 <td id="check_M1-1_Total">0</td>
                             </tr>
                             <tr>
-                                <td>Energy unit completely in a house<br>
-                                    ● matching the energy identifier color for that house or<br>
-                                    ● matching the color of the surplus energy source</td>
-                                <td style="background-color: lightgray;">8</td>
-                                <td style="background-color: lightgray;">96</td>
+                                <td>家の中にエネルギーユニットが完全に入っているが、その家のエネルギー識別子または余剰エネルギー源と一致していない。</td>
+                                <td style="background-color: lightgray;">2</td>
+                                <td style="background-color: lightgray;">24</td>
                                 <td id="check_M1-2">0</td>
                                 <td id="check_M1-2_Total">0</td>
                             </tr>
                             <tr>
-                                <td>Correct configuration of energy supply for a house (4 energy
-                                    units completely in the house, at least one color per energy
-                                    identifier and possibly of the surplus energy and no units of the
-                                    wrong color in the house)</td>
+                                <td>家の中のエネルギー供給が正しい構成になっている。</td>
                                 <td style="background-color: lightgray;">12</td>
                                 <td style="background-color: lightgray;">36</td>
                                 <td id="check_M1-3">0</td>
                                 <td id="check_M1-3_Total">0</td>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>Store remaining energy units (points for max. 4 units)</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>Energy unit is completely inside the storage battery and the
-                                    fence is not moved (touching outside the light grey area) and not
-                                    damaged (at least one piece broken)</td>
+                                <td>残りのエネルギーユニットが蓄電池の中にあり、フェンスが移動または破損していない。</td>
                                 <td style="background-color: lightgray;">5</td>
                                 <td style="background-color: lightgray;">20</td>
                                 <td id="check_M2">0</td>
                                 <td id="check_M2_Total">0</td>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>Turn the solar cells</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>Solar cell completely inside the lighter yellow area the solar cell
-                                    is standing with studs on top.</td>
+                                <td>太陽電池は明るい黄色の領域の内側に完全に入っていて、上部にポッチがある。</td>
                                 <td style="background-color: lightgray;">10</td>
                                 <td style="background-color: lightgray;">20</td>
                                 <td id="check_M3">0</td>
                                 <td id="check_M3_Total">0</td>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>Park the robot</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>Returns to its starting position and stops by itself (partly or completely hiding the grey circle from top view)</td>
-                                <td style="background-color: lightgray;">6</td>
-                                <td style="background-color: lightgray;">6</td>
+                                <td>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">14</td>
                                 <td id="check_M4">0</td>
                                 <td id="check_M4_Total">0</td>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>Get bonus points</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>Hydro power plant fence is not moved or damaged.</td>
+                                <td>ボーナス：水力発電所のフェンスが移動または破損していない。</td>
                                 <td style="background-color: lightgray;"></td>
                                 <td style="background-color: lightgray;">12</td>
                                 <td id="check_M5-1">0</td>
                                 <td id="check_M5-1_Total">0</td>
                             </tr>
                             <tr>
-                                <td>Wind turbine not moved or damaged.</td>
+                                <td>ボーナス：風車が移動または破損していない。</td>
                                 <td style="background-color: lightgray;">3</td>
                                 <td style="background-color: lightgray;">12</td>
                                 <td id="check_M5-2">0</td>

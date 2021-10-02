@@ -24,44 +24,29 @@ function Scoring(mission,selected){
     let each_point;
     switch(mission){
         case 1:
-            each_point = 2;
-            document.getElementById("check_M1-1").innerText = selected;
-            document.getElementById("check_M1-1_Total").innerText = selected*each_point;
+            each_point = 20;
+            document.getElementById("check_M1").innerText = selected;
+            document.getElementById("check_M1_Total").innerText = selected*each_point;
             break;
         case 2:
-            each_point = 8;
-            document.getElementById("check_M1-2").innerText = selected;
-            document.getElementById("check_M1-2_Total").innerText = selected*each_point;
-            break;
-        case 3:
-            each_point = 12;
-            document.getElementById("check_M1-3").innerText = selected;
-            document.getElementById("check_M1-3_Total").innerText = selected*each_point;
-            break;
-        case 4:
-            each_point=5;
+            each_point = 10;
             document.getElementById("check_M2").innerText = selected;
             document.getElementById("check_M2_Total").innerText = selected*each_point;
             break;
-        case 5:
-            each_point=10;
+        case 3:
+            each_point = 10;
             document.getElementById("check_M3").innerText = selected;
             document.getElementById("check_M3_Total").innerText = selected*each_point;
             break;
-        case 6:
-            each_point=14;
+        case 4:
+            each_point = 20;
             document.getElementById("check_M4").innerText = selected;
             document.getElementById("check_M4_Total").innerText = selected*each_point;
             break;
-        case 7:
-            each_point=12;
-            document.getElementById("check_M5-1").innerText = selected;
-            document.getElementById("check_M5-1_Total").innerText = selected*each_point;
-            break;
-        case 8:
-            each_point=3;
-            document.getElementById("check_M5-2").innerText = selected;
-            document.getElementById("check_M5-2_Total").innerText = selected*each_point;
+        case 5:
+            each_point = -10;
+            document.getElementById("check_M5").innerText = selected;
+            document.getElementById("check_M5_Total").innerText = selected*each_point;
             break;
         default:
             console.log("ERROR!!");

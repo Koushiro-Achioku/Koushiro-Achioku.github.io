@@ -1,0 +1,19 @@
+body{
+    background-color: #333;
+}
+
+ul {
+    margin: 0;
+    padding: 0 1em;
+    list-style-type: none;
+    background-color: #333;
+    font-family: 'Titillium Web', 'M PLUS 1p', sans-serif;
+}
+ul li {
+    padding: 2.5px 0;
+    border-bottom: 1px solid #fff;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: #fff;
+}

@@ -23,6 +23,7 @@
             <th>Team Name</th>
             <th>Point</th>
             <th>Time</th>
+            <th>Result</th>
         </tr>
 
         <?
@@ -37,6 +38,7 @@
                 output._ = '<td class="MpBold">' + data[i][2] + '</td>';
                 output._ = '<td>' + data[i][3] + '</td>';
                 output._ = '<td>' + data[i][4] + '</td>';
+                output._ = '<td> ' + '<a target="_blank" href="https://script.google.com/macros/s/AKfycbx07WUDOaRA7DlPO1StItVB0X9Hdbv59EWL_5F9m53ABpzneKVRUDD2-Js_XEjneWrq3A/exec?id=' + data[i][1] + '">Check</a>' + '</td>';
                 output._ = '</tr>';
             }
         ?>

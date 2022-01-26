@@ -1,7 +1,14 @@
 var id=0;
 
+var ss_value_r1 = new Array(14);
+var ss_value_r2 = new Array(14);
+var ss_value_r3 = new Array(14);
+
 function doGet(e) {
     id = e.parameter.id;
+    readValue(id,1);
+    readValue(id,2);
+    readValue(id,3);
     var htmlOutput = HtmlService.createTemplateFromFile("index").evaluate();
     htmlOutput.addMetaTag('viewport','width=device-width, initial-scale=1, user-scalable=no');
     htmlOutput.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
@@ -60,4 +67,69 @@ function writeID(id_read){
     }
 
     return sheet2.getRange(id_row,2).getValue();
+}
+
+function readValue(id_read,round){
+    var id_row=0;
+    var base_row=0;
+
+    var sheet = getSheet('Base');//Sheetの指定
+
+    var sheet2 = getSheet('Total');//Sheetの指定
+    const columnBVals2 = sheet2.getRange('A:A').getValues(); // A列値を配列で取得
+    const LastRow2 = columnBVals2.filter(String).length;  //空白を除き、配列の数を取得
+
+    for(var i=3; i<=LastRow2+1; i++){
+        if(id_read==sheet2.getRange(i,1).getValue())
+            id_row=i;
+    }
+
+    if(sheet2.getRange(id_row,11+round*3).getValue()){
+        base_row=sheet2.getRange(id_row,11+round*3).getValue();
+
+        for(var ii=6;ii<=17;ii++){
+            switch(round){
+                case 1:
+                    ss_value_r1[ii-5] = sheet.getRange(base_row,ii).getValue();
+                    break;
+                case 2:
+                    ss_value_r2[ii-5] = sheet.getRange(base_row,ii).getValue();
+                    break;
+                case 3:
+                    ss_value_r3[ii-5] = sheet.getRange(base_row,ii).getValue();
+                    break;
+            }
+        }
+
+        switch(round){
+            case 1:
+                ss_value_r1[0] = sheet.getRange(base_row,4).getValue();//合計点
+                ss_value_r1[13] = sheet.getRange(base_row,5).getValue();//タイム
+                break;
+            case 2:
+                ss_value_r2[0] = sheet.getRange(base_row,4).getValue();//合計点
+                ss_value_r2[13] = sheet.getRange(base_row,5).getValue();//タイム
+                break;
+            case 3:
+                ss_value_r3[0] = sheet.getRange(base_row,4).getValue();//合計点
+                ss_value_r3[13] = sheet.getRange(base_row,5).getValue();//タイム
+                break;
+        }
+        
+    }
+    else{
+        for(var ii=0;ii<=14;ii++){
+            switch(round){
+                case 1:
+                    ss_value_r1[ii] = "";
+                    break;
+                case 2:
+                    ss_value_r2[ii] = "";
+                    break;
+                case 3:
+                    ss_value_r3[ii] = "";
+                    break;
+            }
+        }
+    }
 }

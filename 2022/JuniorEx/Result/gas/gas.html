@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base target="_top">
+
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,700,800&display=swap" rel="stylesheet">
+
+    <style>
+        <?!= HtmlService.createHtmlOutputFromFile('CSS').getContent(); ?>
+    </style>
+    
+    <!--GASでは以下は削除-->
+    <link href="gas.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!--確認画面-->
+    <table class="check" style="width:60%">
+    <tr>
+        <td style="width:30%">ID</td>
+        <td id="Teamname-text"><? output._ = id; ?></td>
+    </tr>
+    <tr>
+        <td style="width:30%">チーム名</td>
+        <td id="Teamname-text"><? output._ = writeID(id); ?></td>
+    </tr>
+    </table>
+    <br>
+
+    <!--writeValueを改良して、配列にすべて代入する。-->
+
+    <table class="check">
+      <tr style="background-color: white;">
+          <th style="width: 60%;">ミッション</th>
+          <th style="width: 10%;">点数</th>
+          <th style="width: 10%;">1回目</th>
+          <th style="width: 10%;">2回目</th>
+          <th style="width: 10%;">3回目</th>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>【M1】てんとう虫の保護</td>
+          <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+          <td>てんとう虫が完全にroute area の外にあり、直立している。</td>
+          <td style="background-color: lightgray;">5</td>
+          <td id="check_M1-1_0"><? output._ = ss_value_r1[1]; ?></td>
+          <td id="check_M1-1_1"><? output._ = ss_value_r2[1]; ?></td>
+          <td id="check_M1-1_2"><? output._ = ss_value_r3[1]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>【M2】背の高い草を刈る</td>
+          <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+          <td>草の上部分がベースの上に乗っておらず、ベースがグレーのエリアに触れている。</td>
+          <td style="background-color: lightgray;">7</td>
+          <td id="check_M2-1_0"><? output._ = ss_value_r1[2]; ?></td>
+          <td id="check_M2-1_1"><? output._ = ss_value_r2[2]; ?></td>
+          <td id="check_M2-1_2"><? output._ = ss_value_r3[2]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>【M3】雑草を集める</td>
+          <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+          <td>雑草が収集場1の中に完全に入っている。</td>
+          <td style="background-color: lightgray;">9</td>
+          <td id="check_M3-1_0"><? output._ = ss_value_r1[3]; ?></td>
+          <td id="check_M3-1_1"><? output._ = ss_value_r2[3]; ?></td>
+          <td id="check_M3-1_2"><? output._ = ss_value_r3[3]; ?></td>
+      </tr>
+      <tr>
+          <td>雑草が収集場2の中に完全に入っている。</td>
+          <td style="background-color: lightgray;">12</td>
+          <td id="check_M3-2_0"><? output._ = ss_value_r1[4]; ?></td>
+          <td id="check_M3-2_1"><? output._ = ss_value_r2[4]; ?></td>
+          <td id="check_M3-2_2"><? output._ = ss_value_r3[4]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>【M4】サービスポイントを有効化</td>
+          <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+          <td>サービスポイントが完全に立てられており、9つ以上のフェンスが立っており、サービスポイントのベースがグレーのエリア内に入っている。</td>
+          <td style="background-color: lightgray;">17</td>
+          <td id="check_M4-1_0"><? output._ = ss_value_r1[5]; ?></td>
+          <td id="check_M4-1_1"><? output._ = ss_value_r2[5]; ?></td>
+          <td id="check_M4-1_2"><? output._ = ss_value_r3[5]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>【M4】ロボットを停める</td>
+          <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+          <td>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。</td>
+          <td style="background-color: lightgray;">14</td>
+          <td id="check_M5-1_0"><? output._ = ss_value_r1[6]; ?></td>
+          <td id="check_M5-1_1"><? output._ = ss_value_r2[6]; ?></td>
+          <td id="check_M5-1_2"><? output._ = ss_value_r3[6]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>【M6】ボーナスポイント</td>
+          <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+          <td>フェンスが動いておらず、損傷していない。</td>
+          <td style="background-color: lightgray;">2</td>
+          <td id="check_M6-1_0"><? output._ = ss_value_r1[7]; ?></td>
+          <td id="check_M6-1_1"><? output._ = ss_value_r2[7]; ?></td>
+          <td id="check_M6-1_2"><? output._ = ss_value_r3[7]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>合計得点</td>
+          <td>155</td>
+          <td><? output._ = ss_value_r1[0]; ?></td>
+          <td><? output._ = ss_value_r2[0]; ?></td>
+          <td><? output._ = ss_value_r3[0]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>タイム(秒)</td>
+          <td></td>
+          <td><? output._ = ss_value_r1[8]; ?></td>
+          <td><? output._ = ss_value_r2[8]; ?></td>
+          <td><? output._ = ss_value_r3[8]; ?></td>
+      </tr>
+    </table>
+  </body>
+</html>

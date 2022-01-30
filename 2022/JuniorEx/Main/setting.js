@@ -4,7 +4,7 @@ var EndTime_array = new Array(0,0,0,0);
 var RunningTime_array = new Array(0,0,0,0);
 
 //点数計算用の配列定義
-var Score_array = new Array(13).fill(0);
+var Score_array = new Array(8).fill(0);
 
 //点数リセット関数
 function Score_reset(){
@@ -24,64 +24,39 @@ function Scoring(mission,selected){
     let each_point;
     switch(mission){
         case 1:
-            each_point = 6;
+            each_point = 5;
             document.getElementById("check_M1-1").innerText = selected;
             document.getElementById("check_M1-1_Total").innerText = selected*each_point;
             break;
         case 2:
-            each_point = 10;
-            document.getElementById("check_M1-2").innerText = selected;
-            document.getElementById("check_M1-2_Total").innerText = selected*each_point;
-            break;
-        case 3:
-            each_point = 16;
-            document.getElementById("check_M1-3").innerText = selected;
-            document.getElementById("check_M1-3_Total").innerText = selected*each_point;
-            break;
-        case 4:
-            each_point=6;
+            each_point=7;
             document.getElementById("check_M2-1").innerText = selected;
             document.getElementById("check_M2-1_Total").innerText = selected*each_point;
             break;
-        case 5:
-            each_point=-6;
-            document.getElementById("check_M2-2").innerText = selected;
-            document.getElementById("check_M2-2_Total").innerText = selected*each_point;
-            break;
-        case 6:
-            each_point=10;
-            document.getElementById("check_M2-3").innerText = selected;
-            document.getElementById("check_M2-3_Total").innerText = selected*each_point;
-            break;
-        case 7:
-            each_point=14;
-            document.getElementById("check_M2-4").innerText = selected;
-            document.getElementById("check_M2-4_Total").innerText = selected*each_point;
-            break;
-        case 8:
-            each_point=13;
+        case 3:
+            each_point=9;
             document.getElementById("check_M3-1").innerText = selected;
             document.getElementById("check_M3-1_Total").innerText = selected*each_point;
             break;
-        case 9:
-            each_point=13;
+        case 4:
+            each_point=12;
+            document.getElementById("check_M3-2").innerText = selected;
+            document.getElementById("check_M3-2_Total").innerText = selected*each_point;
+            break;
+        case 5:
+            each_point=17;
             document.getElementById("check_M4-1").innerText = selected;
             document.getElementById("check_M4-1_Total").innerText = selected*each_point;
             break;
-        case 10:
-            each_point=4;
+        case 6:
+            each_point=14;
             document.getElementById("check_M5-1").innerText = selected;
             document.getElementById("check_M5-1_Total").innerText = selected*each_point;
             break;
-        case 11:
+        case 7:
             each_point=2;
-            document.getElementById("check_M5-2").innerText = selected;
-            document.getElementById("check_M5-2_Total").innerText = selected*each_point;
-            break;
-        case 12:
-            each_point=2;
-            document.getElementById("check_M5-3").innerText = selected;
-            document.getElementById("check_M5-3_Total").innerText = selected*each_point;
+            document.getElementById("check_M6-1").innerText = selected;
+            document.getElementById("check_M6-1_Total").innerText = selected*each_point;
             break;
         default:
             console.log("ERROR!!");

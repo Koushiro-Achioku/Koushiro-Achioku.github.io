@@ -1,8 +1,9 @@
+const column = 14;
 var id=0;
 
-var ss_value_r1 = new Array(14);
-var ss_value_r2 = new Array(14);
-var ss_value_r3 = new Array(14);
+var ss_value_r1 = new Array(column);
+var ss_value_r2 = new Array(column);
+var ss_value_r3 = new Array(column);
 
 function doGet(e) {
     id = e.parameter.id;
@@ -104,21 +105,21 @@ function readValue(id_read,round){
         switch(round){
             case 1:
                 ss_value_r1[0] = sheet.getRange(base_row,4).getValue();//合計点
-                ss_value_r1[13] = sheet.getRange(base_row,5).getValue();//タイム
+                ss_value_r1[column-1] = sheet.getRange(base_row,5).getValue();//タイム
                 break;
             case 2:
                 ss_value_r2[0] = sheet.getRange(base_row,4).getValue();//合計点
-                ss_value_r2[13] = sheet.getRange(base_row,5).getValue();//タイム
+                ss_value_r2[column-1] = sheet.getRange(base_row,5).getValue();//タイム
                 break;
             case 3:
                 ss_value_r3[0] = sheet.getRange(base_row,4).getValue();//合計点
-                ss_value_r3[13] = sheet.getRange(base_row,5).getValue();//タイム
+                ss_value_r3[column-1] = sheet.getRange(base_row,5).getValue();//タイム
                 break;
         }
         
     }
     else{
-        for(var ii=0;ii<=14;ii++){
+        for(var ii=0;ii<column;ii++){
             switch(round){
                 case 1:
                     ss_value_r1[ii] = "";

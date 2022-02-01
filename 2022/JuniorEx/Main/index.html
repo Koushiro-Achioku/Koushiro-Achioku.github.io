@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base target="_top">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <title>Junior Ex - Scoring System</title>
+
+        <!--WEBフォントの引用-->
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,700&display=swap" rel="stylesheet">
+
+        <link href="index.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="setting.js"></script>
+        <script type="text/javascript" src="teamlist.js"></script>
+    </head>
+    <body onLoad="CurrentTime();setTeam()">
+        
+        <!--横からせり出しメニュー-->
+        <nav>
+            <div>
+                <div class="btn_menu"><p style="margin: 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="30px" height="30px" style="padding-top: 4px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></p></div>
+                <p style="color: white; margin: 10px;">Start Order List</p>
+            </div>
+
+            <iframe src="https://script.google.com/macros/s/AKfycby7Ip7gIAaHGJyZOl8d0GyNDuH_zm1V4f4PVzbZgB98X1AqtNtkgMI9rUI9Ho492kGP/exec"></iframe>
+        </nav>
+        
+        <script>
+        $(function(){
+            $('.btn_menu').click(function(){
+                $('nav').toggleClass('open');
+            });
+        })
+        </script>
+
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbyEY8NVyoPX5IyhI5HLyw1BxzrDT98ET-B1F8FrYbDUzS8N4ZjeSh4d1cmlntFmJjsY/exec">
+
+            <!--ヘッダー-->
+            <div class="headder">
+                <table>
+                    <td class="nav-td">
+                        <div class="btn_menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="30px" height="30px" style="padding-top: 3px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg></div>
+                    </td>
+                    <td class="center-td">
+                        <a target="_blank" href="../../top/index.html"><img src="../../../img/wro-rogo-white.png" class="image"></a>
+                        <p class="TitleEng">Scoring System - Junior Ex</p>
+                    </td>
+                    <td class="right-td">
+                        <p class="TitleEng">Current</p>
+                        <p class="TitleEng" id="CurrentTime-text">12:34:56</p>
+                    </td>
+                    <td class="right-td">
+                        <p class="TitleEng">Time</p>
+                        <p class="TitleEng" id="RunningTime-text">0:00.000</p>
+                    </td>
+                </table>
+            </div>
+
+            <!--メイン-->
+            <div class="area">
+
+                <!--ストップウォッチ-->
+                <table>
+                    <td><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="45px" height="45px" style="padding-top: 8px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg></td>
+                    <td><div class="button" id="start-button"><p style="margin: 0;" id="start-button-text">Start</p></div></td>
+                    <td style="width: 40%;"><p id="StartTime">Start:Ready</p></td>
+                    <td style="width: 40%;"><p id="EndTime">End:Ready</p></td>
+                </table>
+
+                <!--チーム情報-->
+                <div class="section">
+                    <table class="section-title">
+                        <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="45px" height="45px" style="padding-top: 8px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></td>
+                        <td><p style="font-size: 30px;">チーム情報</p></td>
+                    </table>
+                    
+                    <div class="selector">
+                        <table class="Selector-Textbox">
+                            <td><p>チーム名</p></td>
+                            <td>
+                                <select name="TeamID" id="Teamname_selector" required>
+                                    <option value="null" hidden>選択してください</option>
+                                </select>
+                            </td>
+                        </table>
+                    </div>
+                </div>
+                
+                <!--チーム情報-->
+                <div class="section">
+                    <table class="section-title">
+                        <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="45px" height="45px"><path d="M0 0h24v24H0z" fill="none"/><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg></td>
+                        <td><p style="font-size: 30px;">ラウンド</p></td>
+                    </table>
+                    
+                    <!--RadioButton-->
+                    <div style="margin-bottom:20px;">
+                        <label for="radio_select_Round_0" class="radio_select">
+                            <input name="Round" id="radio_select_Round_0" type="radio" class="radio_select_inner" value="1" onclick="Round_set('1回目')" required/>
+                            1回目
+                        </label><br>
+                        <label for="radio_select_Round_1" class="radio_select">
+                            <input name="Round" id="radio_select_Round_1" type="radio" class="radio_select_inner" value="2" onclick="Round_set('2回目')" />
+                            2回目
+                        </label><br>
+                        <label for="radio_select_Round_2" class="radio_select">
+                            <input name="Round" id="radio_select_Round_2" type="radio" class="radio_select_inner" value="3" onclick="Round_set('3回目')" />
+                            3回目
+                        </label>
+                    </div>
+                </div>
+                
+                <!--タスク-->
+                <div class="section">
+                    <table class="section-title">
+                        <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="45px" height="45px"><rect fill="none" height="24" width="24"/><path d="M22,5.18L10.59,16.6l-4.24-4.24l1.41-1.41l2.83,2.83l10-10L22,5.18z M19.79,10.22C19.92,10.79,20,11.39,20,12 c0,4.42-3.58,8-8,8s-8-3.58-8-8c0-4.42,3.58-8,8-8c1.58,0,3.04,0.46,4.28,1.25l1.44-1.44C16.1,2.67,14.13,2,12,2C6.48,2,2,6.48,2,12 c0,5.52,4.48,10,10,10s10-4.48,10-10c0-1.19-0.22-2.33-0.6-3.39L19.79,10.22z"/></svg></td>
+                        <td><p style="font-size: 30px;">ミッション</p></td>
+                    </table>
+
+                    <p style="font-size: 25px;">【M1】火災の発見と消火</p><br>
+
+                    <p>火のオブジェクトがある部屋の中に水のオブジェクトが完全に入っている。【15点】</p>
+                    <p>(1部屋につき1つまでカウントされる)</p>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M1.png">
+                    </details>
+
+                    <div>
+                        <label for="radio_select_M1-1_0" class="radio_select">
+                            <input name="Mission1_1" id="radio_select_M1-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(1,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M1-1_1" class="radio_select">
+                            <input name="Mission1_1" id="radio_select_M1-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(1,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M1-1_2" class="radio_select">
+                            <input name="Mission1_1" id="radio_select_M1-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(1,this.value)" />
+                            2
+                        </label><br>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p>火のオブジェクトがない部屋の中に水のオブジェクトが入っている、または部屋の中の水のオブジェクトの数が火のオブジェクトの数より多い。【-3点】</p>
+                    <div>
+                        <label for="radio_select_M1-2_0" class="radio_select">
+                            <input name="Mission1_2" id="radio_select_M1-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(2,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M1-2_1" class="radio_select">
+                            <input name="Mission1_2" id="radio_select_M1-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(2,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M1-2_2" class="radio_select">
+                            <input name="Mission1_2" id="radio_select_M1-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(2,this.value)" />
+                            2
+                        </label><br>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p style="font-size: 25px;">【M2】化学物質を工場の外へと動かす</p><br>
+
+                    <p>化学物質オブジェクトが工場の外に完全に出ている。(かつSecure storage area の中にはない。)【8点】</p>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M2_1.png">
+                    </details>
+
+                    <div>
+                        <label for="radio_select_M2-1_1" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(3,this.value)" required/>
+                            YES
+                        </label><br>
+                        <label for="radio_select_M2-1_2" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(3,this.value)" />
+                            NO
+                        </label>
+                    </div><br>
+                </div>
+                
+                <div class="section">
+                    <p>化学物質オブジェクトがSecure storage area の中に完全に入っている。【12点】</p>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M2_2.png">
+                    </details>
+
+                    <div>
+                        <label for="radio_select_M2-2_1" class="radio_select">
+                            <input name="Mission2_2" id="radio_select_M2-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(4,this.value)" required/>
+                            YES
+                        </label><br>
+                        <label for="radio_select_M2-2_2" class="radio_select">
+                            <input name="Mission2_2" id="radio_select_M2-2_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(4,this.value)" />
+                            NO
+                        </label>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p style="font-size: 25px;">【M3】工場内の人を探す</p><br>
+
+                    <p>Marking block が正しい色の正方形の中に完全に入っており、対応する色により工場内の人がいる部屋を示している。【19点】</p>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M3.png">
+                    </details>
+
+                    <div>
+                        <label for="radio_select_M3-1_0" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(5,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M3-1_1" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(5,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M3-1_2" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(5,this.value)" />
+                            2
+                        </label><br>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p style="font-size: 25px;">【M4】工場内の段差を横断する</p><br>
+
+                    <p>「横断エリアA」または「横断エリアB」の横断は、全領域を完全に横断したことにより定義されます。(前後の2本の線で示されます。)</p>
+                    <p>ポイントは各横断エリアにつき1回のみ与えられ、Obstacle wall (障害壁)が移動および破損していない場合に与えられます。【15点】</p>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M4.png">
+                    </details>
+
+                    <div>
+                        <label for="radio_select_M4-1_0" class="radio_select">
+                            <input name="Mission4_1" id="radio_select_M4-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(6,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M4-1_1" class="radio_select">
+                            <input name="Mission4_1" id="radio_select_M4-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(6,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M4-1_2" class="radio_select">
+                            <input name="Mission4_1" id="radio_select_M4-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(6,this.value)" />
+                            2
+                        </label><br>
+                    </div><br>
+                </div>
+                
+                <div class="section">
+                    <p style="font-size: 25px;">【M5】ロボットを停める</p><br>
+
+                    <p>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。【13点】</p>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M5.png">
+                    </details>
+
+                    <div>
+                        <label for="radio_select_M5-1_1" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(7,this.value)" required/>
+                            YES
+                        </label><br>
+                        <label for="radio_select_M5-1_2" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(7,this.value)" />
+                            NO
+                        </label>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p style="font-size: 25px;">【M6】ボーナスポイント</p><br>
+
+                    <p>火のオブジェクトと人のオブジェクトがそれぞれ移動および破損していない。【5点】</p>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M6_1.png">
+                    </details>
+
+                    <div>
+                        <label for="radio_select_M6-1_0" class="radio_select">
+                            <input name="Mission6_1" id="radio_select_M6-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(8,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M6-1_1" class="radio_select">
+                            <input name="Mission6_1" id="radio_select_M6-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(8,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M6-1_2" class="radio_select">
+                            <input name="Mission6_1" id="radio_select_M6-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(8,this.value)" />
+                            2
+                        </label><br>
+                        <label for="radio_select_M6-1_3" class="radio_select">
+                            <input name="Mission6_1" id="radio_select_M6-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(8,this.value)" />
+                            3
+                        </label><br>
+                        <label for="radio_select_M6-1_4" class="radio_select">
+                            <input name="Mission6_1" id="radio_select_M6-1_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(8,this.value)" />
+                            4
+                        </label><br>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p>Factory wall (工場の壁)がそれぞれ移動および破損していない。【6点】</p>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M6_2.png">
+                    </details>
+
+                    <div>
+                        <label for="radio_select_M6-2_0" class="radio_select">
+                            <input name="Mission6_2" id="radio_select_M6-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(9,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M6-2_1" class="radio_select">
+                            <input name="Mission6_2" id="radio_select_M6-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(9,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M6-2_2" class="radio_select">
+                            <input name="Mission6_2" id="radio_select_M6-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(9,this.value)" />
+                            2
+                        </label><br>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p>Obstacle wall (障害壁)が移動もしくは破損した。【-12点】</p>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M6_3.png">
+                    </details>
+                    
+                    <div>
+                        <label for="radio_select_M6-3_1" class="radio_select">
+                            <input name="Mission6_3" id="radio_select_M6-3_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(10,this.value)" required/>
+                            YES
+                        </label><br>
+                        <label for="radio_select_M6-3_2" class="radio_select">
+                            <input name="Mission6_3" id="radio_select_M6-3_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(10,this.value)" />
+                            NO
+                        </label>
+                    </div><br>
+                </div>
+                
+                <!--タイム-->
+                <div class="section">
+                    <table class="section-title">
+                        <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="45px" height="45px"><path d="M0 0h24v24H0z" fill="none"/><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></td>
+                        <td><p style="font-size: 30px;">タイム</p></td>
+                    </table>
+                    
+                    <!--Time-->
+                    <div class="cp_ipnum">
+                        <label class="ef">
+                            <table class="Table-Textbox">
+                                <td><input type="number" name="Time" placeholder="秒" id="Time-textbox" required></td>
+                                <td><p style="padding-left: 5px;">秒</p></td>
+                            </table>
+                        </label>
+                    </div>
+                </div>
+                
+                <!--チェック-->
+                <div class="section">
+                    <table class="section-title">
+                        <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="45px" height="45px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M4,7h16v2H4V7z M4,13h16v-2H4V13z M4,17h7v-2H4V17z M4,21h7v-2H4V21z M15.41,18.17L14,16.75l-1.41,1.41L15.41,21L20,16.42 L18.58,15L15.41,18.17z M4,3v2h16V3H4z"/></g></svg></td>
+                        <td><p style="font-size: 30px;">データの確認</p></td>
+                    </table>
+
+                    <div>
+                        <!--確認画面-->
+                        <table class="check" style="width:60%">
+                            <tr>
+                                <td style="width:30%">チーム名</td>
+                                <td id="Teamname-text"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%">ラウンド</td>
+                                <td id="Round-text"></td>
+                            </tr>
+                        </table>
+                        <br>
+
+                        <table class="check">
+                            <tr style="background-color: white;">
+                                <th style="width: 60%;">ミッション</th>
+                                <th style="width: 10%;">点数</th>
+                                <th style="width: 10%;">最大</th>
+                                <th style="width: 10%;">個数</th>
+                                <th style="width: 10%;">計</th>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>【M1】火災の発見と消火</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>火のオブジェクトがある部屋の中に水のオブジェクトが完全に入っている。(1部屋につき1つまでカウントされる)</td>
+                                <td style="background-color: lightgray;">15</td>
+                                <td style="background-color: lightgray;">30</td>
+                                <td id="check_M1-1">0</td>
+                                <td id="check_M1-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>火のオブジェクトがない部屋の中に水のオブジェクトが入っている、または部屋の中の水のオブジェクトの数が火のオブジェクトの数より多い。</td>
+                                <td style="background-color: lightgray;">-3</td>
+                                <td style="background-color: lightgray;">-6</td>
+                                <td id="check_M1-2">0</td>
+                                <td id="check_M1-2_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>【M2】化学物質を工場の外へと動かす</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>化学物質オブジェクトが工場の外に完全に出ている。(かつSecure storage area の中にはない。)</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">8</td>
+                                <td id="check_M2-1">0</td>
+                                <td id="check_M2-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>化学物質オブジェクトがSecure storage area の中に完全に入っている。</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">12</td>
+                                <td id="check_M2-2">0</td>
+                                <td id="check_M2-2_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>【M3】工場内の人を探す</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>Marking block が正しい色の正方形の中に完全に入っており、対応する色により工場内の人がいる部屋を示している。</td>
+                                <td style="background-color: lightgray;">19</td>
+                                <td style="background-color: lightgray;">38</td>
+                                <td id="check_M3-1">0</td>
+                                <td id="check_M3-1_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>【M4】工場内の段差を横断する</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>「横断エリアA」または「横断エリアB」の横断は、全領域を完全に横断したことにより定義されます。(前後の2本の線で示されます。)ポイントは各横断エリアにつき1回のみ与えられ、Obstacle wall (障害壁)が移動および破損していない場合に与えられます。</td>
+                                <td style="background-color: lightgray;">15</td>
+                                <td style="background-color: lightgray;">30</td>
+                                <td id="check_M4-1">0</td>
+                                <td id="check_M4-1_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>【M5】ロボットを停める</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">13</td>
+                                <td id="check_M5-1">0</td>
+                                <td id="check_M5-1_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>【M6】ボーナスポイント</td>
+                                <td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td>火のオブジェクトと人のオブジェクトがそれぞれ移動および破損していない。</td>
+                                <td style="background-color: lightgray;">5</td>
+                                <td style="background-color: lightgray;">20</td>
+                                <td id="check_M6-1">0</td>
+                                <td id="check_M6-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>Factory wall (工場の壁)がそれぞれ移動および破損していない。</td>
+                                <td style="background-color: lightgray;">6</td>
+                                <td style="background-color: lightgray;">12</td>
+                                <td id="check_M6-2">0</td>
+                                <td id="check_M6-2_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>Obstacle wall (障害壁)が移動もしくは破損した。</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">-12</td>
+                                <td id="check_M6-3">0</td>
+                                <td id="check_M6-3_Total">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>最高点数</td>
+                                <td></td><td>155</td><td></td><td></td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>今回の得点</td>
+                                <td></td><td></td><td></td><td id="Point-text">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>タイム(秒)</td>
+                                <td></td><td></td><td></td><td id="Time-text">0</td>
+                            </tr>
+                        </table>
+                        <br>
+                    </div>
+
+                    <!--データ送信用非表示input-->
+                    <input hidden type="number" name="Point" value="0" id="Point-textbox" required>
+                    
+                    <!--確認用チェックボックス-->
+                    <label for="checkbox" class="checkbox">
+                        <p style="font-size: 25px; display: inline-block;">確認ボタン</p>
+                        <input id="checkbox" type="checkbox" class="checkbox_inner" required/>
+                    </label>
+                    
+                    <!--Passcode-->
+                    <div class="cp_iptxt">
+                        <label class="ef">
+                            <table class="Table-Textbox">
+                                <td><p style="font-size: 25px;">パスコード</p></td>
+                                <td><input type="text" name="Passcode" placeholder="passcode" id="Time-textbox" required></td>
+                            </table>
+                        </label>
+                    </div>
+                </div>
+                
+                <input type="submit" value="Send" class="submit-button">
+            </div>
+        </form>
+
+        <script type="text/javascript" src="timing.js"></script>
+        <script type="text/javascript" src="print.js"></script>
+        
+    </body>
+</html>

@@ -4,7 +4,7 @@
         <base target="_top">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="Content-Script-Type" content="text/javascript">
-        <title>Elementary Ex - Scoring System</title>
+        <title>Elementary Bs - Scoring System</title>
 
         <!--WEBフォントの引用-->
         <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
                 <p style="color: white; margin: 10px;">Start Order List</p>
             </div>
 
-            <iframe src="https://script.google.com/macros/s/AKfycbzZbqXSSS_8SeAWmpUs29mVRTtv9d6KE8YxiQ81wueL39i2wPR-m9lc7XtdbFqtMAmNmg/exec"></iframe>
+            <iframe src="https://script.google.com/macros/s/AKfycbxx76c9jEMaQ9CY_OPSaZU6y_nH6ZFgE6ZGeKFMdqVNnTpyy_o4Z6_7EY5Lm96HimnF6g/exec"></iframe>
         </nav>
         
         <script>
@@ -37,7 +37,7 @@
         })
         </script>
 
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbwrTpwGrWHNbcDXLe4X8ZZn4zFD3EUflQJqT_-6q-XUVbNkbHjeWlIeYGJpaJ1D7RpjDA/exec">
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbwmrlKEpmfBEM_I5uIhFFTIvxkf_vfM5XZJ9nmDtUOBXrah2Um-AEjaNFagdv6rrpIr/exec">
 
             <!--ヘッダー-->
             <div class="headder">
@@ -47,7 +47,7 @@
                     </td>
                     <td class="center-td">
                         <a target="_blank" href="../../top/index.html"><img src="../../../img/wro-rogo-white.png" class="image"></a>
-                        <p class="TitleEng">Scoring System - Elementary Expert</p>
+                        <p class="TitleEng">Scoring System - Elementary Basic</p>
                     </td>
                     <td class="right-td">
                         <p class="TitleEng">Current</p>
@@ -121,9 +121,7 @@
                         <td><p style="font-size: 30px;">ミッション</p></td>
                     </table>
 
-                    <p style="font-size: 25px;">【M1】てんとう虫の保護</p><br>
-
-                    <p>てんとう虫が完全にroute area の外にあり、直立している。【5点】</p>
+                    <p style="font-size: 25px;">①「黒ライン」上をロボットがライントレースした。【20点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -131,29 +129,20 @@
                     </details>
 
                     <div>
-                        <label for="radio_select_M1-1_0" class="radio_select">
-                            <input name="Mission1_1" id="radio_select_M1-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(1,this.value)" required/>
-                            0
-                        </label><br>
                         <label for="radio_select_M1-1_1" class="radio_select">
-                            <input name="Mission1_1" id="radio_select_M1-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(1,this.value)" />
-                            1
+                            <input name="Mission1_1" id="radio_select_M1-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(1,this.value)" required/>
+                            YES
                         </label><br>
                         <label for="radio_select_M1-1_2" class="radio_select">
-                            <input name="Mission1_1" id="radio_select_M1-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(1,this.value)" />
-                            2
-                        </label><br>
-                        <label for="radio_select_M1-1_3" class="radio_select">
-                            <input name="Mission1_1" id="radio_select_M1-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(1,this.value)" />
-                            3
-                        </label><br>
+                            <input name="Mission1_1" id="radio_select_M1-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(1,this.value)" />
+                            NO
+                        </label>
                     </div><br>
                 </div>
 
                 <div class="section">
-                    <p style="font-size: 25px;">【M2】背の高い草を刈る</p>
 
-                    <p>草の上部分がベースの上に乗っておらず、ベースがグレーのエリアに触れている。【7点】</p>
+                    <p style="font-size: 25px;">②「ゾーンB」にロボット本体が完全に入った。【20点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -161,87 +150,39 @@
                     </details>
 
                     <div>
-                        <label for="radio_select_M2-1_0" class="radio_select">
-                            <input name="Mission2_1" id="radio_select_M2-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(2,this.value)" required/>
-                            0
-                        </label><br>
                         <label for="radio_select_M2-1_1" class="radio_select">
-                            <input name="Mission2_1" id="radio_select_M2-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(2,this.value)" />
-                            1
+                            <input name="Mission2_1" id="radio_select_M2-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(2,this.value)" required/>
+                            YES
                         </label><br>
                         <label for="radio_select_M2-1_2" class="radio_select">
-                            <input name="Mission2_1" id="radio_select_M2-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(2,this.value)" />
-                            2
-                        </label><br>
-                        <label for="radio_select_M2-1_3" class="radio_select">
-                            <input name="Mission2_1" id="radio_select_M2-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(2,this.value)" />
-                            3
-                        </label><br>
+                            <input name="Mission2_1" id="radio_select_M2-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(2,this.value)" />
+                            NO
+                        </label>
                     </div><br>
                 </div>
                 
                 <div class="section">
-                    <p style="font-size: 25px;">【M3】雑草を集める</p>
-
-                    <p>雑草が収集場1の中に完全に入っている。【9点】</p>
+                    <p style="font-size: 25px;">③「ゾーンA」にロボット本体が完全に入った。【20点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
-                        <img src="../img/M3_1.png">
+                        <img src="../img/M3.png">
                     </details>
 
                     <div>
-                        <label for="radio_select_M3-1_0" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(3,this.value)" required/>
-                            0
-                        </label><br>
                         <label for="radio_select_M3-1_1" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(3,this.value)" />
-                            1
+                            <input name="Mission3_1" id="radio_select_M3-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(3,this.value)" required/>
+                            YES
                         </label><br>
                         <label for="radio_select_M3-1_2" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(3,this.value)" />
-                            2
-                        </label><br>
-                        <label for="radio_select_M3-1_3" class="radio_select">
-                            <input name="Mission3_1" id="radio_select_M3-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(3,this.value)" />
-                            3
-                        </label><br>
+                            <input name="Mission3_1" id="radio_select_M3-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(3,this.value)" />
+                            NO
+                        </label>
                     </div><br>
                 </div>
 
                 <div class="section">
-                    <p>雑草が収集場2の中に完全に入っている。【12点】</p>
-
-                    <details>
-                        <summary>判定例の画像</summary>
-                        <img src="../img/M3_2.png">
-                    </details>
-
-                    <div>
-                        <label for="radio_select_M3-2_0" class="radio_select">
-                            <input name="Mission3_2" id="radio_select_M3-2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(4,this.value)" required/>
-                            0
-                        </label><br>
-                        <label for="radio_select_M3-2_1" class="radio_select">
-                            <input name="Mission3_2" id="radio_select_M3-2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(4,this.value)" />
-                            1
-                        </label><br>
-                        <label for="radio_select_M3-2_2" class="radio_select">
-                            <input name="Mission3_2" id="radio_select_M3-2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(4,this.value)" />
-                            2
-                        </label><br>
-                        <label for="radio_select_M3-2_3" class="radio_select">
-                            <input name="Mission3_2" id="radio_select_M3-2_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(4,this.value)" />
-                            3
-                        </label><br>
-                    </div><br>
-                </div>
-
-                <div class="section">
-                    <p style="font-size: 25px;">【M4】サービスポイントを有効化</p><br>
-
-                    <p>サービスポイントが完全に立てられており、9つ以上のフェンスが立っており、サービスポイントのベースがグレーのエリア内に入っている。【17点】</p>
+                    <p style="font-size: 25px;">④「スタート&ゴール」にロボット本体が完全に入り、すべてのモータが静止している。【20点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -250,69 +191,32 @@
 
                     <div>
                         <label for="radio_select_M4-1_1" class="radio_select">
-                            <input name="Mission4_1" id="radio_select_M4-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(5,this.value)" required/>
+                            <input name="Mission4_1" id="radio_select_M4-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(4,this.value)" required/>
                             YES
                         </label><br>
                         <label for="radio_select_M4-1_2" class="radio_select">
-                            <input name="Mission4_1" id="radio_select_M4-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(5,this.value)" />
+                            <input name="Mission4_1" id="radio_select_M4-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(4,this.value)" />
                             NO
                         </label>
                     </div><br>
                 </div>
-                
+
                 <div class="section">
-                    <p style="font-size: 25px;">【M5】ロボットを停める</p><br>
-
-                    <p>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。【14点】</p>
-
-                    <details>
-                        <summary>判定例の画像</summary>
-                        <img src="../img/M5.png">
-                    </details>
+                    <p style="font-size: 25px;">⑤サプライズルール【20点】</p><br>
 
                     <div>
+                        <label for="radio_select_M5-1_0" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(5,this.value)" required/>
+                            0点
+                        </label><br>
                         <label for="radio_select_M5-1_1" class="radio_select">
-                            <input name="Mission5_1" id="radio_select_M5-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(6,this.value)" required/>
-                            YES
+                            <input name="Mission5_1" id="radio_select_M5-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(5,this.value)" />
+                            10点
                         </label><br>
                         <label for="radio_select_M5-1_2" class="radio_select">
-                            <input name="Mission5_1" id="radio_select_M5-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(6,this.value)" />
-                            NO
-                        </label>
-                    </div><br>
-                </div>
-
-                <div class="section">
-                    <p style="font-size: 25px;">【M6】ボーナスポイント</p><br>
-
-                    <p>フェンスが動いておらず、損傷していない。【2点】</p>
-
-                    <details>
-                        <summary>判定例の画像</summary>
-                        <img src="../img/M6.png">
-                    </details>
-
-                    <div class="selector">
-                        <table class="Selector-Quantity">
-                            <td><p>数量:</p></td>
-                            <td>
-                                <select name="Mission6_1" id="M6-1_selector" onchange="Scoring(7,this.value)" required>
-                                    <option value="null" hidden>選択してください</option>
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                </select>
-                            </td>
-                        </table>
+                            <input name="Mission5_1" id="radio_select_M5-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(5,this.value)" />
+                            20点
+                        </label><br>
                     </div><br>
                 </div>
                 
@@ -363,83 +267,44 @@
                                 <th style="width: 10%;">個数</th>
                                 <th style="width: 10%;">計</th>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>【M1】てんとう虫の保護</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>てんとう虫が完全にroute area の外にあり、直立している。</td>
-                                <td style="background-color: lightgray;">5</td>
-                                <td style="background-color: lightgray;">15</td>
+                                <td>①「黒ライン」上をロボットがライントレースした。</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">20</td>
                                 <td id="check_M1-1">0</td>
                                 <td id="check_M1-1_Total">0</td>
                             </tr>
-                            </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>【M2】背の高い草を刈る</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>草の上部分がベースの上に乗っておらず、ベースがグレーのエリアに触れている。</td>
-                                <td style="background-color: lightgray;">7</td>
-                                <td style="background-color: lightgray;">21</td>
+                                <td>②「ゾーンB」にロボット本体が完全に入った。</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">20</td>
                                 <td id="check_M2-1">0</td>
                                 <td id="check_M2-1_Total">0</td>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>【M3】雑草を集める</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>雑草が収集場1の中に完全に入っている。</td>
-                                <td style="background-color: lightgray;">9</td>
-                                <td style="background-color: lightgray;">27</td>
+                                <td>③「ゾーンA」にロボット本体が完全に入った。</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">20</td>
                                 <td id="check_M3-1">0</td>
                                 <td id="check_M3-1_Total">0</td>
                             </tr>
                             <tr>
-                                <td>雑草が収集場2の中に完全に入っている。</td>
-                                <td style="background-color: lightgray;">12</td>
-                                <td style="background-color: lightgray;">36</td>
-                                <td id="check_M3-2">0</td>
-                                <td id="check_M3-2_Total">0</td>
-                            </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>【M4】サービスポイントを有効化</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
-                            <tr>
-                                <td>サービスポイントが完全に立てられており、9つ以上のフェンスが立っており、サービスポイントのベースがグレーのエリア内に入っている。</td>
+                                <td>④「スタート&ゴール」にロボット本体が完全に入り、すべてのモータが静止している。</td>
                                 <td style="background-color: lightgray;"></td>
-                                <td style="background-color: lightgray;">17</td>
+                                <td style="background-color: lightgray;">20</td>
                                 <td id="check_M4-1">0</td>
                                 <td id="check_M4-1_Total">0</td>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>【M5】ロボットを停める</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。</td>
-                                <td style="background-color: lightgray;"></td>
-                                <td style="background-color: lightgray;">14</td>
+                                <td>⑤サプライズルール</td>
+                                <td style="background-color: lightgray;">10</td>
+                                <td style="background-color: lightgray;">20</td>
                                 <td id="check_M5-1">0</td>
                                 <td id="check_M5-1_Total">0</td>
                             </tr>
                             <tr style="background-color: lightgray;">
-                                <td>【M6】ボーナスポイント</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
-                            <tr>
-                                <td>フェンスが動いておらず、損傷していない。</td>
-                                <td style="background-color: lightgray;">2</td>
-                                <td style="background-color: lightgray;">22</td>
-                                <td id="check_M6-1">0</td>
-                                <td id="check_M6-1_Total">0</td>
-                            </tr>
-                            <tr style="background-color: lightgray;">
                                 <td>最高点数</td>
-                                <td></td><td>125</td><td></td><td></td>
+                                <td></td><td>100</td><td></td><td></td>
                             </tr>
                             <tr style="background-color: lightgray;">
                                 <td>今回の得点</td>

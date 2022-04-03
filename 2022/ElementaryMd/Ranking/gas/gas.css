@@ -1,0 +1,43 @@
+table{
+    background-color: white;
+    border: solid 2px #000000;
+    border-collapse: collapse;
+    font-family: 'Titillium Web', 'M PLUS 1p', sans-serif;
+    font-weight: 800;
+    margin: 0 auto;
+    width: 100%;
+}
+
+tr:nth-child(odd) {
+    background-color:  #ddd;    /* 背景色指定 */
+} 
+tr:nth-child(2){
+    color: goldenrod;
+}
+tr:nth-child(3){
+    color: rgb(100, 99, 99);
+}
+tr:nth-child(4){
+    color: rgb(160, 46, 4);
+}
+
+@media screen and (max-width : 414px){
+    th {
+        padding: 2px;
+        text-align:  center;
+    }
+    td {
+        padding: 2px;
+        text-align:  center;
+    }
+}
+@media screen and (min-width : 415px){
+    th {
+        padding: 10px 15px;
+        text-align:  center;
+    }
+    td {
+        padding: 5px 15px;
+        text-align:  center;
+    }
+}

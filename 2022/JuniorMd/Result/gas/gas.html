@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base target="_top">
+
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,700,800&display=swap" rel="stylesheet">
+
+    <style>
+        <?!= HtmlService.createHtmlOutputFromFile('CSS').getContent(); ?>
+    </style>
+    
+    <!--GASでは以下は削除-->
+    <link href="gas.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!--確認画面-->
+    <table class="check" style="width:60%">
+    <tr>
+        <td style="width:30%">ID</td>
+        <td id="Teamname-text"><? output._ = id; ?></td>
+    </tr>
+    <tr>
+        <td style="width:30%">チーム名</td>
+        <td id="Teamname-text"><? output._ = writeID(id); ?></td>
+    </tr>
+    </table>
+    <br>
+
+    <!--writeValueを改良して、配列にすべて代入する。-->
+
+    <table class="check">
+      <tr style="background-color: white;">
+          <th style="width: 60%;">ミッション</th>
+          <th style="width: 10%;">点数</th>
+          <th style="width: 10%;">1回目</th>
+          <th style="width: 10%;">2回目</th>
+          <th style="width: 10%;">3回目</th>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>【M1】Select</td>
+          <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+          <td>HOGEが入っている</td>
+          <td style="background-color: lightgray;">5</td>
+          <td id="check_M1-1_0"><? output._ = ss_value_r1[1]; ?></td>
+          <td id="check_M1-1_1"><? output._ = ss_value_r2[1]; ?></td>
+          <td id="check_M1-1_2"><? output._ = ss_value_r3[1]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>【M4】ロボットを停める</td>
+          <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+          <td>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。</td>
+          <td style="background-color: lightgray;">10</td>
+          <td id="check_M4-1_0"><? output._ = ss_value_r1[9]; ?></td>
+          <td id="check_M4-1_1"><? output._ = ss_value_r2[9]; ?></td>
+          <td id="check_M4-1_2"><? output._ = ss_value_r3[9]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>合計得点</td>
+          <td>XXX</td>
+          <td><? output._ = ss_value_r1[0]; ?></td>
+          <td><? output._ = ss_value_r2[0]; ?></td>
+          <td><? output._ = ss_value_r3[0]; ?></td>
+      </tr>
+      <tr style="background-color: lightgray;">
+          <td>タイム(秒)</td>
+          <td></td>
+          <td><? output._ = ss_value_r1[13]; ?></td>
+          <td><? output._ = ss_value_r2[13]; ?></td>
+          <td><? output._ = ss_value_r3[13]; ?></td>
+      </tr>
+    </table>
+  </body>
+</html>

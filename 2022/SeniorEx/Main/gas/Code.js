@@ -1,5 +1,15 @@
 var passcode = '123456';
 
+function getSheet(name){
+    // SSIDからスプレッドシートの取得
+    //https://docs.google.com/spreadsheets/d/1yx_MdZquMbDgQTdLdCzGDAl9PTQAOrstxAbOxj0DDb4/edit#gid=0
+    var ssid = '1yx_MdZquMbDgQTdLdCzGDAl9PTQAOrstxAbOxj0DDb4';
+    var ss = SpreadsheetApp.openById(ssid);
+    // 指定されたシート名からシートを取得して返却
+    var sheet = ss.getSheetByName(name);
+    return sheet;
+}
+
 function doGet() {
    //エラー表示
     var htmlOutput = HtmlService.createTemplateFromFile("error").evaluate();
@@ -19,8 +29,10 @@ function doPost(e) {
     // 最終行にデータ挿入
     // 「e.parameter.フォーム名」 でフォームから送信されたパラメータを受け取ることができます
     sheet.appendRow([new Date(),e.parameter.TeamID,e.parameter.Round,e.parameter.Point,e.parameter.Time,
-                    e.parameter.Mission1_1,
-                    e.parameter.Mission2_1]);
+                    e.parameter.Mission1_1,e.parameter.Mission1_2,e.parameter.Mission1_3,
+                    e.parameter.Mission2_1,e.parameter.Mission2_2,e.parameter.Mission2_3,e.parameter.Mission2_4,
+                    e.parameter.Mission3_1,e.parameter.Mission4_1,
+                    e.parameter.Mission5_1,e.parameter.Mission5_2,e.parameter.Mission5_3]);
 
     calculate();
     sort();
@@ -38,16 +50,6 @@ function doPost(e) {
   }
 }
 
-function getSheet(name){
-    // SSIDからスプレッドシートの取得
-    //https://docs.google.com/spreadsheets/d/hoge/edit#gid=0
-    var ssid = 'hoge';
-    var ss = SpreadsheetApp.openById(ssid);
-    // 指定されたシート名からシートを取得して返却
-    var sheet = ss.getSheetByName(name);
-    return sheet;
-}
-
 function calculate(){
   var sheet = getSheet('Base');//Sheetの指定
   const columnBVals = sheet.getRange('A:A').getValues(); // A列値を配列で取得
@@ -56,10 +58,10 @@ function calculate(){
   var sheet2 = getSheet('Total');//Sheetの指定
   const columnBVals2 = sheet2.getRange('A:A').getValues(); // A列値を配列で取得
   const LastRow2 = columnBVals2.filter(String).length;  //空白を除き、配列の数を取得
-  
+
   for(var i=2; i<=LastRow; i++){
     //BaseDataからcheckがYesでない行を探索
-    const check_column = X;
+    const check_column = 18;
     if(sheet.getRange(i,check_column).getValue()!="Yes"){
       
       var id_position=0;
@@ -102,25 +104,25 @@ function calculate(){
         sheet2.getRange(id_position,10).setValue(Point);//Point
         sheet2.getRange(id_position,11).setValue(Time);//Time
       }
-
+      
       //Best Score 判定
       var changed=true;
       while(1){
         if(changed){
           changed=false;
 
+          var round_1st = sheet2.getRange(id_position,3).getValue();
+          var round_2nd = sheet2.getRange(id_position,6).getValue();
+          var round_3rd = sheet2.getRange(id_position,9).getValue();
           var point_1st = sheet2.getRange(id_position,4).getValue();
           var point_2nd = sheet2.getRange(id_position,7).getValue();
           var point_3rd = sheet2.getRange(id_position,10).getValue();
+          var time_1st = sheet2.getRange(id_position,5).getValue();
+          var time_2nd = sheet2.getRange(id_position,8).getValue();
+          var time_3rd = sheet2.getRange(id_position,11).getValue();
           
-          //点数入れ替え(3位から)
           if(point_3rd>point_2nd){//3>2
             if(point_3rd>point_1st){//3>1
-              var round_1st = sheet2.getRange(id_position,3).getValue();
-              var round_3rd = sheet2.getRange(id_position,9).getValue();
-              var time_1st = sheet2.getRange(id_position,5).getValue();
-              var time_3rd = sheet2.getRange(id_position,11).getValue();
-
               //3rdを1stに
               sheet2.getRange(id_position,3).setValue(round_3rd);//Round
               sheet2.getRange(id_position,4).setValue(point_3rd);//Point
@@ -131,11 +133,6 @@ function calculate(){
               sheet2.getRange(id_position,11).setValue(time_1st);//Time
             }
             else{//3<1,3==1
-              var round_2nd = sheet2.getRange(id_position,6).getValue();
-              var round_3rd = sheet2.getRange(id_position,9).getValue();
-              var time_2nd = sheet2.getRange(id_position,8).getValue();
-              var time_3rd = sheet2.getRange(id_position,11).getValue();
-
               //3rdを2ndに
               sheet2.getRange(id_position,6).setValue(round_3rd);//Round
               sheet2.getRange(id_position,7).setValue(point_3rd);//Point
@@ -151,7 +148,6 @@ function calculate(){
           point_1st = sheet2.getRange(id_position,4).getValue();
           point_2nd = sheet2.getRange(id_position,7).getValue();
           
-          //点数入れ替え(2位から)
           if(point_2nd>point_1st){//2>1
             round_1st = sheet2.getRange(id_position,3).getValue();
             round_2nd = sheet2.getRange(id_position,6).getValue();
@@ -173,7 +169,6 @@ function calculate(){
           point_2nd = sheet2.getRange(id_position,7).getValue();
           point_3rd = sheet2.getRange(id_position,10).getValue();
 
-          //タイム入れ替え(2位と3位)
           if(point_2nd==point_3rd){
             time_2nd = sheet2.getRange(id_position,8).getValue();
             time_3rd = sheet2.getRange(id_position,11).getValue();
@@ -198,7 +193,6 @@ function calculate(){
           point_1st = sheet2.getRange(id_position,4).getValue();
           point_2nd = sheet2.getRange(id_position,7).getValue();
         
-          //タイム入れ替え(1位と2位)
           if(point_1st==point_2nd){
             time_1st = sheet2.getRange(id_position,5).getValue();
             time_2nd = sheet2.getRange(id_position,8).getValue();
@@ -225,7 +219,7 @@ function calculate(){
         }
       }
       //Best Score判定終了
-      
+
       var sheet3 = getSheet('Rank');//Sheetの指定
       const columnBVals3 = sheet3.getRange('B:B').getValues(); // A列値を配列で取得
       const LastRow3 = columnBVals3.filter(String).length;  //空白を除き、配列の数を取得

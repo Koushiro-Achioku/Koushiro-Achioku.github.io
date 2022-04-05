@@ -63,12 +63,12 @@ document.getElementById("start-button").onclick = function(){
         StartTime_array[3] = now.getMilliseconds()
 
         document.getElementById("StartTime").innerHTML = "Start:" + StartTime_array[0] + ":" + StartTime_array[1] + ":" + StartTime_array[2] + "." + StartTime_array[3];
-        document.getElementById("EndTime").innerHTML = "End:Now Running";
+        document.getElementById("EndTime").innerHTML = "End:Running";
         document.getElementById("start-button-text").innerHTML="Stop";
 
         timer1 = setInterval(logging,1000);
     }
-    else if(document.getElementById("EndTime").innerHTML == "End:Now Running"){
+    else if(document.getElementById("EndTime").innerHTML == "End:Running"){
         console.log("end!");
         let now = new Date();
         EndTime_array[0] = now.getHours();
@@ -77,7 +77,7 @@ document.getElementById("start-button").onclick = function(){
         EndTime_array[3] = now.getMilliseconds()
 
         document.getElementById("EndTime").innerHTML = "End:" + EndTime_array[0] + ":" + EndTime_array[1] + ":" + EndTime_array[2] + "." + EndTime_array[3];
-        document.getElementById("start-button-text").innerHTML="-----";
+        document.getElementById("start-button-text").innerHTML = "Reset";
 
 
         if(EndTime_array[3]>=StartTime_array[3]){
@@ -120,10 +120,21 @@ document.getElementById("start-button").onclick = function(){
             sec = "0" + sec;
         }
 
-        document.getElementById("Time-textbox").value = min_and_sec + "." + microsec;
-        document.getElementById("Time-text").innerHTML = min_and_sec + "." + microsec;
         document.getElementById("RunningTime-text").innerHTML = min + ":" + sec + "." + microsec;
 
+        if(microsec>=500){
+            min_and_sec = min_and_sec + 1;
+        }
+
+        document.getElementById("Time-textbox").value = min_and_sec;
+        document.getElementById("Time-text").innerHTML = min_and_sec;
+
         clearInterval(timer1);
+    }
+    else if(document.getElementById("start-button-text").innerHTML == "Reset"){
+        document.getElementById("start-button-text").innerHTML = "Start";
+        document.getElementById("StartTime").innerHTML = "Start:Ready";
+        document.getElementById("EndTime").innerHTML = "End:Ready";
+        document.getElementById("RunningTime-text").innerHTML = "0:00.000";
     }
 };

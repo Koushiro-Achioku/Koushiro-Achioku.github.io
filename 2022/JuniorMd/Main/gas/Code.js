@@ -19,8 +19,7 @@ function doPost(e) {
     // 最終行にデータ挿入
     // 「e.parameter.フォーム名」 でフォームから送信されたパラメータを受け取ることができます
     sheet.appendRow([new Date(),e.parameter.TeamID,e.parameter.Round,e.parameter.Point,e.parameter.Time,
-                    e.parameter.Mission1_1,
-                    e.parameter.Mission2_1]);
+                    e.parameter.Mission1_1,e.parameter.Mission4_1]);
 
     calculate();
     sort();

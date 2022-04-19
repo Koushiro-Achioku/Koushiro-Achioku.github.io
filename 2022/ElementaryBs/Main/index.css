@@ -449,3 +449,7 @@ iframe{
 .signature-table td{
     border: solid 0.5px #5f5f5f;
 }
+
+.judge{
+    width: 30%;
+}

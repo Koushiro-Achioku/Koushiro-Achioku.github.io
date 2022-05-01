@@ -1,4 +1,4 @@
-const column = 4;
+const column = 9;
 var id=0;
 
 var ss_value_r1 = new Array(column);
@@ -89,16 +89,16 @@ function readValue(id_read,round){
     if(sheet2.getRange(id_row,11+round*3).getValue()){
         base_row=sheet2.getRange(id_row,11+round*3).getValue();
 
-        for(var ii=6;ii<=17;ii++){
+        for(var ii=8;ii<=12;ii++){
             switch(round){
                 case 1:
-                    ss_value_r1[ii-5] = sheet.getRange(base_row,ii).getValue();
+                    ss_value_r1[ii-7] = sheet.getRange(base_row,ii).getValue();
                     break;
                 case 2:
-                    ss_value_r2[ii-5] = sheet.getRange(base_row,ii).getValue();
+                    ss_value_r2[ii-7] = sheet.getRange(base_row,ii).getValue();
                     break;
                 case 3:
-                    ss_value_r3[ii-5] = sheet.getRange(base_row,ii).getValue();
+                    ss_value_r3[ii-7] = sheet.getRange(base_row,ii).getValue();
                     break;
             }
         }
@@ -106,15 +106,21 @@ function readValue(id_read,round){
         switch(round){
             case 1:
                 ss_value_r1[0] = sheet.getRange(base_row,4).getValue();//合計点
-                ss_value_r1[column-1] = sheet.getRange(base_row,5).getValue();//タイム
+                ss_value_r1[column-3] = sheet.getRange(base_row,4).getValue();//パターン
+                ss_value_r1[column-2] = sheet.getRange(base_row,6).getValue();//タイム
+                ss_value_r1[column-1] = sheet.getRange(base_row,7).getValue();//スピード
                 break;
             case 2:
                 ss_value_r2[0] = sheet.getRange(base_row,4).getValue();//合計点
-                ss_value_r2[column-1] = sheet.getRange(base_row,5).getValue();//タイム
+                ss_value_r2[column-3] = sheet.getRange(base_row,4).getValue();//パターン
+                ss_value_r2[column-2] = sheet.getRange(base_row,6).getValue();//タイム
+                ss_value_r2[column-1] = sheet.getRange(base_row,7).getValue();//スピード
                 break;
             case 3:
                 ss_value_r3[0] = sheet.getRange(base_row,4).getValue();//合計点
-                ss_value_r3[column-1] = sheet.getRange(base_row,5).getValue();//タイム
+                ss_value_r3[column-3] = sheet.getRange(base_row,4).getValue();//パターン
+                ss_value_r3[column-2] = sheet.getRange(base_row,6).getValue();//タイム
+                ss_value_r3[column-1] = sheet.getRange(base_row,7).getValue();//スピード
                 break;
         }
         

@@ -18,9 +18,8 @@ function doPost(e) {
 
     // 最終行にデータ挿入
     // 「e.parameter.フォーム名」 でフォームから送信されたパラメータを受け取ることができます
-    sheet.appendRow([new Date(),e.parameter.TeamID,e.parameter.Round,e.parameter.Point,e.parameter.Time,
-                    e.parameter.Mission1_1,
-                    e.parameter.Mission2_1]);
+    sheet.appendRow([new Date(),e.parameter.TeamID,e.parameter.Round,e.parameter.Route,e.parameter.Point,e.parameter.Time,e.parameter.Speed,
+                    e.parameter.Mission1_1,e.parameter.Mission2_1,e.parameter.Mission3_1,e.parameter.Mission4_1,e.parameter.Mission5_1]);
 
     calculate();
     sort();
@@ -59,7 +58,7 @@ function calculate(){
   
   for(var i=2; i<=LastRow; i++){
     //BaseDataからcheckがYesでない行を探索
-    const check_column = 18;
+    const check_column = 13;
     if(sheet.getRange(i,check_column).getValue()!="Yes"){
       
       var id_position=0;
@@ -71,36 +70,36 @@ function calculate(){
       }
       //Logger.log(id_position);
       
-      var Point = sheet.getRange(i,4).getValue();
-      var Time = sheet.getRange(i,5).getValue();
+      var Point = sheet.getRange(i,5).getValue();
+      var Speed = sheet.getRange(i,7).getValue();
       
       //Score書き込み
       if(sheet.getRange(i,3).getValue()=="1"){
         sheet2.getRange(id_position,12).setValue(Point);//Point
-        sheet2.getRange(id_position,13).setValue(Time);//Time
+        sheet2.getRange(id_position,13).setValue(Speed);//Speed
         sheet2.getRange(id_position,14).setValue(i);//Row
 
         sheet2.getRange(id_position,3).setValue(1);//Round
         sheet2.getRange(id_position,4).setValue(Point);//Point
-        sheet2.getRange(id_position,5).setValue(Time);//Time
+        sheet2.getRange(id_position,5).setValue(Speed);//Speed
       }
       else if(sheet.getRange(i,3).getValue()=="2"){
         sheet2.getRange(id_position,15).setValue(Point);//Point
-        sheet2.getRange(id_position,16).setValue(Time);//Time
+        sheet2.getRange(id_position,16).setValue(Speed);//Speed
         sheet2.getRange(id_position,17).setValue(i);//Row
 
         sheet2.getRange(id_position,6).setValue(2);//Round
         sheet2.getRange(id_position,7).setValue(Point);//Point
-        sheet2.getRange(id_position,8).setValue(Time);//Time
+        sheet2.getRange(id_position,8).setValue(Speed);//Speed
       }
       else if(sheet.getRange(i,3).getValue()=="3"){
         sheet2.getRange(id_position,18).setValue(Point);//Point
-        sheet2.getRange(id_position,19).setValue(Time);//Time
+        sheet2.getRange(id_position,19).setValue(Speed);//Speed
         sheet2.getRange(id_position,20).setValue(i);//Row
 
         sheet2.getRange(id_position,9).setValue(3);//Round
         sheet2.getRange(id_position,10).setValue(Point);//Point
-        sheet2.getRange(id_position,11).setValue(Time);//Time
+        sheet2.getRange(id_position,11).setValue(Speed);//Speed
       }
 
       //Best Score 判定
@@ -118,32 +117,32 @@ function calculate(){
             if(point_3rd>point_1st){//3>1
               var round_1st = sheet2.getRange(id_position,3).getValue();
               var round_3rd = sheet2.getRange(id_position,9).getValue();
-              var time_1st = sheet2.getRange(id_position,5).getValue();
-              var time_3rd = sheet2.getRange(id_position,11).getValue();
+              var speed_1st = sheet2.getRange(id_position,5).getValue();
+              var speed_3rd = sheet2.getRange(id_position,11).getValue();
 
               //3rdを1stに
               sheet2.getRange(id_position,3).setValue(round_3rd);//Round
               sheet2.getRange(id_position,4).setValue(point_3rd);//Point
-              sheet2.getRange(id_position,5).setValue(time_3rd);//Time
+              sheet2.getRange(id_position,5).setValue(speed_3rd);//Time
               //1stを3rdに
               sheet2.getRange(id_position,9).setValue(round_1st);//Round
               sheet2.getRange(id_position,10).setValue(point_1st);//Point
-              sheet2.getRange(id_position,11).setValue(time_1st);//Time
+              sheet2.getRange(id_position,11).setValue(speed_1st);//Time
             }
             else{//3<1,3==1
               var round_2nd = sheet2.getRange(id_position,6).getValue();
               var round_3rd = sheet2.getRange(id_position,9).getValue();
-              var time_2nd = sheet2.getRange(id_position,8).getValue();
-              var time_3rd = sheet2.getRange(id_position,11).getValue();
+              var speed_2nd = sheet2.getRange(id_position,8).getValue();
+              var speed_3rd = sheet2.getRange(id_position,11).getValue();
 
               //3rdを2ndに
               sheet2.getRange(id_position,6).setValue(round_3rd);//Round
               sheet2.getRange(id_position,7).setValue(point_3rd);//Point
-              sheet2.getRange(id_position,8).setValue(time_3rd);//Time
+              sheet2.getRange(id_position,8).setValue(speed_3rd);//Time
               //2ndを3rdに
               sheet2.getRange(id_position,9).setValue(round_2nd);//Round
               sheet2.getRange(id_position,10).setValue(point_2nd);//Point
-              sheet2.getRange(id_position,11).setValue(time_2nd);//Time
+              sheet2.getRange(id_position,11).setValue(speed_2nd);//Time
             }
             changed=true;
           }
@@ -155,17 +154,17 @@ function calculate(){
           if(point_2nd>point_1st){//2>1
             round_1st = sheet2.getRange(id_position,3).getValue();
             round_2nd = sheet2.getRange(id_position,6).getValue();
-            time_1st = sheet2.getRange(id_position,5).getValue();
-            time_2nd = sheet2.getRange(id_position,8).getValue();
+            speed_1st = sheet2.getRange(id_position,5).getValue();
+            speed_2nd = sheet2.getRange(id_position,8).getValue();
 
             //2ndを1stに
             sheet2.getRange(id_position,3).setValue(round_2nd);//Round
             sheet2.getRange(id_position,4).setValue(point_2nd);//Point
-            sheet2.getRange(id_position,5).setValue(time_2nd);//Time
+            sheet2.getRange(id_position,5).setValue(speed_2nd);//Time
             //1stを2ndに
             sheet2.getRange(id_position,6).setValue(round_1st);//Round
             sheet2.getRange(id_position,7).setValue(point_1st);//Point
-            sheet2.getRange(id_position,8).setValue(time_1st);//Time
+            sheet2.getRange(id_position,8).setValue(speed_1st);//Time
 
             changed=true;
           }
@@ -173,23 +172,23 @@ function calculate(){
           point_2nd = sheet2.getRange(id_position,7).getValue();
           point_3rd = sheet2.getRange(id_position,10).getValue();
 
-          //タイム入れ替え(2位と3位)
+          //スピード入れ替え(2位と3位)
           if(point_2nd==point_3rd){
-            time_2nd = sheet2.getRange(id_position,8).getValue();
-            time_3rd = sheet2.getRange(id_position,11).getValue();
+            speed_2nd = sheet2.getRange(id_position,8).getValue();
+            speed_3rd = sheet2.getRange(id_position,11).getValue();
 
-            if(time_2nd>time_3rd){
+            if(speed_2nd<speed_3rd){
               round_2nd = sheet2.getRange(id_position,6).getValue();
               round_3rd = sheet2.getRange(id_position,9).getValue();
 
               //3rdを2ndに
               sheet2.getRange(id_position,6).setValue(round_3rd);//Round
               sheet2.getRange(id_position,7).setValue(point_3rd);//Point
-              sheet2.getRange(id_position,8).setValue(time_3rd);//Time
+              sheet2.getRange(id_position,8).setValue(speed_3rd);//Time
               //2ndを3rdに
               sheet2.getRange(id_position,9).setValue(round_2nd);//Round
               sheet2.getRange(id_position,10).setValue(point_2nd);//Point
-              sheet2.getRange(id_position,11).setValue(time_2nd);//Time
+              sheet2.getRange(id_position,11).setValue(speed_2nd);//Time
               
               changed=true;
             }
@@ -200,21 +199,21 @@ function calculate(){
         
           //タイム入れ替え(1位と2位)
           if(point_1st==point_2nd){
-            time_1st = sheet2.getRange(id_position,5).getValue();
-            time_2nd = sheet2.getRange(id_position,8).getValue();
+            speed_1st = sheet2.getRange(id_position,5).getValue();
+            speed_2nd = sheet2.getRange(id_position,8).getValue();
 
-            if(time_1st>time_2nd){
+            if(speed_1st<speed_2nd){
               round_1st = sheet2.getRange(id_position,3).getValue();
               round_2nd = sheet2.getRange(id_position,6).getValue();
 
               //2ndを1stに
               sheet2.getRange(id_position,3).setValue(round_2nd);//Round
               sheet2.getRange(id_position,4).setValue(point_2nd);//Point
-              sheet2.getRange(id_position,5).setValue(time_2nd);//Time
+              sheet2.getRange(id_position,5).setValue(speed_2nd);//Time
               //1stを2ndに
               sheet2.getRange(id_position,6).setValue(round_1st);//Round
               sheet2.getRange(id_position,7).setValue(point_1st);//Point
-              sheet2.getRange(id_position,8).setValue(time_1st);//Time
+              sheet2.getRange(id_position,8).setValue(speed_1st);//Time
 
               changed=true
             }
@@ -282,12 +281,12 @@ function sort(){
   while(1){
     if(changed2){
       changed2=false;
-      //自分より上の行で、「自分の点数と同じ点数」で「自分のタイムの方が速い」行を入れ替えていく
+      //自分より上の行で、「自分の点数と同じ点数」で「自分のスピードが大きい」行を入れ替えていく
       for(var i=2; i<LastRow+1; i++){
         var i0_value = sheet.getRange(i,4).getValue();
         var i1_value = sheet.getRange(i+1,4).getValue();
         if(i0_value && i1_value){
-          if((i0_value == i1_value)&&(sheet.getRange(i,5).getValue()>sheet.getRange(i+1,5).getValue())){
+          if((i0_value == i1_value)&&(sheet.getRange(i,5).getValue()<sheet.getRange(i+1,5).getValue())){
             sheet.insertRowAfter(i-1);
             for(ii=2; ii<6; ii++){
               sheet.getRange(i,ii).setValue(sheet.getRange(i+2,ii).getValue());

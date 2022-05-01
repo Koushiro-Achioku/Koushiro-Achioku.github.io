@@ -4,7 +4,12 @@ var EndTime_array = new Array(0,0,0,0);
 var RunningTime_array = new Array(0,0,0,0);
 
 //点数計算用の配列定義
-var Score_array = new Array(13).fill(0);
+var Score_array = new Array(6).fill(0);
+
+//走行パターン変数
+var Time = 0;
+var Pattern = 0;
+var Distance = new Array(6230,6710,6710,7190,7190,7190);
 
 //点数リセット関数
 function Score_reset(){
@@ -24,7 +29,7 @@ function Scoring(mission,selected){
     let each_point;
     switch(mission){
         case 1:
-            each_point = 5;
+            each_point = 20;
             document.getElementById("check_M1-1").innerText = selected;
             document.getElementById("check_M1-1_Total").innerText = selected*each_point;
             break;
@@ -32,6 +37,21 @@ function Scoring(mission,selected){
             each_point = 10;
             document.getElementById("check_M2-1").innerText = selected;
             document.getElementById("check_M2-1_Total").innerText = selected*each_point;
+            break;
+        case 3:
+            each_point = 20;
+            document.getElementById("check_M3-1").innerText = selected;
+            document.getElementById("check_M3-1_Total").innerText = selected*each_point;
+            break;
+        case 4:
+            each_point = 10;
+            document.getElementById("check_M4-1").innerText = selected;
+            document.getElementById("check_M4-1_Total").innerText = selected*each_point;
+            break;
+        case 5:
+            each_point = -5;
+            document.getElementById("check_M5-1").innerText = selected;
+            document.getElementById("check_M5-1_Total").innerText = selected*each_point;
             break;
         default:
             console.log("ERROR!!");
@@ -66,7 +86,13 @@ function CurrentTime(){
 window.addEventListener('DOMContentLoaded', function(){
     var input_time = document.getElementById("Time-textbox");
     input_time.addEventListener("change",function(){
-        document.getElementById("Time-text").innerHTML = input_time.value;
+        //タイム書き込み
+        Time = input_time.value;
+        document.getElementById("Time-text").innerHTML = Time;
+        //スピード計算・書き込み
+        document.getElementById("Speed").innerHTML = Speed(Pattern,Time);
+        document.getElementById("Speed-textbox").value = Speed(Pattern,Time);
+        document.getElementById("Speed-text").innerHTML = Speed(Pattern,Time);
     });
 
     var select_teamname = document.getElementById("Teamname_selector");
@@ -90,3 +116,21 @@ function setTeam(){
     document.getElementById("Teamname_selector").appendChild(opt);
     }
 };
+
+function Patternset(num){
+    document.getElementById("Pattern-text").innerHTML = num;
+    Pattern = num-1;
+    //スピード計算・書き込み
+    document.getElementById("Speed").innerHTML = Speed(Pattern,Time);
+    document.getElementById("Speed-textbox").value = Speed(Pattern,Time);
+    document.getElementById("Speed-text").innerHTML = Speed(Pattern,Time);
+}
+
+function Speed(pattern,time){
+    if(time==0){
+        return 0;
+    }
+    else{
+        return Math.floor((Distance[pattern]/time)*100)/100;
+    }
+}

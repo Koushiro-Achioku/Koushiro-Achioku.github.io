@@ -126,8 +126,15 @@ document.getElementById("start-button").onclick = function(){
             min_and_sec = min_and_sec + 1;
         }
 
+        //タイム書き込み
+        Time = min_and_sec;
         document.getElementById("Time-textbox").value = min_and_sec;
         document.getElementById("Time-text").innerHTML = min_and_sec;
+
+        //スピード計算・書き込み
+        document.getElementById("Speed").innerHTML = Speed(Pattern,Time);
+        document.getElementById("Speed-textbox").value = Speed(Pattern,Time);
+        document.getElementById("Speed-text").innerHTML = Speed(Pattern,Time);
 
         clearInterval(timer1);
     }

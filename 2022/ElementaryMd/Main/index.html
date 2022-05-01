@@ -47,7 +47,7 @@
                     </td>
                     <td class="center-td">
                         <a target="_blank" href="../../top/index.html"><img src="../../../img/wro-rogo-white.png" class="image"></a>
-                        <p class="TitleEng">Scoring System - Elementary Middle</p>
+                        <p class="TitleEng">Scoring System - Senior Middle</p>
                     </td>
                     <td class="right-td">
                         <p class="TitleEng">Current</p>
@@ -113,6 +113,47 @@
                         </label>
                     </div>
                 </div>
+
+                <!--走行パターン-->
+                <div class="section">
+                    <table class="section-title">
+                        <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M17.75 42Q14.5 42 12.25 39.725Q10 37.45 10 34.25V16.8Q8.25 16.15 7.125 14.725Q6 13.3 6 11.5Q6 9.2 7.625 7.6Q9.25 6 11.55 6Q13.8 6 15.4 7.6Q17 9.2 17 11.5Q17 13.3 15.875 14.725Q14.75 16.15 13 16.8V34.25Q13 36.2 14.375 37.6Q15.75 39 17.8 39Q19.8 39 21.15 37.6Q22.5 36.2 22.5 34.25V13.75Q22.5 10.5 24.75 8.25Q27 6 30.25 6Q33.5 6 35.75 8.25Q38 10.5 38 13.75V31.2Q39.75 31.85 40.875 33.275Q42 34.7 42 36.5Q42 38.75 40.4 40.375Q38.8 42 36.5 42Q34.25 42 32.625 40.375Q31 38.75 31 36.5Q31 34.7 32.125 33.25Q33.25 31.8 35 31.2V13.75Q35 11.75 33.625 10.375Q32.25 9 30.25 9Q28.25 9 26.875 10.375Q25.5 11.75 25.5 13.75V34.25Q25.5 37.45 23.25 39.725Q21 42 17.75 42ZM11.55 14Q12.55 14 13.275 13.25Q14 12.5 14 11.45Q14 10.45 13.275 9.725Q12.55 9 11.5 9Q10.5 9 9.75 9.725Q9 10.45 9 11.5Q9 12.5 9.75 13.25Q10.5 14 11.55 14ZM36.55 39Q37.55 39 38.275 38.25Q39 37.5 39 36.45Q39 35.45 38.275 34.725Q37.55 34 36.5 34Q35.5 34 34.75 34.725Q34 35.45 34 36.5Q34 37.5 34.75 38.25Q35.5 39 36.55 39ZM11.5 11.5Q11.5 11.5 11.5 11.5Q11.5 11.5 11.5 11.5Q11.5 11.5 11.5 11.5Q11.5 11.5 11.5 11.5Q11.5 11.5 11.5 11.5Q11.5 11.5 11.5 11.5Q11.5 11.5 11.5 11.5Q11.5 11.5 11.5 11.5ZM36.5 36.5Q36.5 36.5 36.5 36.5Q36.5 36.5 36.5 36.5Q36.5 36.5 36.5 36.5Q36.5 36.5 36.5 36.5Q36.5 36.5 36.5 36.5Q36.5 36.5 36.5 36.5Q36.5 36.5 36.5 36.5Q36.5 36.5 36.5 36.5Z"/></svg></td>
+                        <td><p style="font-size: 30px;">走行パターン</p></td>
+                    </table>
+
+                    <details>
+                        <summary>走行パターン表</summary>
+                        <img src="../img/pattern.png">
+                    </details>
+
+                    <!--RadioButton-->
+                    <div style="margin-bottom:20px;">
+                        <label for="radio_select_Route_0" class="radio_select">
+                            <input name="Route" id="radio_select_Route_0" type="radio" class="radio_select_inner" value="1" onclick="Patternset(value)" required/>
+                            1
+                        </label><br>
+                        <label for="radio_select_Route_1" class="radio_select">
+                            <input name="Route" id="radio_select_Route_1" type="radio" class="radio_select_inner" value="2" onclick="Patternset(value)" />
+                            2
+                        </label><br>
+                        <label for="radio_select_Route_2" class="radio_select">
+                            <input name="Route" id="radio_select_Route_2" type="radio" class="radio_select_inner" value="3" onclick="Patternset(value)" />
+                            3
+                        </label><br>
+                        <label for="radio_select_Route_3" class="radio_select">
+                            <input name="Route" id="radio_select_Route_3" type="radio" class="radio_select_inner" value="4" onclick="Patternset(value)" />
+                            4
+                        </label><br>
+                        <label for="radio_select_Route_4" class="radio_select">
+                            <input name="Route" id="radio_select_Route_4" type="radio" class="radio_select_inner" value="5" onclick="Patternset(value)" />
+                            5
+                        </label><br>
+                        <label for="radio_select_Route_5" class="radio_select">
+                            <input name="Route" id="radio_select_Route_5" type="radio" class="radio_select_inner" value="6" onclick="Patternset(value)" />
+                            6
+                        </label>
+                    </div>
+                </div>
                 
                 <!--タスク-->
                 <div class="section">
@@ -121,53 +162,138 @@
                         <td><p style="font-size: 30px;">ミッション</p></td>
                     </table>
 
-                    <p style="font-size: 25px;">【M1】Select</p><br>
+                    <p style="font-size: 25px;">【M1】オブジェクトが壊れず、指定されたエリアに完全に入っている。【20点】</p><br>
 
                     <details>
                         <summary>判定例の画像</summary>
                         <img src="../img/M1.png">
                     </details>
-
-                    <p>HOGEが入っている【X点】</p>
+                    
                     <div>
-                        <label for="radio_select_M1-1_0" class="radio_select">
-                            <input name="Mission1_1" id="radio_select_M1-1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(1,this.value)" required/>
+                        <label for="radio_select_M1_0" class="radio_select">
+                            <input name="Mission1_1" id="radio_select_M1_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(1,this.value)" required/>
                             0
                         </label><br>
-                        <label for="radio_select_M1-1_1" class="radio_select">
-                            <input name="Mission1_1" id="radio_select_M1-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(1,this.value)" />
+                        <label for="radio_select_M1_1" class="radio_select">
+                            <input name="Mission1_1" id="radio_select_M1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(1,this.value)" />
                             1
                         </label><br>
-                        <label for="radio_select_M1-1_2" class="radio_select">
-                            <input name="Mission1_1" id="radio_select_M1-1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(1,this.value)" />
+                        <label for="radio_select_M1_2" class="radio_select">
+                            <input name="Mission1_1" id="radio_select_M1_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(1,this.value)" />
                             2
                         </label><br>
-                        <label for="radio_select_M1-1_3" class="radio_select">
-                            <input name="Mission1_1" id="radio_select_M1-1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(1,this.value)" />
+                        <label for="radio_select_M1_3" class="radio_select">
+                            <input name="Mission1_1" id="radio_select_M1_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(1,this.value)" />
                             3
+                        </label><br>
+                        <label for="radio_select_M1_4" class="radio_select">
+                            <input name="Mission1_1" id="radio_select_M1_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(1,this.value)" />
+                            4
+                        </label><br>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p style="font-size: 25px;">【M2】オブジェクトが壊れず、指定されたエリアに完全ではないが入っている。【10点】</p><br>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M2.png">
+                    </details><br>
+
+                    <details>
+                        <summary>以下の場合は0点</summary>
+                        <img src="../img/M2_1.png">
+                    </details>
+                    
+                    <div>
+                        <label for="radio_select_M2_0" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(2,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M2_1" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(2,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M2_2" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(2,this.value)" />
+                            2
+                        </label><br>
+                        <label for="radio_select_M2_3" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(2,this.value)" />
+                            3
+                        </label><br>
+                        <label for="radio_select_M2_4" class="radio_select">
+                            <input name="Mission2_1" id="radio_select_M2_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(2,this.value)" />
+                            4
                         </label><br>
                     </div><br>
                 </div>
                 
                 <div class="section">
-                    <p style="font-size: 25px;">【M4】YES or NO</p><br>
-
-                    <p>ロボット本体全体がゴールエリアに入り、すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。【X点】</p>
+                    <p style="font-size: 25px;">【M3】ロボット本体全体がゴールエリアに入り、すべてのモータが静止している（少なくとも1⃣、2⃣のいずれかのポイントが取れている場合のみ与えられる）。【10点】</p><br>
 
                     <details>
                         <summary>判定例の画像</summary>
-                        <img src="../img/M4.png">
+                        <img src="../img/M3.jpg">
                     </details>
 
                     <div>
-                        <label for="radio_select_M4-1_1" class="radio_select">
-                            <input name="Mission4_1" id="radio_select_M4-1_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(2,this.value)" required/>
+                        <label for="radio_select_M3_1" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(3,this.value)" required/>
                             YES
                         </label><br>
-                        <label for="radio_select_M4-1_2" class="radio_select">
-                            <input name="Mission4_1" id="radio_select_M4-1_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(2,this.value)" />
+                        <label for="radio_select_M3_2" class="radio_select">
+                            <input name="Mission3_1" id="radio_select_M3_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(3,this.value)" />
                             NO
                         </label>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p style="font-size: 25px;">【M4】正しい順にオブジェクトを入れることが出来た（少なくとも1⃣、2⃣のいずれかのポイントがすべて取れている場合のみ与えられる）。【10点】</p><br>
+
+                    <div>
+                        <label for="radio_select_M4_1" class="radio_select">
+                            <input name="Mission4_1" id="radio_select_M4_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(4,this.value)" required/>
+                            YES
+                        </label><br>
+                        <label for="radio_select_M4_2" class="radio_select">
+                            <input name="Mission4_1" id="radio_select_M4_2" type="radio" class="radio_select_inner" value="0" onclick="Scoring(4,this.value)" />
+                            NO
+                        </label>
+                    </div><br>
+                </div>
+
+                <div class="section">
+                    <p style="font-size: 25px;">【M5】ブロック壁がこわれた、または、ブロック壁が枠からはみ出した。【-5点】</p><br>
+
+                    <details>
+                        <summary>判定例の画像</summary>
+                        <img src="../img/M5.png">
+                    </details><br>
+
+                    <div>
+                        <label for="radio_select_M5_0" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5_0" type="radio" class="radio_select_inner" value="0" onclick="Scoring(5,this.value)" required/>
+                            0
+                        </label><br>
+                        <label for="radio_select_M5_1" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5_1" type="radio" class="radio_select_inner" value="1" onclick="Scoring(5,this.value)" />
+                            1
+                        </label><br>
+                        <label for="radio_select_M5_2" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5_2" type="radio" class="radio_select_inner" value="2" onclick="Scoring(5,this.value)" />
+                            2
+                        </label><br>
+                        <label for="radio_select_M5_3" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5_3" type="radio" class="radio_select_inner" value="3" onclick="Scoring(5,this.value)" />
+                            3
+                        </label><br>
+                        <label for="radio_select_M5_4" class="radio_select">
+                            <input name="Mission5_1" id="radio_select_M5_4" type="radio" class="radio_select_inner" value="4" onclick="Scoring(5,this.value)" />
+                            4
+                        </label><br>
                     </div><br>
                 </div>
                 
@@ -188,6 +314,22 @@
                         </label>
                     </div>
                 </div>
+
+                <!--スピード-->
+                <div class="section">
+                    <table class="section-title">
+                        <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.35 31.75Q21.5 32.9 23.675 32.825Q25.85 32.75 26.85 31.2L37.65 14.25L20.9 25.2Q19.4 26.2 19.3 28.4Q19.2 30.6 20.35 31.75ZM9.6 40Q8.75 40 7.925 39.575Q7.1 39.15 6.7 38.35Q5.4 35.95 4.7 33.475Q4 31 4 28.2Q4 24.05 5.575 20.375Q7.15 16.7 9.85 13.975Q12.55 11.25 16.175 9.65Q19.8 8.05 23.9 8.05Q26.75 8.05 29.85 8.975Q32.95 9.9 35.8 12.15L33.2 14Q30.95 12.5 28.375 11.775Q25.8 11.05 23.9 11.05Q16.9 11.05 11.95 16.05Q7 21.05 7 28.2Q7 30.45 7.625 32.75Q8.25 35.05 9.4 37H38.35Q39.45 35.2 40.1 32.8Q40.75 30.4 40.75 28.1Q40.75 26 40.125 23.575Q39.5 21.15 37.9 19.1L39.85 16.5Q41.75 19.3 42.7 22.125Q43.65 24.95 43.75 27.8Q43.85 30.8 43.15 33.45Q42.45 36.1 41.1 38.35Q40.5 39.5 39.825 39.75Q39.15 40 38.15 40ZM23.45 24.6Q23.45 24.6 23.45 24.6Q23.45 24.6 23.45 24.6Q23.45 24.6 23.45 24.6Q23.45 24.6 23.45 24.6Q23.45 24.6 23.45 24.6Q23.45 24.6 23.45 24.6Q23.45 24.6 23.45 24.6Q23.45 24.6 23.45 24.6Q23.45 24.6 23.45 24.6Q23.45 24.6 23.45 24.6Z"/></svg></td>
+                        <td><p style="font-size: 30px;">スピード</p></td>
+                    </table>
+
+                    <table class="Table-Textbox">
+                        <td style="width: 45px;"><p id="Speed" style="font-size: 30px;">0</p></td>
+                        <td><p style="font-size: 30px;">[mm/秒]</p></td>
+                    </table>
+
+                    <!--データ送信用非表示input-->
+                    <input hidden type="text" name="Speed" value="0" id="Speed-textbox" required>
+                </div>
                 
                 <!--チェック-->
                 <div class="section">
@@ -207,6 +349,10 @@
                                 <td style="width:30%">ラウンド</td>
                                 <td id="Round-text"></td>
                             </tr>
+                            <tr>
+                                <td style="width:30%">走行パターン</td>
+                                <td id="Pattern-text"></td>
+                            </tr>
                         </table>
                         <br>
 
@@ -218,31 +364,44 @@
                                 <th style="width: 10%;">個数</th>
                                 <th style="width: 10%;">計</th>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>【M1】Select</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>HOGEが入っている</td>
-                                <td style="background-color: lightgray;">5</td>
-                                <td style="background-color: lightgray;">15</td>
+                                <td>【M1】オブジェクトが壊れず、指定されたエリアに完全に入っている。</td>
+                                <td style="background-color: lightgray;">20</td>
+                                <td style="background-color: lightgray;">80</td>
                                 <td id="check_M1-1">0</td>
                                 <td id="check_M1-1_Total">0</td>
                             </tr>
-                            <tr style="background-color: lightgray;">
-                                <td>【M4】YES or NO</td>
-                                <td></td><td></td><td></td><td></td>
-                            </tr>
                             <tr>
-                                <td>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。</td>
-                                <td style="background-color: lightgray;"></td>
+                                <td>【M2】オブジェクトが壊れず、指定されたエリアに完全ではないが入っている。</td>
                                 <td style="background-color: lightgray;">10</td>
+                                <td style="background-color: lightgray;">40</td>
                                 <td id="check_M2-1">0</td>
                                 <td id="check_M2-1_Total">0</td>
                             </tr>
+                            <tr>
+                                <td>【M3】ロボット本体全体がゴールエリアに入り、すべてのモータが静止している（少なくとも1⃣、2⃣のいずれかのポイントが取れている場合のみ与えられる）。</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">20</td>
+                                <td id="check_M3-1">0</td>
+                                <td id="check_M3-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>【M4】正しい順にオブジェクトを入れることが出来た（少なくとも1⃣、2⃣のいずれかのポイントがすべて取れている場合のみ与えられる）。</td>
+                                <td style="background-color: lightgray;"></td>
+                                <td style="background-color: lightgray;">10</td>
+                                <td id="check_M4-1">0</td>
+                                <td id="check_M4-1_Total">0</td>
+                            </tr>
+                            <tr>
+                                <td>【M5】ブロック壁がこわれた、または、ブロック壁が枠からはみ出した。</td>
+                                <td style="background-color: lightgray;">-5</td>
+                                <td style="background-color: lightgray;">-20</td>
+                                <td id="check_M5-1">0</td>
+                                <td id="check_M5-1_Total">0</td>
+                            </tr>
                             <tr style="background-color: lightgray;">
                                 <td>最高点数</td>
-                                <td></td><td>XXX</td><td></td><td></td>
+                                <td></td><td>110</td><td></td><td></td>
                             </tr>
                             <tr style="background-color: lightgray;">
                                 <td>今回の得点</td>
@@ -251,6 +410,10 @@
                             <tr style="background-color: lightgray;">
                                 <td>タイム(秒)</td>
                                 <td></td><td></td><td></td><td id="Time-text">0</td>
+                            </tr>
+                            <tr style="background-color: lightgray;">
+                                <td>スピード(mm/秒)</td>
+                                <td></td><td></td><td></td><td id="Speed-text">0</td>
                             </tr>
                         </table>
                         <br>

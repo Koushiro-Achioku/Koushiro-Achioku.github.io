@@ -23,7 +23,7 @@
         <nav>
             <div>
                 <div class="btn_menu"><p style="margin: 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30px" height="30px" style="padding-top: 4px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></p></div>
-                <p style="color: white; margin: 10px;">Start Order List</p>
+                <p style="color: white; margin: 10px;">出走順</p>
             </div>
 
             <iframe src="https://script.google.com/macros/s/AKfycbytTwZdigEsRGaKEiR3rNpsgyPn6DEKZB0M3-sai3V2tOxWsYniqmX-jaBpQuTdb2ou/exec"></iframe>
@@ -231,7 +231,7 @@
                 </div>
                 
                 <div class="section">
-                    <p style="font-size: 25px;">【M3】ロボット本体全体がゴールエリアに入り、すべてのモータが静止している（少なくとも1⃣、2⃣のいずれかのポイントが取れている場合のみ与えられる）。【10点】</p><br>
+                    <p style="font-size: 25px;">【M3】ロボット本体全体がゴールエリアに入り、すべてのモータが静止している（少なくともM1、M2のいずれかのポイントが取れている場合のみ与えられる）。【10点】</p><br>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -251,7 +251,7 @@
                 </div>
 
                 <div class="section">
-                    <p style="font-size: 25px;">【M4】正しい順にオブジェクトを入れることが出来た（少なくとも1⃣、2⃣のいずれかのポイントがすべて取れている場合のみ与えられる）。【10点】</p><br>
+                    <p style="font-size: 25px;">【M4】正しい順にオブジェクトを入れることが出来た（少なくともM1、M2のいずれかのポイントがすべて取れている場合のみ与えられる）。【10点】</p><br>
 
                     <div>
                         <label for="radio_select_M4_1" class="radio_select">
@@ -308,7 +308,7 @@
                     <div class="cp_ipnum">
                         <label class="ef">
                             <table class="Table-Textbox">
-                                <td><input type="number" name="Time" placeholder="秒" id="Time-textbox" required></td>
+                                <td><input type="number" name="Time" placeholder="秒" id="Time-textbox" step="0.1" required></td>
                                 <td><p style="padding-left: 5px;">秒</p></td>
                             </table>
                         </label>
@@ -379,14 +379,14 @@
                                 <td id="check_M2-1_Total">0</td>
                             </tr>
                             <tr>
-                                <td>【M3】ロボット本体全体がゴールエリアに入り、すべてのモータが静止している（少なくとも1⃣、2⃣のいずれかのポイントが取れている場合のみ与えられる）。</td>
+                                <td>【M3】ロボット本体全体がゴールエリアに入り、すべてのモータが静止している（少なくともM1、M2のいずれかのポイントが取れている場合のみ与えられる）。</td>
                                 <td style="background-color: lightgray;"></td>
                                 <td style="background-color: lightgray;">20</td>
                                 <td id="check_M3-1">0</td>
                                 <td id="check_M3-1_Total">0</td>
                             </tr>
                             <tr>
-                                <td>【M4】正しい順にオブジェクトを入れることが出来た（少なくとも1⃣、2⃣のいずれかのポイントがすべて取れている場合のみ与えられる）。</td>
+                                <td>【M4】正しい順にオブジェクトを入れることが出来た（少なくともM1、M2のいずれかのポイントがすべて取れている場合のみ与えられる）。</td>
                                 <td style="background-color: lightgray;"></td>
                                 <td style="background-color: lightgray;">10</td>
                                 <td id="check_M4-1">0</td>

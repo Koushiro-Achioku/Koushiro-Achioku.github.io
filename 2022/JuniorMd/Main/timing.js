@@ -122,14 +122,12 @@ document.getElementById("start-button").onclick = function(){
 
         document.getElementById("RunningTime-text").innerHTML = min + ":" + sec + "." + microsec;
 
-        if(microsec>=500){
-            min_and_sec = min_and_sec + 1;
-        }
+        min_and_sec = min_and_sec + "." + microsec;
 
         //タイム書き込み
-        Time = min_and_sec;
-        document.getElementById("Time-textbox").value = min_and_sec;
-        document.getElementById("Time-text").innerHTML = min_and_sec;
+        Time = Math.round(min_and_sec*10)/10;
+        document.getElementById("Time-textbox").value = Time;
+        document.getElementById("Time-text").innerHTML = Time;
 
         //スピード計算・書き込み
         document.getElementById("Speed").innerHTML = Speed(Pattern,Time);

@@ -105,19 +105,19 @@ function readValue(id_read,round){
 
         switch(round){
             case 1:
-                ss_value_r1[0] = sheet.getRange(base_row,4).getValue();//合計点
+                ss_value_r1[0] = sheet.getRange(base_row,5).getValue();//合計点
                 ss_value_r1[column-3] = sheet.getRange(base_row,4).getValue();//パターン
                 ss_value_r1[column-2] = sheet.getRange(base_row,6).getValue();//タイム
                 ss_value_r1[column-1] = sheet.getRange(base_row,7).getValue();//スピード
                 break;
             case 2:
-                ss_value_r2[0] = sheet.getRange(base_row,4).getValue();//合計点
+                ss_value_r2[0] = sheet.getRange(base_row,5).getValue();//合計点
                 ss_value_r2[column-3] = sheet.getRange(base_row,4).getValue();//パターン
                 ss_value_r2[column-2] = sheet.getRange(base_row,6).getValue();//タイム
                 ss_value_r2[column-1] = sheet.getRange(base_row,7).getValue();//スピード
                 break;
             case 3:
-                ss_value_r3[0] = sheet.getRange(base_row,4).getValue();//合計点
+                ss_value_r3[0] = sheet.getRange(base_row,5).getValue();//合計点
                 ss_value_r3[column-3] = sheet.getRange(base_row,4).getValue();//パターン
                 ss_value_r3[column-2] = sheet.getRange(base_row,6).getValue();//タイム
                 ss_value_r3[column-1] = sheet.getRange(base_row,7).getValue();//スピード

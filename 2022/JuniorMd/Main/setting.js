@@ -131,6 +131,6 @@ function Speed(pattern,time){
         return 0;
     }
     else{
-        return Math.floor((Distance[pattern]/time)*100)/100;
+        return Math.round((Distance[pattern]/time)*10)/10;
     }
 }

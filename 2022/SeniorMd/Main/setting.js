@@ -7,7 +7,7 @@ var RunningTime_array = new Array(0,0,0,0);
 var Score_array = new Array(6).fill(0);
 
 //走行パターン変数
-var Time = 0;
+var Time = 0.0;
 var Pattern = 0;
 var Distance = new Array(6230,6710,6710,7190,7190,7190);
 
@@ -131,6 +131,6 @@ function Speed(pattern,time){
         return 0;
     }
     else{
-        return Math.floor((Distance[pattern]/time)*100)/100;
+        return Math.round((Distance[pattern]/time)*10)/10;
     }
 }

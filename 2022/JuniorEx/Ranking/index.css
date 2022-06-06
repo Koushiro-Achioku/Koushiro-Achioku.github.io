@@ -193,7 +193,6 @@ nav {
     transition: all 0.4s ease-in-out;
     transform: translate(-400px);
     z-index: 1000;
-    color: white;
     text-align: center;
     font-family: 'Titillium Web', 'M PLUS 1p', sans-serif;
     font-weight: 500;

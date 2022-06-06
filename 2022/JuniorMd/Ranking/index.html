@@ -17,13 +17,29 @@
         <script type="text/javascript" src="setting.js"></script>
     </head>
     <body onLoad="CurrentTime()">
+        <!--横からせり出しメニュー-->
+        <nav>
+            <div>
+                <div class="btn_menu"><p style="margin: 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30px" height="30px" style="padding-top: 4px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></p></div>
+                <p style="color: white; margin: 10px;">出走順</p>
+            </div>
+
+            <iframe src="https://script.google.com/macros/s/AKfycbxKXF_IIffgotyLonkyt9g8e1SRP-SkmKJKEhx6WqOHaIGjdGzVF9h01c1DtW1SiYzf/exec"></iframe>
+        </nav>
+        
+        <script>
+        $(function(){
+            $('.btn_menu').click(function(){
+                $('nav').toggleClass('open');
+            });
+        })
+        </script>
+        
         <!--ヘッダー-->
         <div class="headder">
             <table>
                 <td class="left-td">
-                    <!--
                     <div class="btn_menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30px" height="30px" style="padding-top: 3px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg></div>
-                    -->
                 </td>
                 <td class="center-td">
                     <a target="_blank" href="../../top/index.html"><img src="../../../img/wro-rogo-white.png" class="image"></a>

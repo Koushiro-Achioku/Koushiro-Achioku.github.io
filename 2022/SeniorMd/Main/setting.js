@@ -6,6 +6,8 @@ var RunningTime_array = new Array(0,0,0,0);
 //点数計算用の配列定義
 var Score_array = new Array(6).fill(0);
 
+var obj = new Array(0,0,0).fill(0);
+
 //走行パターン変数
 var Time = 0.0;
 var Pattern = 0;
@@ -32,11 +34,29 @@ function Scoring(mission,selected){
             each_point = 20;
             document.getElementById("check_M1-1").innerText = selected;
             document.getElementById("check_M1-1_Total").innerText = selected*each_point;
+            //データ数検証
+            obj[1] = selected;
+            obj[0] = Number(obj[1]) + Number(obj[2]);
+            if(Number(obj[0])<=4){
+                document.getElementById("caution_text").hidden = true;
+            }
+            else{
+                document.getElementById("caution_text").hidden = false;
+            }
             break;
         case 2:
             each_point = 10;
             document.getElementById("check_M2-1").innerText = selected;
             document.getElementById("check_M2-1_Total").innerText = selected*each_point;
+            //データ数検証
+            obj[2] = selected;
+            obj[0] = Number(obj[1]) + Number(obj[2]);
+            if(Number(obj[0])<=4){
+                document.getElementById("caution_text").hidden = true;
+            }
+            else{
+                document.getElementById("caution_text").hidden = false;
+            }
             break;
         case 3:
             each_point = 20;

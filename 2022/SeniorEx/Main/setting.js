@@ -6,6 +6,10 @@ var RunningTime_array = new Array(0,0,0,0);
 //点数計算用の配列定義
 var Score_array = new Array(13).fill(0);
 
+var caution_flag = new Array(0,0).fill(0);
+var obj_mission1 = new Array(0,0,0,0).fill(0);
+var obj_mission2 = new Array(0,0,0,0,0).fill(0);
+
 //点数リセット関数
 function Score_reset(){
     for(let i=0; i<Score_array.length; i++ ){ Score_array[i]=0; }
@@ -27,36 +31,99 @@ function Scoring(mission,selected){
             each_point = 6;
             document.getElementById("check_M1-1").innerText = selected;
             document.getElementById("check_M1-1_Total").innerText = selected*each_point;
+            //データ数検証
+            obj_mission1[1] = selected;
+            obj_mission1[0] = Number(obj_mission1[1]) + Number(obj_mission1[2]) + Number(obj_mission1[3]);
+            if(Number(obj_mission1[0])<=3){
+                caution_flag[0] = 0;
+            }
+            else{
+                caution_flag[0] = 1;
+            }
             break;
         case 2:
             each_point = 10;
             document.getElementById("check_M1-2").innerText = selected;
             document.getElementById("check_M1-2_Total").innerText = selected*each_point;
+            //データ数検証
+            obj_mission1[2] = selected;
+            obj_mission1[0] = Number(obj_mission1[1]) + Number(obj_mission1[2]) + Number(obj_mission1[3]);
+            if(Number(obj_mission1[0])<=3){
+                caution_flag[0] = 0;
+            }
+            else{
+                caution_flag[0] = 1;
+            }
             break;
         case 3:
             each_point = 16;
             document.getElementById("check_M1-3").innerText = selected;
             document.getElementById("check_M1-3_Total").innerText = selected*each_point;
+            //データ数検証
+            obj_mission1[3] = selected;
+            obj_mission1[0] = Number(obj_mission1[1]) + Number(obj_mission1[2]) + Number(obj_mission1[3]);
+            if(Number(obj_mission1[0])<=3){
+                caution_flag[0] = 0;
+            }
+            else{
+                caution_flag[0] = 1;
+            }
             break;
         case 4:
             each_point=6;
             document.getElementById("check_M2-1").innerText = selected;
             document.getElementById("check_M2-1_Total").innerText = selected*each_point;
+            //データ数検証
+            obj_mission2[1] = selected;
+            obj_mission2[0] = Number(obj_mission2[1]) + Number(obj_mission2[2]) + Number(obj_mission2[3]) + Number(obj_mission2[4]);
+            if(Number(obj_mission2[0])<=2){
+                caution_flag[1] = 0;
+            }
+            else{
+                caution_flag[1] = 1;
+            }
             break;
         case 5:
             each_point=-6;
             document.getElementById("check_M2-2").innerText = selected;
             document.getElementById("check_M2-2_Total").innerText = selected*each_point;
+            //データ数検証
+            obj_mission2[2] = selected;
+            obj_mission2[0] = Number(obj_mission2[1]) + Number(obj_mission2[2]) + Number(obj_mission2[3]) + Number(obj_mission2[4]);
+            if(Number(obj_mission2[0])<=2){
+                caution_flag[1] = 0;
+            }
+            else{
+                caution_flag[1] = 1;
+            }
             break;
         case 6:
             each_point=10;
             document.getElementById("check_M2-3").innerText = selected;
             document.getElementById("check_M2-3_Total").innerText = selected*each_point;
+            //データ数検証
+            obj_mission2[3] = selected;
+            obj_mission2[0] = Number(obj_mission2[1]) + Number(obj_mission2[2]) + Number(obj_mission2[3]) + Number(obj_mission2[4]);
+            if(Number(obj_mission2[0])<=2){
+                caution_flag[1] = 0;
+            }
+            else{
+                caution_flag[1] = 1;
+            }
             break;
         case 7:
             each_point=14;
             document.getElementById("check_M2-4").innerText = selected;
             document.getElementById("check_M2-4_Total").innerText = selected*each_point;
+            //データ数検証
+            obj_mission2[4] = selected;
+            obj_mission2[0] = Number(obj_mission2[1]) + Number(obj_mission2[2]) + Number(obj_mission2[3]) + Number(obj_mission2[4]);
+            if(Number(obj_mission2[0])<=2){
+                caution_flag[1] = 0;
+            }
+            else{
+                caution_flag[1] = 1;
+            }
             break;
         case 8:
             each_point=13;
@@ -91,6 +158,14 @@ function Scoring(mission,selected){
     Score_sum();
     document.getElementById("Point-text").innerHTML = Score_array[0];
     document.getElementById("Point-textbox").value = Score_array[0];
+
+    //データ数検証
+    if(caution_flag[0]+caution_flag[1]==0){
+        document.getElementById("caution_text").hidden = true;
+    }
+    else{
+        document.getElementById("caution_text").hidden = false;
+    }
 }
 
 //現在時刻表示関数

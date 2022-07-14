@@ -453,3 +453,9 @@ iframe{
 details{
     margin: 8px;
 }
+
+.caution{
+    color: red;
+    margin: 8px;
+    font-size: 25px;
+}

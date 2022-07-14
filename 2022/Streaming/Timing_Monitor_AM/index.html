@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base target="_top">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@600&display=swap" rel="stylesheet">
+
+        <link href="index.css" rel="stylesheet">
+
+    </head>
+
+    <body onload="CurrentTime();EventTime();EventTime2()">
+        <table>
+            <td>
+                <img class="rogo" src="../../../img/WRO-MAIN1-reg.svg">
+            </td>
+            <td>
+                <p>WRO 2022 京都公認予選会</p>
+            </td>
+        </table>
+
+        <p style="text-align: center;">タイミングモニター</p>
+
+        <table>
+            <td><p class="current-text">現在時刻</p></td>
+            <td><p class="current-time" id="CurrentTime-text">00:00:00</p></td>
+        </table>
+
+        <br>
+
+        <p>エレメンタリーエキスパート・ミドル</p>
+
+        <table>
+            <tr>
+                <td><p>現在のプログラム</p></td>
+                <td><p>残り時間</p></td>
+            </tr>
+            <tr>
+                <td><p class="event-text" id="CurrentEvent-text">---</p></td>
+                <td><p class="event-time" id="EventTime-text">00:00:00</p></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <p>エレメンタリーベーシック</p>
+
+        <table>
+            <tr>
+                <td><p>現在のプログラム</p></td>
+                <td><p>残り時間</p></td>
+            </tr>
+            <tr>
+                <td><p class="event-text2" id="CurrentEvent-text2">---</p></td>
+                <td><p class="event-time" id="EventTime-text2">00:00:00</p></td>
+            </tr>
+        </table>
+        
+        <script type="text/javascript" src="timing.js"></script>
+    </body>
+</html>

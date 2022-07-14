@@ -6,6 +6,8 @@ var RunningTime_array = new Array(0,0,0,0);
 //点数計算用の配列定義
 var Score_array = new Array(8).fill(0);
 
+var obj_mission3 = new Array(0,0,0).fill(0);
+
 //点数リセット関数
 function Score_reset(){
     for(let i=0; i<Score_array.length; i++ ){ Score_array[i]=0; }
@@ -37,11 +39,29 @@ function Scoring(mission,selected){
             each_point=9;
             document.getElementById("check_M3-1").innerText = selected;
             document.getElementById("check_M3-1_Total").innerText = selected*each_point;
+            //データ数検証
+            obj_mission3[1] = selected;
+            obj_mission3[0] = Number(obj_mission3[1]) + Number(obj_mission3[2]);
+            if(Number(obj_mission3[0])<=3){
+                document.getElementById("caution_text").hidden = true;
+            }
+            else{
+                document.getElementById("caution_text").hidden = false;
+            }
             break;
         case 4:
             each_point=12;
             document.getElementById("check_M3-2").innerText = selected;
             document.getElementById("check_M3-2_Total").innerText = selected*each_point;
+            //データ数検証
+            obj_mission3[2] = selected;
+            obj_mission3[0] = Number(obj_mission3[1]) + Number(obj_mission3[2]);
+            if(Number(obj_mission3[0])<=3){
+                document.getElementById("caution_text").hidden = true;
+            }
+            else{
+                document.getElementById("caution_text").hidden = false;
+            }
             break;
         case 5:
             each_point=17;

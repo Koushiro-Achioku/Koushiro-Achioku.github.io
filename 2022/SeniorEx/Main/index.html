@@ -107,11 +107,19 @@
                             <input name="Round" id="radio_select_Round_1" type="radio" class="radio_select_inner" value="2" onclick="Round_set('2回目')" />
                             2回目
                         </label><br>
+                        <!---
                         <label for="radio_select_Round_2" class="radio_select">
                             <input name="Round" id="radio_select_Round_2" type="radio" class="radio_select_inner" value="3" onclick="Round_set('3回目')" />
                             3回目
                         </label>
+                        -->
                     </div>
+
+                    <!--エキシビジョン-->
+                    <label for="exhibition" class="checkbox">
+                        <p style="font-size: 25px; display: inline-block;">エキシビジョン</p>
+                        <input name="exhibition" id="exhibition" type="checkbox" class="checkbox_inner" value="YES" />
+                    </label>
                 </div>
                 
                 <!--タスク-->
@@ -605,6 +613,8 @@
                     <!--データ送信用非表示input-->
                     <input hidden type="number" name="Point" value="0" id="Point-textbox" required>
                     
+                    <p class="caution" id="caution_text" hidden>⚠入力個数に誤りがあります。確認してください。⚠</p>
+
                     <!--確認用チェックボックス-->
                     <label for="checkbox" class="checkbox">
                         <p style="font-size: 25px; display: inline-block;">確認ボタン</p>

@@ -107,11 +107,19 @@
                             <input name="Round" id="radio_select_Round_1" type="radio" class="radio_select_inner" value="2" onclick="Round_set('2回目')" />
                             2回目
                         </label><br>
+                        <!---
                         <label for="radio_select_Round_2" class="radio_select">
                             <input name="Round" id="radio_select_Round_2" type="radio" class="radio_select_inner" value="3" onclick="Round_set('3回目')" />
                             3回目
                         </label>
+                        -->
                     </div>
+
+                    <!--エキシビジョン-->
+                    <label for="exhibition" class="checkbox">
+                        <p style="font-size: 25px; display: inline-block;">エキシビジョン</p>
+                        <input name="exhibition" id="exhibition" type="checkbox" class="checkbox_inner" value="YES" />
+                    </label>
                 </div>
                 
                 <!--タスク-->
@@ -123,7 +131,7 @@
 
                     <p style="font-size: 25px;">【M1】てんとう虫の保護</p><br>
 
-                    <p>てんとう虫が完全にroute area の外にあり、直立している。【5点】</p>
+                    <p>てんとう虫は完全にルート外の場所にいて、直立した状態で立っている。【5点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -151,9 +159,9 @@
                 </div>
 
                 <div class="section">
-                    <p style="font-size: 25px;">【M2】背の高い草を刈る</p>
+                    <p style="font-size: 25px;">【M2】草刈り</p>
 
-                    <p>草の上部分がベースの上に乗っておらず、ベースがグレーのエリアに触れている。【7点】</p>
+                    <p>トップが芝生のベースに触れなくなり、芝生のベースがグレーの部分に触れたままになっている。【7点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -181,9 +189,9 @@
                 </div>
                 
                 <div class="section">
-                    <p style="font-size: 25px;">【M3】雑草を集める</p>
+                    <p style="font-size: 25px;">【M3】雑草の回収</p>
 
-                    <p>雑草が収集場1の中に完全に入っている。【9点】</p>
+                    <p>雑草は、完全に回収地点1の内側にある。【9点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -211,7 +219,7 @@
                 </div>
 
                 <div class="section">
-                    <p>雑草が収集場2の中に完全に入っている。【12点】</p>
+                    <p>雑草は、完全に回収地点2の内側にある。【12点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -239,9 +247,9 @@
                 </div>
 
                 <div class="section">
-                    <p style="font-size: 25px;">【M4】サービスポイントを有効化</p><br>
+                    <p style="font-size: 25px;">【M4】サービスポイントの起動</p><br>
 
-                    <p>サービスポイントが完全に立てられており、9つ以上のフェンスが立っており、サービスポイントのベースがグレーのエリア内に入っている。【17点】</p>
+                    <p>サービスポイントが正しく起動され、少なくとも9個のフェンスの底面がグレーエリアの中に完全に入り、立っている。【17点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -261,9 +269,9 @@
                 </div>
                 
                 <div class="section">
-                    <p style="font-size: 25px;">【M5】ロボットを停める</p><br>
+                    <p style="font-size: 25px;">【M5】ロボットの駐車</p><br>
 
-                    <p>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。【14点】</p>
+                    <p>ロボット全体(ケーブルは除く)がスタート&フィニッシュエリアで完全に停止した場合（ボーナスポイントではない他のポイントを獲得している場合のみ）【14点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -283,9 +291,9 @@
                 </div>
 
                 <div class="section">
-                    <p style="font-size: 25px;">【M6】ボーナスポイント</p><br>
+                    <p style="font-size: 25px;">【M6】ボーナスポイントの獲得</p><br>
 
-                    <p>フェンスが動いておらず、損傷していない。【2点】</p>
+                    <p>フェンスが動かされたり、壊されていない。【2点】</p>
 
                     <details>
                         <summary>判定例の画像</summary>
@@ -455,6 +463,8 @@
 
                     <!--データ送信用非表示input-->
                     <input hidden type="number" name="Point" value="0" id="Point-textbox" required>
+
+                    <p class="caution" id="caution_text" hidden>⚠入力個数に誤りがあります。確認してください。⚠</p>
                     
                     <!--確認用チェックボックス-->
                     <label for="checkbox" class="checkbox">

@@ -26,3 +26,17 @@ var list = [
     {val:"25", txt:"25 Team Yankee"},
     {val:"26", txt:"26 Team Zule"},
 ];
+
+/*
+var list = [
+    {val:"1", txt:"1 GEAROBO"},
+    {val:"2", txt:"2 Team Bravo"},
+    {val:"3", txt:"3 Team Charlie"},
+    {val:"4", txt:"4 Team Delta"},
+    {val:"5", txt:"5 Team Echo"},
+    {val:"6", txt:"6 Team Foxtrot"},
+    {val:"7", txt:"7 Team Golf"},
+    {val:"8", txt:"8 Team Hote"},
+    {val:"9", txt:"9 Team India"},
+];
+*/

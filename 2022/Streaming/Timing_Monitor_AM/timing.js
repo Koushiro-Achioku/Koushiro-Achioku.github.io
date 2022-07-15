@@ -147,5 +147,5 @@ function EventTime2(){
     }
 
     document.getElementById("EventTime-text2").innerHTML = RemainTime_array[0]+":"+RemainTime_array[1]+":"+RemainTime_array[2];
-    setTimeout("EventTime()", 1000);
+    setTimeout("EventTime2()", 1000);
 }

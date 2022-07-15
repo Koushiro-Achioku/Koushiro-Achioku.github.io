@@ -26,3 +26,23 @@ var list = [
     {val:"185", txt:"185 Team Yankee"},
     {val:"186", txt:"186 Team Zule"},
 ];
+
+/*
+var list = [
+    {val:"501", txt:"501 チャーハン2人前"},
+    {val:"502", txt:"502 メカメカクワカブト"},
+    {val:"503", txt:"503 carrot"},
+    {val:"504", txt:"504 M53万"},
+    {val:"505", txt:"5 Team Echo"},
+    {val:"506", txt:"6 Team Foxtrot"},
+    {val:"507", txt:"7 Team Golf"},
+    {val:"508", txt:"8 Team Hote"},
+    {val:"509", txt:"9 Team India"},
+    {val:"510", txt:"10 Team Juliet"},
+    {val:"511", txt:"11 Team Kilo"},
+    {val:"512", txt:"12 Team Lima"},
+    {val:"513", txt:"13 Team Mike"},
+    {val:"514", txt:"14 Team November"},
+    {val:"515", txt:"15 Team Oscar"},
+];
+*/

@@ -26,3 +26,31 @@ var list = [
     {val:"85", txt:"85 Team Yankee"},
     {val:"86", txt:"86 Team Zule"},
 ];
+
+/*
+var list = [
+    {val:"201", txt:"201 ブラックミソスープ"},
+    {val:"202", txt:"202 CLT"},
+    {val:"203", txt:"203 チーム_エキスパート"},
+    {val:"204", txt:"204 カニラーメン２"},
+    {val:"205", txt:"5 Team Echo"},
+    {val:"206", txt:"6 Team Foxtrot"},
+    {val:"207", txt:"7 Team Golf"},
+    {val:"208", txt:"8 Team Hote"},
+    {val:"209", txt:"9 Team India"},
+    {val:"210", txt:"10 Team Juliet"},
+    {val:"211", txt:"11 Team Kilo"},
+    {val:"212", txt:"12 Team Lima"},
+    {val:"213", txt:"13 Team Mike"},
+    {val:"214", txt:"14 Team November"},
+    {val:"215", txt:"15 Team Oscar"},
+    {val:"216", txt:"16 Team Papa"},
+    {val:"217", txt:"17 Team Quebec"},
+    {val:"218", txt:"18 Team Romeo"},
+    {val:"219", txt:"19 Team Sierra"},
+    {val:"220", txt:"20 Team Tango"},
+    {val:"221", txt:"21 Team Uniform"},
+    {val:"222", txt:"22 Team Victor"},
+    {val:"223", txt:"23 Team Whiskey"},
+];
+*/

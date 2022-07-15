@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base target="_top">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <title>Elementary Md - Scoring System</title>
+
+        <!--WEBフォントの引用-->
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,700&display=swap" rel="stylesheet">
+
+        <link href="index.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="setting.js"></script>
+    </head>
+    <body onLoad="CurrentTime()">
+        <!--横からせり出しメニュー-->
+        <nav>
+            <div>
+                <div class="btn_menu"><p style="margin: 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30px" height="30px" style="padding-top: 4px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></p></div>
+                <p style="color: white; margin: 10px;">出走順</p>
+            </div>
+
+            <iframe src="https://script.google.com/macros/s/AKfycbyBtRwb1DwHcYXO0lkhkbHgsL5GkElH3gDjqyDz-XkdoIh57IWJC9MPfl31MiQZ3vrU2w/exec"></iframe>
+        </nav>
+        
+        <script>
+        $(function(){
+            $('.btn_menu').click(function(){
+                $('nav').toggleClass('open');
+            });
+        })
+        </script>
+        
+        <!--ヘッダー-->
+        <div class="headder">
+            <table>
+                <td class="left-td">
+                    <div class="btn_menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30px" height="30px" style="padding-top: 3px;"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg></div>
+                </td>
+                <td class="center-td">
+                    <a target="_blank" href="../../top/index.html"><img src="../../../img/wro-rogo-white.png" class="image"></a>
+                    <p class="TitleEng">Scoring System - Elementary Middle</p>
+                </td>
+                <td class="right-td">
+                    <p class="TitleEng">Current</p>
+                    <p class="TitleEng" id="CurrentTime-text">12:34:56</p>
+                </td>
+            </table>
+        </div>
+
+        <!--メイン-->
+        <div class="area">
+            <table class="section-title">
+                <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 0 24 24" width="45px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></td>
+                <td><p style="font-size: 30px;">順位表</p></td>
+            </table>
+            <iframe src="https://script.google.com/macros/s/AKfycbwQ62bcCTtb6c3gp8UKt_tlV608k0gUuDQFlo3jHMvB92Kd0LH4LqxbgiKgiQQCvb7hjA/exec"></iframe>
+
+            <table class="section-title">
+                <td style="width: 45px;"><svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 0 24 24" width="45px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></td>
+                <td><p style="font-size: 30px;">グラフ</p></td>
+            </table>
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQU5CVGQa2578k8GHh7q1tRwtwAjeBfvnvenD-dhf83ukfcXsOVtFQVvu8_xYrKCur3_ZM-PGRaHKfN/pubchart?oid=1339835676&amp;format=interactive"></iframe>
+        </div>
+        
+    </body>
+</html>

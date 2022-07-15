@@ -26,3 +26,21 @@ var list = [
     {val:"225", txt:"225 Team Yankee"},
     {val:"226", txt:"226 Team Zule"},
 ];
+
+/*
+var list = [
+    {val:"601", txt:"601 のりしお"},
+    {val:"602", txt:"602 チームライントレース"},
+    {val:"603", txt:"603 しまかぜ"},
+    {val:"604", txt:"604 レッドチーム"},
+    {val:"605", txt:"5 Team Echo"},
+    {val:"606", txt:"6 Team Foxtrot"},
+    {val:"607", txt:"7 Team Golf"},
+    {val:"608", txt:"8 Team Hote"},
+    {val:"609", txt:"9 Team India"},
+    {val:"610", txt:"10 Team Juliet"},
+    {val:"611", txt:"11 Team Kilo"},
+    {val:"612", txt:"12 Team Lima"},
+    {val:"613", txt:"613 (*) SPEED&POWERチーム"},
+];
+*/

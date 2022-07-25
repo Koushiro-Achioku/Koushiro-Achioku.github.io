@@ -34,129 +34,114 @@
 
     <table class="check">
       <tr style="background-color: white;">
-          <th style="width: 60%;">ミッション</th>
+          <th style="width: 70%;">ミッション</th>
           <th style="width: 10%;">点数</th>
           <th style="width: 10%;">1回目</th>
           <th style="width: 10%;">2回目</th>
-          <th style="width: 10%;">3回目</th>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M1】洗濯をする</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>Laundry Block がLaundry Area の中に完全に入っているが、Laundry Container の中や上にはない。</td>
           <td style="background-color: lightgray;">6</td>
           <td id="check_M1-1_0"><? output._ = ss_value_r1[1]; ?></td>
           <td id="check_M1-1_1"><? output._ = ss_value_r2[1]; ?></td>
-          <td id="check_M1-1_2"><? output._ = ss_value_r3[1]; ?></td>
       </tr>
       <tr>
           <td>Laundry Block が違う色のLaundry Container の中に入っており、Laundry Container がLaundry Area の中に完全に残っている。</td>
           <td style="background-color: lightgray;">10</td>
           <td id="check_M1-2_0"><? output._ = ss_value_r1[2]; ?></td>
           <td id="check_M1-2_1"><? output._ = ss_value_r2[2]; ?></td>
-          <td id="check_M1-2_2"><? output._ = ss_value_r3[2]; ?></td>
       </tr>
       <tr>
           <td>Laundry Block が同じ色のLaundry Container の中に入っており、Laundry Container がLaundry Area の中に完全に残っている。</td>
           <td style="background-color: lightgray;">16</td>
           <td id="check_M1-3_0"><? output._ = ss_value_r1[3]; ?></td>
           <td id="check_M1-3_1"><? output._ = ss_value_r2[3]; ?></td>
-          <td id="check_M1-3_2"><? output._ = ss_value_r3[3]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M2】水を部屋へ届ける</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>水が部屋の中に完全に入っているが、テーブルの上に乗っていない。</td>
           <td style="background-color: lightgray;">6</td>
           <td id="check_M2-1_0"><? output._ = ss_value_r1[4]; ?></td>
           <td id="check_M2-1_1"><? output._ = ss_value_r2[4]; ?></td>
-          <td id="check_M2-1_2"><? output._ = ss_value_r3[4]; ?></td>
       </tr>
       <tr>
           <td>水がmarking block で示された部屋とは違う部屋の中に部分的もしくは完全に入っている。</td>
           <td style="background-color: lightgray;">-6</td>
           <td id="check_M2-2_0"><? output._ = ss_value_r1[5]; ?></td>
           <td id="check_M2-2_1"><? output._ = ss_value_r2[5]; ?></td>
-          <td id="check_M2-2_2"><? output._ = ss_value_r3[5]; ?></td>
       </tr>
       <tr>
           <td>水が正しい部屋の中のテーブルの上に乗っているが、立っておらず、損傷しておらず、テーブルが濃い灰色のエリアの中に残っている。</td>
           <td style="background-color: lightgray;">10</td>
           <td id="check_M2-3_0"><? output._ = ss_value_r1[6]; ?></td>
           <td id="check_M2-3_1"><? output._ = ss_value_r2[6]; ?></td>
-          <td id="check_M2-3_2"><? output._ = ss_value_r3[6]; ?></td>
       </tr>
       <tr>
           <td>水が正しい部屋の中のテーブルの上に乗っていて、立っていて、損傷しておらず、テーブルが濃い灰色のエリアの中に残っている。</td>
           <td style="background-color: lightgray;">14</td>
           <td id="check_M2-4_0"><? output._ = ss_value_r1[7]; ?></td>
           <td id="check_M2-4_1"><? output._ = ss_value_r2[7]; ?></td>
-          <td id="check_M2-4_2"><? output._ = ss_value_r3[7]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M3】ゲームをする</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>ボールがGame Netの中にある。</td>
           <td style="background-color: lightgray;">13</td>
           <td id="check_M3-1_0"><? output._ = ss_value_r1[8]; ?></td>
           <td id="check_M3-1_1"><? output._ = ss_value_r2[8]; ?></td>
-          <td id="check_M3-1_2"><? output._ = ss_value_r3[8]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M4】ロボットを停める</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。</td>
           <td style="background-color: lightgray;">13</td>
           <td id="check_M4-1_0"><? output._ = ss_value_r1[9]; ?></td>
           <td id="check_M4-1_1"><? output._ = ss_value_r2[9]; ?></td>
-          <td id="check_M4-1_2"><? output._ = ss_value_r3[9]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M5】ボーナスポイント</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>個々の人が動いておらず、損傷していない。</td>
           <td style="background-color: lightgray;">4</td>
           <td id="check_M5-1_0"><? output._ = ss_value_r1[10]; ?></td>
           <td id="check_M5-1_1"><? output._ = ss_value_r2[10]; ?></td>
-          <td id="check_M5-1_2"><? output._ = ss_value_r3[10]; ?></td>
       </tr>
       <tr>
           <td>個々のGame Netが動いておらず、損傷していない。</td>
           <td style="background-color: lightgray;">2</td>
           <td id="check_M5-2_3"><? output._ = ss_value_r1[11]; ?></td>
           <td id="check_M5-2_1"><? output._ = ss_value_r2[11]; ?></td>
-          <td id="check_M5-2_2"><? output._ = ss_value_r3[11]; ?></td>
       </tr>
       <tr>
           <td>個々のテーブルが動いておらず、損傷していない。</td>
           <td style="background-color: lightgray;">2</td>
           <td id="check_M5-3_0"><? output._ = ss_value_r1[12]; ?></td>
           <td id="check_M5-3_1"><? output._ = ss_value_r2[12]; ?></td>
-          <td id="check_M5-3_2"><? output._ = ss_value_r3[12]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>合計得点</td>
           <td>155</td>
           <td><? output._ = ss_value_r1[0]; ?></td>
           <td><? output._ = ss_value_r2[0]; ?></td>
-          <td><? output._ = ss_value_r3[0]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>タイム(秒)</td>
           <td></td>
           <td><? output._ = ss_value_r1[13]; ?></td>
           <td><? output._ = ss_value_r2[13]; ?></td>
-          <td><? output._ = ss_value_r3[13]; ?></td>
       </tr>
     </table>
   </body>

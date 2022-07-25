@@ -34,119 +34,106 @@
 
     <table class="check">
       <tr style="background-color: white;">
-          <th style="width: 60%;">ミッション</th>
+          <th style="width: 70%;">ミッション</th>
           <th style="width: 10%;">点数</th>
           <th style="width: 10%;">1回目</th>
           <th style="width: 10%;">2回目</th>
-          <th style="width: 10%;">3回目</th>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M1】火災の発見と消火</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>火のオブジェクトがある部屋の中に水のオブジェクトが完全に入っている。(1部屋につき1つまでカウントされる)</td>
           <td style="background-color: lightgray;">15</td>
           <td id="check_M1-1_0"><? output._ = ss_value_r1[1]; ?></td>
           <td id="check_M1-1_1"><? output._ = ss_value_r2[1]; ?></td>
-          <td id="check_M1-1_2"><? output._ = ss_value_r3[1]; ?></td>
       </tr>
       <tr>
         <td>火のオブジェクトがない部屋の中に水のオブジェクトが入っている、または部屋の中の水のオブジェクトの数が火のオブジェクトの数より多い。</td>
         <td style="background-color: lightgray;">-3</td>
         <td id="check_M1-2_0"><? output._ = ss_value_r1[2]; ?></td>
         <td id="check_M1-2_1"><? output._ = ss_value_r2[2]; ?></td>
-        <td id="check_M1-2_2"><? output._ = ss_value_r3[2]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M2】化学物質を工場の外へと動かす</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>化学物質オブジェクトが工場の外に完全に出ている。(かつSecure storage area の中にはない。)</td>
           <td style="background-color: lightgray;">8</td>
           <td id="check_M2-1_0"><? output._ = ss_value_r1[3]; ?></td>
           <td id="check_M2-1_1"><? output._ = ss_value_r2[3]; ?></td>
-          <td id="check_M2-1_2"><? output._ = ss_value_r3[3]; ?></td>
       </tr>
       <tr>
         <td>化学物質オブジェクトがSecure storage area の中に完全に入っている。</td>
         <td style="background-color: lightgray;">12</td>
         <td id="check_M2-2_0"><? output._ = ss_value_r1[4]; ?></td>
         <td id="check_M2-2_1"><? output._ = ss_value_r2[4]; ?></td>
-        <td id="check_M2-2_2"><? output._ = ss_value_r3[4]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M3】工場内の人を探す</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>Marking block が正しい色の正方形の中に完全に入っており、対応する色により工場内の人がいる部屋を示している。</td>
           <td style="background-color: lightgray;">19</td>
           <td id="check_M3-1_0"><? output._ = ss_value_r1[5]; ?></td>
           <td id="check_M3-1_1"><? output._ = ss_value_r2[5]; ?></td>
-          <td id="check_M3-1_2"><? output._ = ss_value_r3[5]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M4】工場内の段差を横断する</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>「横断エリアA」または「横断エリアB」の横断は、全領域を完全に横断したことにより定義されます。(前後の2本の線で示されます。)ポイントは各横断エリアにつき1回のみ与えられ、Obstacle wall (障害壁)が移動および破損していない場合に与えられます。</td>
           <td style="background-color: lightgray;">15</td>
           <td id="check_M4-1_0"><? output._ = ss_value_r1[6]; ?></td>
           <td id="check_M4-1_1"><? output._ = ss_value_r2[6]; ?></td>
-          <td id="check_M4-1_2"><? output._ = ss_value_r3[6]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M5】ロボットを停める</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>ロボット本体全体がゴールエリアに入り，すべてのモータが静止している（ボーナスポイント以外にポイントがある場合のみ与えられる）。</td>
           <td style="background-color: lightgray;">13</td>
           <td id="check_M5-1_0"><? output._ = ss_value_r1[7]; ?></td>
           <td id="check_M5-1_1"><? output._ = ss_value_r2[7]; ?></td>
-          <td id="check_M5-1_2"><? output._ = ss_value_r3[7]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>【M6】ボーナスポイント</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td>
       </tr>
       <tr>
           <td>火のオブジェクトと人のオブジェクトがそれぞれ移動および破損していない。</td>
           <td style="background-color: lightgray;">5</td>
           <td id="check_M6-1_0"><? output._ = ss_value_r1[8]; ?></td>
           <td id="check_M6-1_1"><? output._ = ss_value_r2[8]; ?></td>
-          <td id="check_M6-1_2"><? output._ = ss_value_r3[8]; ?></td>
       </tr>
       <tr>
         <td>Factory wall (工場の壁)がそれぞれ移動および破損していない。</td>
         <td style="background-color: lightgray;">6</td>
         <td id="check_M6-2_0"><? output._ = ss_value_r1[9]; ?></td>
         <td id="check_M6-2_1"><? output._ = ss_value_r2[9]; ?></td>
-        <td id="check_M6-2_2"><? output._ = ss_value_r3[9]; ?></td>
       </tr>
       <tr>
         <td>Obstacle wall (障害壁)が移動もしくは破損した。</td>
         <td style="background-color: lightgray;">-12</td>
         <td id="check_M6-3_0"><? output._ = ss_value_r1[10]; ?></td>
         <td id="check_M6-3_1"><? output._ = ss_value_r2[10]; ?></td>
-        <td id="check_M6-3_2"><? output._ = ss_value_r3[10]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>合計得点</td>
           <td>155</td>
           <td><? output._ = ss_value_r1[0]; ?></td>
           <td><? output._ = ss_value_r2[0]; ?></td>
-          <td><? output._ = ss_value_r3[0]; ?></td>
       </tr>
       <tr style="background-color: lightgray;">
           <td>タイム(秒)</td>
           <td></td>
           <td><? output._ = ss_value_r1[11]; ?></td>
           <td><? output._ = ss_value_r2[11]; ?></td>
-          <td><? output._ = ss_value_r3[11]; ?></td>
       </tr>
     </table>
   </body>

@@ -209,9 +209,13 @@ function Round_set(text){
 function setTeam(){
     //プルダウンリストをループ処理で値を取り出してセレクトボックスにセットする
     for(var i=0;i<list.length;i++){
-    let opt = document.createElement("option");
-    opt.value = list[i].val;  //value値
-    opt.text = list[i].txt;   //テキスト値
-    document.getElementById("Teamname_selector").appendChild(opt);
+        let opt = document.createElement("option");
+        opt.value = list[i].val;  //value値
+        opt.text = list[i].txt;   //テキスト値
+        document.getElementById("Teamname_selector").appendChild(opt);
     }
+};
+
+function reset_pass(){
+    document.getElementById("Pass-textbox").value = "999999";
 };

@@ -144,7 +144,7 @@ function Patternset(num){
     document.getElementById("Speed").innerHTML = Speed(Pattern,Time);
     document.getElementById("Speed-textbox").value = Speed(Pattern,Time);
     document.getElementById("Speed-text").innerHTML = Speed(Pattern,Time);
-}
+};
 
 function Speed(pattern,time){
     if(time==0){
@@ -153,4 +153,8 @@ function Speed(pattern,time){
     else{
         return Math.round((Distance[pattern]/time)*10)/10;
     }
-}
+};
+
+function reset_pass(){
+    document.getElementById("Pass-textbox").value = "999999";
+};

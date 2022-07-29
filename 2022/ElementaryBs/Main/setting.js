@@ -105,3 +105,7 @@ function setTeam(){
     document.getElementById("Teamname_selector").appendChild(opt);
     }
 };
+
+function reset_pass(){
+    document.getElementById("Pass-textbox").value = "999999";
+};

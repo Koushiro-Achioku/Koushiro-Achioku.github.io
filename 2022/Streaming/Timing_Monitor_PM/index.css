@@ -26,7 +26,7 @@ p{
 
 .current-time{
     text-align: center;
-    font-size: 65px;
+    font-size: 90px;
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 700;
     color: black;
@@ -34,7 +34,7 @@ p{
 
 .event-text{
     text-align: center;
-    font-size: 65px;
+    font-size: 60px;
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 700;
     color: white;
@@ -43,7 +43,7 @@ p{
 
 .event-text2{
     text-align: center;
-    font-size: 65px;
+    font-size: 60px;
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 700;
     color: white;
@@ -52,7 +52,7 @@ p{
 
 .event-time{
     text-align: center;
-    font-size: 65px;
+    font-size: 100px;
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 700;
     color: black;

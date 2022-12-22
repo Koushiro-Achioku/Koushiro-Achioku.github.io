@@ -1,5 +1,5 @@
-var passcode = '196204';
-var masterkey = '19881223';
+var passcode = '';
+var masterkey = '';
 var double = '999999';
 var caution = 0;
 

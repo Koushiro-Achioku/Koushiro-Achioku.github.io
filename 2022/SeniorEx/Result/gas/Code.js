@@ -19,8 +19,7 @@ function doGet(e) {
 
 function getSheet(name){
     // SSIDからスプレッドシートの取得
-    //https://docs.google.com/spreadsheets/d/1yx_MdZquMbDgQTdLdCzGDAl9PTQAOrstxAbOxj0DDb4/edit#gid=0
-    var ssid = '1yx_MdZquMbDgQTdLdCzGDAl9PTQAOrstxAbOxj0DDb4';
+    var ssid = '1Cg-IbNHO9mXoOHzKTgFFAWxbhOE1xekFL_PzR-B0rhQ';
     var ss = SpreadsheetApp.openById(ssid);
     // 指定されたシート名からシートを取得して返却
     var sheet = ss.getSheetByName(name);
